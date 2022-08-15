@@ -22,28 +22,34 @@
 #include "parameters.h"
 
 
-
-
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> &em_barrel,
+    hls::stream<result_t> &layer55_out,
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
 
     //hls-fpga-machine-learning insert IO
-    #pragma HLS INTERFACE axis port=input_1,layer2_out 
-
+    #pragma HLS INTERFACE axis port=em_barrel,layer55_out 
+    #pragma HLS DATAFLOW 
 
     const_size_in_1 = N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1;
-    const_size_out_1 = OUT_HEIGHT_2*OUT_WIDTH_2*N_CHAN_2;
+    const_size_out_1 = N_LAYER_53;
+
+#ifndef __SYNTHESIS__
+    static bool loaded_weights = false;
+    if (!loaded_weights) {
+        //hls-fpga-machine-learning insert load weights
+        nnet::load_weights_from_txt<model_default_t, 4>(s3, "s3.txt");
+        nnet::load_weights_from_txt<model_default_t, 4>(b3, "b3.txt");
+        loaded_weights = true;
+    }
+#endif
 
     // ****************************************
     // NETWORK INSTANTIATION
     // ****************************************
 
     //hls-fpga-machine-learning insert layers
-    #pragma HLS DATAFLOW 
-    nnet::resize_nearest_v2<input_t, config2>(input_1, layer2_out); // up_sampling2d
-
+    nnet::normalize_me<input_t, result_t, config3>(em_barrel, layer55_out, s3, b3); // batch_normalization
 }

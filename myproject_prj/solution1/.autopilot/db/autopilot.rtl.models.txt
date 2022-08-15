@@ -1,5 +1,7 @@
+myproject_mux_42_32_1_1
 regslice_core
 regslice_core
 Block_proc
-resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s
+product_dense_ap_fixed_ap_fixed_ap_fixed_s
+normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s
 myproject

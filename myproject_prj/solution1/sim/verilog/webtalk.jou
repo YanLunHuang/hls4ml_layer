@@ -2,11 +2,11 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Aug 15 12:58:37 2022
-# Process ID: 1375
-# Current directory: /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog
-# Command line: wbtcv -mode batch -source /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
-# Log file: /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/webtalk.log
-# Journal file: /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/webtalk.jou
+# Start of session at: Mon Aug 15 15:02:55 2022
+# Process ID: 8352
+# Current directory: /home/YL_HUANG/8_19/normalize_test/myproject_prj/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /home/YL_HUANG/8_19/normalize_test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/YL_HUANG/8_19/normalize_test/myproject_prj/solution1/sim/verilog/webtalk.log
+# Journal file: /home/YL_HUANG/8_19/normalize_test/myproject_prj/solution1/sim/verilog/webtalk.jou
 #-----------------------------------------------------------
-source /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+source /home/YL_HUANG/8_19/normalize_test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace

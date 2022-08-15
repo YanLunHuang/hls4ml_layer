@@ -53,4 +53,5 @@ obj/myproject.o: ../../../../firmware/myproject.cpp \
  ../../../../firmware/nnet_utils/nnet_pooling.h \
  ../../../../firmware/nnet_utils/nnet_pooling_stream.h \
  /opt/Xilinx/Vivado/2019.2/include/utils/x_hls_utils.h \
- ../../../../firmware/nnet_utils/nnet_pooling.h
+ ../../../../firmware/nnet_utils/nnet_pooling.h \
+ ../../../../firmware/weights/s3.h ../../../../firmware/weights/b3.h

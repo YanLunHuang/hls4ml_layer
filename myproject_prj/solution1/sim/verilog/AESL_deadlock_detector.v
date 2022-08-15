@@ -59,7 +59,7 @@ module AESL_deadlock_detector (
         .token_out_vec(token_out_vec_0),
         .dl_detect_out(dl_in_vec[0]));
 
-    assign proc_dep_vld_vec_0[0] = dl_detect_out ? proc_dep_vld_vec_0_reg[0] : (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0])));
+    assign proc_dep_vld_vec_0[0] = dl_detect_out ? proc_dep_vld_vec_0_reg[0] : (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count[0])));
     always @ (negedge reset or posedge clock) begin
         if (~reset) begin
             proc_dep_vld_vec_0_reg <= 'b0;
@@ -76,16 +76,16 @@ module AESL_deadlock_detector (
     assign token_0_1 = token_out_vec_0[0];
 
     // delay ap_idle for one cycle
-    reg [0:0] AESL_inst_myproject$resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0$ap_idle;
+    reg [0:0] AESL_inst_myproject$normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0$ap_idle;
     always @ (negedge reset or posedge clock) begin
         if (~reset) begin
-            AESL_inst_myproject$resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0$ap_idle <= 'b0;
+            AESL_inst_myproject$normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0$ap_idle <= 'b0;
         end
         else begin
-            AESL_inst_myproject$resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0$ap_idle <= AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.ap_idle;
+            AESL_inst_myproject$normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0$ap_idle <= AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0.ap_idle;
         end
     end
-    // Process: AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0
+    // Process: AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0
     AESL_deadlock_detect_unit #(2, 1, 1, 1) AESL_deadlock_detect_unit_1 (
         .reset(reset),
         .clock(clock),
@@ -101,7 +101,7 @@ module AESL_deadlock_detector (
         .token_out_vec(token_out_vec_1),
         .dl_detect_out(dl_in_vec[1]));
 
-    assign proc_dep_vld_vec_1[0] = dl_detect_out ? proc_dep_vld_vec_1_reg[0] : (((AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]) & AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0])));
+    assign proc_dep_vld_vec_1[0] = dl_detect_out ? proc_dep_vld_vec_1_reg[0] : (((AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count[0]) & AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0])));
     always @ (negedge reset or posedge clock) begin
         if (~reset) begin
             proc_dep_vld_vec_1_reg <= 'b0;

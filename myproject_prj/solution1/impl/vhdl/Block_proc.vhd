@@ -30,7 +30,6 @@ architecture behav of Block_proc is
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
-    constant ap_const_lv16_9A0 : STD_LOGIC_VECTOR (15 downto 0) := "0000100110100000";
     constant ap_const_lv16_3020 : STD_LOGIC_VECTOR (15 downto 0) := "0011000000100000";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
@@ -123,7 +122,7 @@ begin
         end if; 
     end process;
 
-    const_size_in_1 <= ap_const_lv16_9A0;
+    const_size_in_1 <= ap_const_lv16_3020;
 
     const_size_in_1_ap_vld_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1)
     begin

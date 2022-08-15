@@ -74,6 +74,22 @@ void relu(hls::stream<data_T> &data, hls::stream<res_T> &res) {
     }
 }
 
+template<class data_T, class res_T, typename CONFIG_T>
+void relu_me(hls::stream<data_T> &data, hls::stream<res_T> &res) {
+    for (int i = 0; i < CONFIG_T::n_in; i++) {
+         #pragma HLS PIPELINE
+
+        data_T in_data = data.read();
+        res_T out_data;
+        #pragma HLS DATA_PACK variable=out_data
+        
+        if (in_data > 0) out_data = in_data;
+        else out_data = 0;
+        
+        res.write(out_data);
+    }
+}
+
 // *************************************************
 //       Sigmoid Activation
 // *************************************************
@@ -414,6 +430,24 @@ void hard_sigmoid(hls::stream<data_T> &data, hls::stream<res_T> &res) {
 // *************************************************
 //       Leaky RELU Activation
 // *************************************************
+
+
+template<class data_T, class res_T, typename CONFIG_T>
+void leaky_relu_me(hls::stream<data_T> &data,data_T alpha, hls::stream<res_T> &res) {
+    LeakyReLUActLoop: for (int i = 0; i < CONFIG_T::n_in; i++) {
+        #pragma HLS PIPELINE
+
+        data_T in_data = data.read();
+        res_T out_data;
+        #pragma HLS DATA_PACK variable=out_data
+
+        //#pragma HLS UNROLL
+        if (in_data > 0) out_data = in_data;
+        else out_data = alpha * in_data;
+        res.write(out_data);
+    }
+}
+
 
 template<class data_T, class res_T, typename CONFIG_T>
 void leaky_relu(hls::stream<data_T> &data, typename data_T::value_type alpha, hls::stream<res_T> &res) {

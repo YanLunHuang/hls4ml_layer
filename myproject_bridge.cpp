@@ -50,36 +50,36 @@ void collect_trace_output(struct trace_data *c_trace_outputs) {
 
 // Wrapper of top level function for Python bridge
 void myproject_float(
-    float input_1[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
-    float layer2_out[OUT_HEIGHT_2*OUT_WIDTH_2*N_FILT_2],
+    float em_barrel[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
+    float layer55_out[N_LAYER_53],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
     
-    hls::stream<input_t> input_1_ap("input_1");
-    nnet::convert_data<float, input_t, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(input_1, input_1_ap);
+    hls::stream<input_t> em_barrel_ap("em_barrel");
+    nnet::convert_data<float, input_t, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(em_barrel, em_barrel_ap);
 
-    hls::stream<layer2_t> layer2_out_ap("layer2_out");
+    hls::stream<result_t> layer55_out_ap("layer55_out");
 
-    myproject(input_1_ap,layer2_out_ap,const_size_in_1,const_size_out_1);
+    myproject(em_barrel_ap,layer55_out_ap,const_size_in_1,const_size_out_1);
 
-    nnet::convert_data<layer2_t, float, OUT_HEIGHT_2*OUT_WIDTH_2*N_FILT_2>(layer2_out_ap, layer2_out);
+    nnet::convert_data<result_t, float, N_LAYER_53>(layer55_out_ap, layer55_out);
 }
 
 void myproject_double(
-    double input_1[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
-    double layer2_out[OUT_HEIGHT_2*OUT_WIDTH_2*N_FILT_2],
+    double em_barrel[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
+    double layer55_out[N_LAYER_53],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
-    hls::stream<input_t> input_1_ap("input_1");
-    nnet::convert_data<double, input_t, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(input_1, input_1_ap);
+    hls::stream<input_t> em_barrel_ap("em_barrel");
+    nnet::convert_data<double, input_t, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(em_barrel, em_barrel_ap);
 
-    hls::stream<layer2_t> layer2_out_ap("layer2_out");
+    hls::stream<result_t> layer55_out_ap("layer55_out");
 
-    myproject(input_1_ap,layer2_out_ap,const_size_in_1,const_size_out_1);
+    myproject(em_barrel_ap,layer55_out_ap,const_size_in_1,const_size_out_1);
 
-    nnet::convert_data<layer2_t, double, OUT_HEIGHT_2*OUT_WIDTH_2*N_FILT_2>(layer2_out_ap, layer2_out);
+    nnet::convert_data<result_t, double, N_LAYER_53>(layer55_out_ap, layer55_out);
 }
 
 }

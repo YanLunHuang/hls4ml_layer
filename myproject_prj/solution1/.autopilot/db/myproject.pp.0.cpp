@@ -30395,8 +30395,7 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 4 "firmware/nnet_utils/nnet_types.h" 2
-
+# 5 "firmware/nnet_utils/nnet_types.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 1 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 3
@@ -30404,13 +30403,11 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3
 # 44 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 2 3
-# 5 "firmware/nnet_utils/nnet_types.h" 2
-
+# 6 "firmware/nnet_utils/nnet_types.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-# 6 "firmware/nnet_utils/nnet_types.h" 2
-
+# 7 "firmware/nnet_utils/nnet_types.h" 2
 
 namespace nnet {
 
@@ -30458,15 +30455,16 @@ struct array {
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
 # 9 "firmware/defines.h" 2
-# 19 "firmware/defines.h"
-typedef ap_fixed<16,14> input_t;
-typedef ap_fixed<16,14> layer2_t;
+# 18 "firmware/defines.h"
+typedef ap_fixed<32,16> model_default_t;
+typedef ap_fixed<32,16> input_t;
+typedef ap_fixed<32,16> result_t;
 # 28 "firmware/myproject.h" 2
 
 
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> &em_barrel,
+    hls::stream<result_t> &layer55_out,
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 );
@@ -30477,7 +30475,6 @@ void myproject(
 
 # 1 "/opt/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_int.h" 1
 # 5 "firmware/parameters.h" 2
-
 
 
 # 1 "firmware/nnet_utils/nnet_helpers.h" 1
@@ -31446,8 +31443,7 @@ struct __exception
 extern int matherr (struct __exception *__exc) throw ();
 # 475 "/usr/include/math.h" 3 4
 }
-# 25 "firmware/nnet_utils/nnet_helpers.h" 2
-
+# 26 "firmware/nnet_utils/nnet_helpers.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
 # 38 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
 # 38 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
@@ -33375,8 +33371,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 921 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 26 "firmware/nnet_utils/nnet_helpers.h" 2
-
+# 27 "firmware/nnet_utils/nnet_helpers.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 1 3
 # 59 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 3
 # 59 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 3
@@ -55415,8 +55410,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 63 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 2 3
-# 27 "firmware/nnet_utils/nnet_helpers.h" 2
-
+# 28 "firmware/nnet_utils/nnet_helpers.h" 2
 
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/map" 1 3
 # 58 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/map" 3
@@ -57858,13 +57852,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 62 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/map" 2 3
-# 29 "firmware/nnet_utils/nnet_helpers.h" 2
-
+# 30 "firmware/nnet_utils/nnet_helpers.h" 2
 
 
 
 namespace nnet {
-# 282 "firmware/nnet_utils/nnet_helpers.h"
+# 280 "firmware/nnet_utils/nnet_helpers.h"
 template<class src_T, class dst_T, size_t OFFSET, size_t SIZE>
 void copy_data(std::vector<src_T> src, dst_T dst[SIZE]) {
     typename std::vector<src_T>::const_iterator in_begin = src.cbegin() + OFFSET;
@@ -57932,7 +57925,7 @@ void print_result_me(hls::stream<res_T> &result, std::ostream &out, bool keep = 
         out << res_pack << " ";
         if (keep) result.write(res_pack);
     }
- out << std::endl;
+    out << std::endl;
 }
 
 template<class res_T, size_t SIZE>
@@ -58042,15 +58035,14 @@ constexpr int pow2(int x){
 }
 
 }
-# 9 "firmware/parameters.h" 2
+# 8 "firmware/parameters.h" 2
 
 # 1 "firmware/nnet_utils/nnet_activation.h" 1
 # 23 "firmware/nnet_utils/nnet_activation.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-# 23 "firmware/nnet_utils/nnet_activation.h" 2
-
+# 24 "firmware/nnet_utils/nnet_activation.h" 2
 
 # 1 "firmware/nnet_utils/nnet_common.h" 1
 # 30 "firmware/nnet_utils/nnet_common.h"
@@ -58121,8 +58113,7 @@ _ssdm_SpecConstant(&rightN);
  };
 
 }
-# 25 "firmware/nnet_utils/nnet_activation.h" 2
-
+# 26 "firmware/nnet_utils/nnet_activation.h" 2
 
 namespace nnet {
 
@@ -58968,14 +58959,13 @@ void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in])
 }
 
 }
-# 11 "firmware/parameters.h" 2
+# 10 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_activation_stream.h" 1
 # 23 "firmware/nnet_utils/nnet_activation_stream.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-# 23 "firmware/nnet_utils/nnet_activation_stream.h" 2
-
+# 24 "firmware/nnet_utils/nnet_activation_stream.h" 2
 
 
 
@@ -59099,8 +59089,7 @@ void broadcast_stream(hls::stream<data_T> &data, hls::stream<res_T> &res) {
     }
 }
 }
-# 28 "firmware/nnet_utils/nnet_activation_stream.h" 2
-
+# 29 "firmware/nnet_utils/nnet_activation_stream.h" 2
 
 
 namespace nnet {
@@ -59144,6 +59133,22 @@ void relu(hls::stream<data_T> &data, hls::stream<res_T> &res) {
  if (in_data[j] > 0) out_data[j] = in_data[j];
             else out_data[j] = 0;
         }
+
+        res.write(out_data);
+    }
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+void relu_me(hls::stream<data_T> &data, hls::stream<res_T> &res) {
+    for (int i = 0; i < CONFIG_T::n_in; i++) {
+#pragma HLS PIPELINE
+
+ data_T in_data = data.read();
+        res_T out_data;
+#pragma HLS DATA_PACK variable=&out_data
+
+ if (in_data > 0) out_data = in_data;
+        else out_data = 0;
 
         res.write(out_data);
     }
@@ -59490,6 +59495,24 @@ void hard_sigmoid(hls::stream<data_T> &data, hls::stream<res_T> &res) {
 
 
 
+
+template<class data_T, class res_T, typename CONFIG_T>
+void leaky_relu_me(hls::stream<data_T> &data,data_T alpha, hls::stream<res_T> &res) {
+    LeakyReLUActLoop: for (int i = 0; i < CONFIG_T::n_in; i++) {
+#pragma HLS PIPELINE
+
+ data_T in_data = data.read();
+        res_T out_data;
+#pragma HLS DATA_PACK variable=&out_data
+
+
+ if (in_data > 0) out_data = in_data;
+        else out_data = alpha * in_data;
+        res.write(out_data);
+    }
+}
+
+
 template<class data_T, class res_T, typename CONFIG_T>
 void leaky_relu(hls::stream<data_T> &data, typename data_T::value_type alpha, hls::stream<res_T> &res) {
     LeakyReLUActLoop: for (int i = 0; i < CONFIG_T::n_in / res_T::size; i++) {
@@ -59724,7 +59747,7 @@ void prelu(hls::stream<data_T> &data, typename data_T::value_type alpha[CONFIG_T
 
 
 }
-# 12 "firmware/parameters.h" 2
+# 11 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_batchnorm.h" 1
 # 24 "firmware/nnet_utils/nnet_batchnorm.h"
 # 1 "firmware/nnet_utils/nnet_dense.h" 1
@@ -59853,8 +59876,7 @@ cast(typename CONFIG_T::accum_t x){
 }
 
 }
-# 5 "firmware/nnet_utils/nnet_dense.h" 2
-
+# 6 "firmware/nnet_utils/nnet_dense.h" 2
 # 1 "firmware/nnet_utils/nnet_dense_latency.h" 1
 # 29 "firmware/nnet_utils/nnet_dense_latency.h"
 namespace nnet {
@@ -59958,8 +59980,7 @@ void dense_latency(
 }
 
 }
-# 6 "firmware/nnet_utils/nnet_dense.h" 2
-
+# 7 "firmware/nnet_utils/nnet_dense.h" 2
 # 1 "firmware/nnet_utils/nnet_dense_resource.h" 1
 # 27 "firmware/nnet_utils/nnet_dense_resource.h"
 # 1 "/usr/include/assert.h" 1 3 4
@@ -59984,8 +60005,7 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 27 "firmware/nnet_utils/nnet_dense_resource.h" 2
-
+# 28 "firmware/nnet_utils/nnet_dense_resource.h" 2
 
 namespace nnet {
 
@@ -59996,6 +60016,18 @@ product_dense(data_T a, weight_T w){
 
 #pragma HLS inline off
  return a * w;
+}
+
+template<class data_T, class weight_T, class ret_T,class out_T>void product_merge_split(data_T a, weight_T w, out_T out[2]){_ssdm_SpecArrayDimSize(out, 2);
+
+#pragma HLS inline off
+ ret_T w1;
+    w1.range(25,18) = w.range(15,8);
+    w1.range(7,0) = w.range(7,0);
+    ret_T w2 = a * w1;
+    weight_T wf;
+    out[0] = w2.range(15, 8);
+    out[1] = w2.range( 7, 0);
 }
 
 
@@ -60014,8 +60046,8 @@ void dense_resource_rf_leq_nin(
     const int nin = CONFIG_T::n_in;
     const int nout = CONFIG_T::n_out;
 
-    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 56, __PRETTY_FUNCTION__));
-    (((multiplier_limit == block_factor) && "This function is correct only for RF <= N_IN") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit == block_factor) && \"This function is correct only for RF <= N_IN\"", "firmware/nnet_utils/nnet_dense_resource.h", 57, __PRETTY_FUNCTION__));
+    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 68, __PRETTY_FUNCTION__));
+    (((multiplier_limit == block_factor) && "This function is correct only for RF <= N_IN") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit == block_factor) && \"This function is correct only for RF <= N_IN\"", "firmware/nnet_utils/nnet_dense_resource.h", 69, __PRETTY_FUNCTION__));
 
 #pragma HLS function_instantiate variable=&weights,&biases
 
@@ -60080,8 +60112,8 @@ void dense_resource_rf_gt_nin_rem0(
     const int nin = CONFIG_T::n_in;
     const int nout = CONFIG_T::n_out;
 
-    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 122, __PRETTY_FUNCTION__));
-    (((rufactor > nin && rufactor % nin == 0) && "This function is correct only for RF > N_IN && RF % N_IN == 0") ? static_cast<void> (0) : __assert_fail ("(rufactor > nin && rufactor % nin == 0) && \"This function is correct only for RF > N_IN && RF % N_IN == 0\"", "firmware/nnet_utils/nnet_dense_resource.h", 123, __PRETTY_FUNCTION__));
+    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 134, __PRETTY_FUNCTION__));
+    (((rufactor > nin && rufactor % nin == 0) && "This function is correct only for RF > N_IN && RF % N_IN == 0") ? static_cast<void> (0) : __assert_fail ("(rufactor > nin && rufactor % nin == 0) && \"This function is correct only for RF > N_IN && RF % N_IN == 0\"", "firmware/nnet_utils/nnet_dense_resource.h", 135, __PRETTY_FUNCTION__));
 
 #pragma HLS function_instantiate variable=&weights,&biases
 
@@ -60114,7 +60146,7 @@ void dense_resource_rf_gt_nin_rem0(
 
     ReuseLoop:
     for (int ir = 0; ir < rufactor; ir++) {
-#pragma HLS PIPELINE II=1 rewind
+#pragma HLS PIPELINE II=1
 
  w_index = ir;
         out_index = outidx[ir] ;
@@ -60122,7 +60154,8 @@ void dense_resource_rf_gt_nin_rem0(
         MultLoop:
         for (int im = 0; im < block_factor; im++) {
 #pragma HLS UNROLL
- acc[out_index] += CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::product(data[in_index], weights[w_index]);
+
+ acc[out_index] += product_dense<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>(data[in_index], weights[w_index]);
 
             w_index += rufactor;
             if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) break;
@@ -60159,8 +60192,8 @@ void dense_resource_rf_gt_nin(
     const int nin = CONFIG_T::n_in;
     const int nout = CONFIG_T::n_out;
 
-    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 201, __PRETTY_FUNCTION__));
-    (((rufactor > nin) && "This function is correct only for RF > N_IN") ? static_cast<void> (0) : __assert_fail ("(rufactor > nin) && \"This function is correct only for RF > N_IN\"", "firmware/nnet_utils/nnet_dense_resource.h", 202, __PRETTY_FUNCTION__));
+    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 214, __PRETTY_FUNCTION__));
+    (((rufactor > nin) && "This function is correct only for RF > N_IN") ? static_cast<void> (0) : __assert_fail ("(rufactor > nin) && \"This function is correct only for RF > N_IN\"", "firmware/nnet_utils/nnet_dense_resource.h", 215, __PRETTY_FUNCTION__));
 
 #pragma HLS function_instantiate variable=&weights,&biases
 
@@ -60178,7 +60211,7 @@ void dense_resource_rf_gt_nin(
 
     ReuseLoop:
     for (int ir = 0; ir < rufactor; ir++) {
-#pragma HLS PIPELINE II=1 rewind
+#pragma HLS PIPELINE II=1
  typename CONFIG_T::accum_t tmpmult[block_factor];
 #pragma HLS ARRAY_PARTITION variable=&tmpmult complete
 
@@ -60188,7 +60221,10 @@ void dense_resource_rf_gt_nin(
  int w_index = ir + rufactor * im;
             int in_index = w_index % nin;
             if (w_index >= CONFIG_T::n_in*CONFIG_T::n_out) continue;
-            tmpmult[im] = CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::product(data[in_index], weights[w_index]);
+
+
+
+            tmpmult[im] = product_dense<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>(data[in_index], weights[w_index]);
         }
 
         typename CONFIG_T::accum_t mult[multiplier_limit];
@@ -60237,16 +60273,355 @@ void dense_resource(
 
  if (CONFIG_T::reuse_factor <= CONFIG_T::n_in) {
         dense_resource_rf_leq_nin<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+        std::cout<<"dense1"<<std::endl;
     } else if (CONFIG_T::reuse_factor % CONFIG_T::n_in == 0) {
         dense_resource_rf_gt_nin_rem0<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+        std::cout<<"dense2"<<std::endl;
     } else {
         dense_resource_rf_gt_nin<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+        std::cout<<"dense3"<<std::endl;
+    }
+}
+# 315 "firmware/nnet_utils/nnet_dense_resource.h"
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_large_rf_leq_nin(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+    const int rufactor = CONFIG_T::reuse_factor;
+    const int multfactor = (CONFIG_T::n_in > CONFIG_T::reuse_factor ? CONFIG_T::reuse_factor : CONFIG_T::n_in);
+    const int multiplier_limit = ((CONFIG_T::n_in*CONFIG_T::n_out + multfactor - 1) / multfactor);
+    const int block_factor = ((CONFIG_T::n_in*CONFIG_T::n_out + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+    const int multscale = multiplier_limit/CONFIG_T::n_out;
+    const int nin = CONFIG_T::n_in;
+    const int nout = CONFIG_T::n_out;
+
+    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 330, __PRETTY_FUNCTION__));
+    (((multiplier_limit == block_factor) && "This function is correct only for RF <= N_IN") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit == block_factor) && \"This function is correct only for RF <= N_IN\"", "firmware/nnet_utils/nnet_dense_resource.h", 331, __PRETTY_FUNCTION__));
+
+
+
+
+
+
+#pragma HLS ARRAY_RESHAPE variable=&weights block factor=block_factor
+#pragma HLS ARRAY_PARTITION variable=&biases complete
+
+ typename CONFIG_T::accum_t acc[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=&acc complete
+
+ InitAccum:
+    for (int iacc = 0; iacc < nout; iacc++) {
+#pragma HLS UNROLL
+ acc[iacc] = (typename CONFIG_T::accum_t) biases[iacc];
+    }
+# 358 "firmware/nnet_utils/nnet_dense_resource.h"
+    for (int ir = 0; ir < rufactor; ir++) {
+#pragma HLS PIPELINE II=1
+ typename CONFIG_T::accum_t tmpmult[block_factor];
+#pragma HLS ARRAY_PARTITION variable=&tmpmult complete
+ unsigned in_index=ir;
+ for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+ unsigned w_index = ir + (rufactor*im);
+     tmpmult[im] = product_dense<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>(data[in_index], weights[w_index]);
+     in_index += rufactor;
+     if (in_index >= nin) {
+             in_index = ir;
+            }
+        }
+ for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+
+ unsigned out_index = im/multscale;
+  acc[out_index] += tmpmult[im];
+       }
+    }
+# 405 "firmware/nnet_utils/nnet_dense_resource.h"
+    Result:
+    for (int ires = 0; ires < CONFIG_T::n_out; ires++) {
+#pragma HLS UNROLL
+
+ res_T tmp = acc[ires];
+        res[ires] = tmp;
     }
 }
 
-}
-# 7 "firmware/nnet_utils/nnet_dense.h" 2
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_large_rf_gt_nin_rem0(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
 
+    const int rufactor = (CONFIG_T::reuse_factor > CONFIG_T::n_in * CONFIG_T::n_out ? CONFIG_T::n_in * CONFIG_T::n_out : CONFIG_T::reuse_factor);
+    const int multfactor = (CONFIG_T::n_in > CONFIG_T::reuse_factor ? CONFIG_T::reuse_factor : CONFIG_T::n_in);
+    const int multiplier_limit = ((CONFIG_T::n_in*CONFIG_T::n_out + multfactor - 1) / multfactor);
+    const int block_factor = ((CONFIG_T::n_in*CONFIG_T::n_out + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+    const int multscale = multiplier_limit/CONFIG_T::n_out;
+    const int nin = CONFIG_T::n_in;
+    const int nout = CONFIG_T::n_out;
+
+    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 429, __PRETTY_FUNCTION__));
+    (((rufactor > nin && rufactor % nin == 0) && "This function is correct only for RF > N_IN && RF % N_IN == 0") ? static_cast<void> (0) : __assert_fail ("(rufactor > nin && rufactor % nin == 0) && \"This function is correct only for RF > N_IN && RF % N_IN == 0\"", "firmware/nnet_utils/nnet_dense_resource.h", 430, __PRETTY_FUNCTION__));
+
+#pragma HLS function_instantiate variable=&biases
+
+#pragma HLS ARRAY_RESHAPE variable=&weights block factor=block_factor
+#pragma HLS ARRAY_PARTITION variable=&biases complete
+
+ typename CONFIG_T::accum_t acc[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=&acc complete
+
+ InitAccum:
+    for (int iacc = 0; iacc < nout; iacc++) {
+#pragma HLS UNROLL
+ acc[iacc] = (typename CONFIG_T::accum_t) biases[iacc];
+    }
+
+    int w_index;
+    int in_index = 0;
+    int out_index;
+    int outstep = 0;
+    const int outscale = rufactor / nin;
+
+    int outidx[rufactor];
+    IndexLoop:
+    for (int ir = 0; ir < rufactor; ir++) {
+        outidx[ir] = outstep;
+        if ((ir + 1) % nin == 0) {
+            outstep++;
+        }
+    }
+
+    ReuseLoop:
+    for (int ir = 0; ir < rufactor; ir++) {
+#pragma HLS PIPELINE II=1 rewind
+
+
+
+
+ unsigned in_index = ir - int(ir/nin)*nin;
+ unsigned out_idx_r = int(ir/nin);
+
+
+
+        MultLoop:
+        for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+ unsigned w_index = ir + rufactor*im;
+     unsigned out_index = im*outscale+out_idx_r;
+
+
+     acc[out_index] += product_dense<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>(data[in_index], weights[w_index]);
+
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+
+    Result:
+    for (int ires = 0; ires < CONFIG_T::n_out; ires++) {
+#pragma HLS UNROLL
+
+ res_T tmp = acc[ires];
+        res[ires] = tmp;
+    }
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_large_rf_gt_nin(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+    const int rufactor = CONFIG_T::reuse_factor;
+    const int multfactor = (CONFIG_T::n_in > CONFIG_T::reuse_factor ? CONFIG_T::reuse_factor : CONFIG_T::n_in);
+    const int multiplier_limit = ((CONFIG_T::n_in*CONFIG_T::n_out + multfactor - 1) / multfactor);
+    const int block_factor = ((CONFIG_T::n_in*CONFIG_T::n_out + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+    const int multscale = multiplier_limit/CONFIG_T::n_out;
+    const int nin = CONFIG_T::n_in;
+    const int nout = CONFIG_T::n_out;
+
+    (((multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed") ? static_cast<void> (0) : __assert_fail ("(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\"", "firmware/nnet_utils/nnet_dense_resource.h", 519, __PRETTY_FUNCTION__));
+    (((rufactor > nin) && "This function is correct only for RF > N_IN") ? static_cast<void> (0) : __assert_fail ("(rufactor > nin) && \"This function is correct only for RF > N_IN\"", "firmware/nnet_utils/nnet_dense_resource.h", 520, __PRETTY_FUNCTION__));
+
+#pragma HLS function_instantiate variable=&biases
+
+#pragma HLS ARRAY_RESHAPE variable=&weights block factor=block_factor
+#pragma HLS ARRAY_PARTITION variable=&biases complete
+
+ typename CONFIG_T::accum_t acc[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=&acc complete
+
+ InitAccum:
+    for (int iacc = 0; iacc < nout; iacc++) {
+#pragma HLS UNROLL
+ acc[iacc] = (typename CONFIG_T::accum_t) biases[iacc];
+    }
+
+    ReuseLoop:
+    for (int ir = 0; ir < rufactor; ir++) {
+#pragma HLS PIPELINE II=1 rewind
+ typename CONFIG_T::accum_t tmpmult[block_factor];
+#pragma HLS ARRAY_PARTITION variable=&tmpmult complete
+
+ MultLoop:
+        for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+ int w_index = ir + rufactor * im;
+            int in_index = w_index % nin;
+            if (w_index >= CONFIG_T::n_in*CONFIG_T::n_out) continue;
+            tmpmult[im] = product_dense<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>(data[in_index], weights[w_index]);
+        }
+
+        typename CONFIG_T::accum_t mult[multiplier_limit];
+#pragma HLS ARRAY_PARTITION variable=&mult complete
+
+ ResetMult:
+        for (int imult = 0; imult < multiplier_limit; imult++) {
+#pragma HLS UNROLL
+ mult[imult] = 0;
+        }
+
+        AccumLoop1:
+        for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+ int w_index = ir + rufactor * im;
+            int out_index = w_index / multfactor;
+            if (out_index >= multiplier_limit) continue;
+            mult[out_index] += tmpmult[im];
+        }
+
+        AccumLoop2:
+        for (int im = 0; im < multiplier_limit; im++) {
+#pragma HLS UNROLL
+
+
+ acc[im] += mult[im];
+        }
+    }
+
+
+    Result:
+    for (int ires = 0; ires < CONFIG_T::n_out; ires++) {
+#pragma HLS UNROLL
+
+ res_T tmp = acc[ires];
+        res[ires] = tmp;
+    }
+}
+
+
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_large(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+#pragma HLS INLINE region
+
+ if (CONFIG_T::reuse_factor <= CONFIG_T::n_in) {
+        std::cout<< "USE DENSE LARGE1" << std::endl;
+        dense_large_rf_leq_nin<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    } else if (CONFIG_T::reuse_factor % CONFIG_T::n_in == 0) {
+        std::cout<< "USE DENSE LARGE2" << std::endl;
+        dense_large_rf_gt_nin_rem0<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    } else {
+        std::cout<< "USE DENSE LARGE3" << std::endl;
+        dense_large_rf_gt_nin<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    }
+
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_large_stream(
+      hls::stream<data_T> data[CONFIG_T::n_input],
+      hls::stream<res_T> res[CONFIG_T::n_output],
+      typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+      typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+      static unsigned pX = 0;
+      data_T pStatus = data[0].read();
+      if(pStatus == 0) {
+       pX = 0;
+      }
+      static data_T tmpdata[CONFIG_T::n_in];
+#pragma HLS ARRAY_PARTITION variable=&tmpdata complete
+ for(int i0 = 0; i0 < CONFIG_T::n_input-1; i0++) {
+#pragma HLS UNROLL
+ data_T pTmp = data[i0+1].read();
+
+       unsigned index = i0+pX*(CONFIG_T::n_input-1);
+       tmpdata[index] = pTmp;
+      }
+      pX = pX+1;
+      if(pX == CONFIG_T::block_factor) {
+ data_T tmpres[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=&tmpres complete
+ dense_large<data_T, res_T, CONFIG_T>(tmpdata,tmpres,weights,biases);
+ res_T pOStatus = 0;
+ res[0].write(pOStatus);
+ for(int i0 = 0; i0 < CONFIG_T::n_out; i0++) {
+#pragma HLS UNROLL
+ res_T pTmp = tmpres[i0];
+
+         res[i0+1].write(pTmp);
+        }
+ pX = 0;
+     }
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_large_stream_me(
+      hls::stream<data_T> &data,
+      hls::stream<res_T> &res,
+      typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+      typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+
+      static data_T tmpdata[CONFIG_T::n_in];
+#pragma HLS ARRAY_PARTITION variable=&tmpdata complete
+
+ DataPrepare: for(int i_in = 0; i_in < CONFIG_T::n_in; i_in++) {
+        if (CONFIG_T::n_in > 1) {
+#pragma HLS PIPELINE
+ }
+#pragma HLS UNROLL
+ tmpdata[i_in] = data.read();
+    }
+
+       res_T tmpres[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=&tmpres complete
+ dense_large<data_T,res_T, CONFIG_T>(tmpdata,tmpres,weights,biases);
+
+  ResWrite: for(unsigned i_out = 0; i_out < CONFIG_T::n_out; i_out++) {
+        if (CONFIG_T::n_out > 1) {
+#pragma HLS PIPELINE
+ }
+#pragma HLS UNROLL
+ res.write(tmpres[i_out]);
+    }
+
+}
+
+
+
+}
+# 8 "firmware/nnet_utils/nnet_dense.h" 2
 
 
 
@@ -60292,8 +60667,7 @@ void dense(
 }
 
 }
-# 24 "firmware/nnet_utils/nnet_batchnorm.h" 2
-
+# 25 "firmware/nnet_utils/nnet_batchnorm.h" 2
 
 
 
@@ -60432,7 +60806,7 @@ void normalize_ternary_tanh(data_T data[CONFIG_T::n_in], ap_int<2> res[CONFIG_T:
 }
 
 }
-# 13 "firmware/parameters.h" 2
+# 12 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_batchnorm_stream.h" 1
 # 28 "firmware/nnet_utils/nnet_batchnorm_stream.h"
 namespace nnet {
@@ -60440,6 +60814,36 @@ namespace nnet {
 
 
 
+
+template<class data_T, class res_T, typename CONFIG_T>
+void normalize_me(
+    hls::stream<data_T> &data,
+    hls::stream<res_T> &res,
+    typename CONFIG_T::scale_t scale[CONFIG_T::n_in],
+    typename CONFIG_T::bias_t bias[CONFIG_T::n_in]
+) {
+#pragma HLS ARRAY_PARTITION variable=&scale complete
+#pragma HLS ARRAY_PARTITION variable=&bias complete
+
+ constexpr unsigned multiplier_limit = ((CONFIG_T::n_in + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+    constexpr unsigned ii = CONFIG_T::n_in / multiplier_limit;
+    CONFIG_T::template product<data_T, typename CONFIG_T::scale_t,res_T>::limit(multiplier_limit);
+
+    BatchNormLoop: for (int i = 0; i < CONFIG_T::n_in; i++) {
+#pragma HLS PIPELINE II=1
+
+ data_T in_data = data.read();
+
+        int norm_index;
+        if (CONFIG_T::n_filt==-1 ) {
+            norm_index = i;
+        } else {
+            norm_index = i % CONFIG_T::n_filt;
+        }
+        res_T out_data = product_dense<data_T, typename CONFIG_T::scale_t,res_T>(in_data, scale[norm_index]) + bias[norm_index];
+        res.write(out_data);
+    }
+}
 
 template<class data_T, class res_T, typename CONFIG_T>
 void normalize(
@@ -60540,7 +60944,7 @@ void normalize_ternary_tanh(
 }
 
 }
-# 14 "firmware/parameters.h" 2
+# 13 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_conv2d.h" 1
 # 24 "firmware/nnet_utils/nnet_conv2d.h"
 # 1 "firmware/nnet_utils/nnet_conv2d_latency.h" 1
@@ -60551,8 +60955,7 @@ void normalize_ternary_tanh(
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-# 5 "firmware/nnet_utils/nnet_conv2d_latency.h" 2
-
+# 6 "firmware/nnet_utils/nnet_conv2d_latency.h" 2
 
 namespace nnet {
 
@@ -60932,8 +61335,7 @@ void pointwise_conv_2d_cl(
 }
 
 }
-# 24 "firmware/nnet_utils/nnet_conv2d.h" 2
-
+# 25 "firmware/nnet_utils/nnet_conv2d.h" 2
 # 1 "firmware/nnet_utils/nnet_conv2d_resource.h" 1
 
 
@@ -61091,18 +61493,20 @@ void im2col_2d_cl(
     const int col)
 {
     int index = 0;
-    for (int kernel_row = 0; kernel_row < CONFIG_T::filt_height; kernel_row++) {
+    for (int channel = CONFIG_T::n_chan; channel--; data++) {
 #pragma HLS UNROLL
- int input_row = -CONFIG_T::pad_top + kernel_row * CONFIG_T::dilation_height + row * CONFIG_T::stride_height;
-        for (int kernel_col = 0; kernel_col < CONFIG_T::filt_width; kernel_col++) {
-            for (int channel = 0; channel < CONFIG_T::n_chan; channel++) {
+ for (int kernel_row = 0; kernel_row < CONFIG_T::filt_height; kernel_row++) {
+            int input_row = -CONFIG_T::pad_top + kernel_row * CONFIG_T::dilation_height + row * CONFIG_T::stride_height;
+            for (int kernel_col = 0; kernel_col < CONFIG_T::filt_width; kernel_col++) {
                 if (input_row < 0 || input_row >= CONFIG_T::in_height) {
                     data_col[index++] = 0;
                 } else {
                     int input_col = -CONFIG_T::pad_left + kernel_col * CONFIG_T::dilation_width + col * CONFIG_T::stride_width;
                     if (input_col >= 0 && input_col < CONFIG_T::in_width) {
-                        data_col[index++] = data[input_row * CONFIG_T::in_width * CONFIG_T::n_chan + input_col * CONFIG_T::n_chan + channel];
+
+                        data_col[index++] = data[input_row * CONFIG_T::in_width * CONFIG_T::n_chan + input_col * CONFIG_T::n_chan];
                     } else {
+
                         data_col[index++] = 0;
                     }
                 }
@@ -61144,19 +61548,18 @@ void conv_2d_resource_cl(
             FiltLoop:
             for (int k = 0; k < CONFIG_T::n_filt; k++) {
                 res[i * CONFIG_T::out_width * CONFIG_T::n_filt + j * CONFIG_T::n_filt + k] = res_col[k];
+
             }
         }
     }
 }
 
 }
-# 25 "firmware/nnet_utils/nnet_conv2d.h" 2
-
+# 26 "firmware/nnet_utils/nnet_conv2d.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
 # 41 "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-# 26 "firmware/nnet_utils/nnet_conv2d.h" 2
-
+# 27 "firmware/nnet_utils/nnet_conv2d.h" 2
 
 namespace nnet {
 
@@ -61220,7 +61623,7 @@ void conv_2d_cl(
 }
 
 }
-# 15 "firmware/parameters.h" 2
+# 14 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_conv2d_stream.h" 1
 
 
@@ -61284,8 +61687,7 @@ class ap_shift_reg
   protected:
     __SHIFT_T__ Array[__SHIFT_DEPTH__] ;
 };
-# 4 "firmware/nnet_utils/nnet_conv2d_stream.h" 2
-
+# 5 "firmware/nnet_utils/nnet_conv2d_stream.h" 2
 
 # 1 "firmware/nnet_utils/nnet_conv_stream.h" 1
 
@@ -61683,8 +62085,7 @@ _ssdm_SpecConstant(&lShiftX);
 }
 
 }
-# 6 "firmware/nnet_utils/nnet_conv2d_stream.h" 2
-
+# 7 "firmware/nnet_utils/nnet_conv2d_stream.h" 2
 
 
 namespace nnet {
@@ -61830,12 +62231,12 @@ void conv_2d_large_cl_nopad_pad_me(
 #pragma HLS ARRAY_RESHAPE variable=&tmpdata complete
 
  static data_T layer_in[CONFIG_T::filt_height*CONFIG_T::filt_width*CONFIG_T::n_chan];
-#pragma HLS ARRAY_RESHAPE variable=&layer_in complete
 
 
 
 
- res_T layer_out[CONFIG_T::n_filt];
+
+    res_T layer_out[CONFIG_T::n_filt];
 #pragma HLS ARRAY_RESHAPE variable=&layer_out complete dim=0
 
  res_T res_pack;
@@ -61876,7 +62277,7 @@ _ssdm_SpecConstant(&lShiftY);
  if (CONFIG_T::strategy == nnet::latency) {
     dense_latency<data_T,res_T, typename CONFIG_T::mult_config>(layer_in, layer_out, weights, biases);
    } else {
-    dense_resource<data_T,res_T, typename CONFIG_T::mult_config>(layer_in, layer_out, weights, biases);
+    dense_large<data_T,res_T, typename CONFIG_T::mult_config>(layer_in, layer_out, weights, biases);
    }
 
 
@@ -62078,7 +62479,7 @@ void conv_2d_cl_me(
 }
 
 }
-# 16 "firmware/parameters.h" 2
+# 15 "firmware/parameters.h" 2
 
 # 1 "firmware/nnet_utils/nnet_dense_compressed.h" 1
 # 28 "firmware/nnet_utils/nnet_dense_compressed.h"
@@ -62162,7 +62563,7 @@ void dense_compressed(
 }
 
 }
-# 18 "firmware/parameters.h" 2
+# 17 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_dense_stream.h" 1
 
 
@@ -62193,8 +62594,7 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 8 "firmware/nnet_utils/nnet_dense_stream.h" 2
-
+# 9 "firmware/nnet_utils/nnet_dense_stream.h" 2
 
 namespace nnet {
 
@@ -62255,7 +62655,7 @@ void dense(
 }
 
 }
-# 19 "firmware/parameters.h" 2
+# 18 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_image.h" 1
 
 
@@ -62297,7 +62697,7 @@ void resize_nearest(
 }
 
 }
-# 20 "firmware/parameters.h" 2
+# 19 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_image_stream.h" 1
 
 
@@ -62308,12 +62708,47 @@ void resize_nearest(
 namespace nnet {
 
 template<class data_T, typename CONFIG_T>
-void resize_nearest(
+void resize_nearest_me(
     hls::stream<data_T> &image,
     hls::stream<data_T> &resized
 ) {
     ((CONFIG_T::new_height % CONFIG_T::height == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_height % CONFIG_T::height == 0", "firmware/nnet_utils/nnet_image_stream.h", 14, __PRETTY_FUNCTION__));
     ((CONFIG_T::new_width % CONFIG_T::width == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_width % CONFIG_T::width == 0", "firmware/nnet_utils/nnet_image_stream.h", 15, __PRETTY_FUNCTION__));
+    constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
+    constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
+    constexpr unsigned ii = ratio_height * ratio_width;
+ data_T in_data[CONFIG_T::n_chan];
+    ResizeImage: for (unsigned i = 0; i < CONFIG_T::height * CONFIG_T::width; i++) {
+#pragma HLS PIPELINE II=ii
+
+ for(unsigned l = 0;l < CONFIG_T::n_chan;l++) {
+   in_data[l] = image.read();
+  }
+
+        ResizeNew: for (unsigned j = 0; j < ratio_height * ratio_width; j++) {
+#pragma HLS UNROLL
+
+ data_T out_data;
+#pragma HLS DATA_PACK variable=&out_data
+
+ ResizeChan: for (unsigned k = 0; k < CONFIG_T::n_chan; k++) {
+#pragma HLS UNROLL
+ out_data = in_data[k];
+    resized.write(out_data);
+            }
+
+
+        }
+    }
+}
+
+template<class data_T, typename CONFIG_T>
+void resize_nearest(
+    hls::stream<data_T> &image,
+    hls::stream<data_T> &resized
+) {
+    ((CONFIG_T::new_height % CONFIG_T::height == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_height % CONFIG_T::height == 0", "firmware/nnet_utils/nnet_image_stream.h", 49, __PRETTY_FUNCTION__));
+    ((CONFIG_T::new_width % CONFIG_T::width == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_width % CONFIG_T::width == 0", "firmware/nnet_utils/nnet_image_stream.h", 50, __PRETTY_FUNCTION__));
     constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
     constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
     constexpr unsigned ii = ratio_height * ratio_width;
@@ -62339,140 +62774,8 @@ void resize_nearest(
     }
 }
 
-
-template<class data_T, typename CONFIG_T>
-void resize_nearest_hls4ml(
-    hls::stream<data_T> &image,
-    hls::stream<data_T> &resized
-) {
-    ((CONFIG_T::new_height % CONFIG_T::height == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_height % CONFIG_T::height == 0", "firmware/nnet_utils/nnet_image_stream.h", 47, __PRETTY_FUNCTION__));
-    ((CONFIG_T::new_width % CONFIG_T::width == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_width % CONFIG_T::width == 0", "firmware/nnet_utils/nnet_image_stream.h", 48, __PRETTY_FUNCTION__));
-    constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
-    constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
-    constexpr unsigned ii = ratio_height * ratio_width;
- data_T in_data[CONFIG_T::n_chan];
-    ResizeImage: for (unsigned i = 0; i < CONFIG_T::height * CONFIG_T::width; i++) {
-#pragma HLS PIPELINE II=ii
-
- for(unsigned l = 0;l < CONFIG_T::n_chan;l++) {
-#pragma HLS UNROLL
- in_data[l] = image.read();
-  }
-
-        ResizeNew: for (unsigned j = 0; j < ratio_height * ratio_width; j++) {
-#pragma HLS UNROLL
-
- data_T out_data;
-
-            ResizeChan: for (unsigned k = 0; k < CONFIG_T::n_chan; k++) {
-#pragma HLS UNROLL
- out_data = in_data[k];
-    resized.write(out_data);
-            }
-
-
-        }
-    }
 }
-
-
-template<class data_T, typename CONFIG_T>
-void resize_nearest_chi_rui(
-    hls::stream<data_T> &image,
-    hls::stream<data_T> &resized
-) {
- ((CONFIG_T::new_height % CONFIG_T::height == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_height % CONFIG_T::height == 0", "firmware/nnet_utils/nnet_image_stream.h", 83, __PRETTY_FUNCTION__));
- ((CONFIG_T::new_width % CONFIG_T::width == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_width % CONFIG_T::width == 0", "firmware/nnet_utils/nnet_image_stream.h", 84, __PRETTY_FUNCTION__));
- constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
- constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
-
-
- ImageHeight: for (unsigned h = 0; h < CONFIG_T::height; h++) {
-#pragma HLS PIPELINE
-
- data_T data_in_row[CONFIG_T::width];
-
-  ImageWidth: for (unsigned i = 0; i < CONFIG_T::width; i++) {
-#pragma HLS UNROLL
-
- data_T in_data = image.read();
-
-   ImageChan: for (unsigned j = 0; j < CONFIG_T::n_chan; j++) {
-#pragma HLS UNROLL
-
- data_in_row[i][j] = in_data[j];
-   }
-  }
-
-  ResizeHeight: for (unsigned i = 0; i <ratio_height; i++) {
-#pragma HLS UNROLL
-
- ImageWidth2: for (unsigned l = 0; l < CONFIG_T::width; l++) {
-#pragma HLS UNROLL
-
- ResizeWidth: for (unsigned j = 0; j < ratio_width; j++) {
-#pragma HLS UNROLL
-
- data_T out_data;
-#pragma HLS DATA_PACK variable=&out_data
-
- ResizeChan: for (unsigned k = 0; k < CONFIG_T::n_chan; k++) {
-#pragma HLS UNROLL
-
- out_data[k] = data_in_row[l][k];
-     }
-
-     resized.write(out_data);
-    }
-   }
-  }
- }
-}
-
-
-template<class data_T, typename CONFIG_T>
-void resize_nearest_v2(
-    hls::stream<data_T> &image,
-    hls::stream<data_T> &resized
-) {
- ((CONFIG_T::new_height % CONFIG_T::height == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_height % CONFIG_T::height == 0", "firmware/nnet_utils/nnet_image_stream.h", 137, __PRETTY_FUNCTION__));
- ((CONFIG_T::new_width % CONFIG_T::width == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_width % CONFIG_T::width == 0", "firmware/nnet_utils/nnet_image_stream.h", 138, __PRETTY_FUNCTION__));
- constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
- constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
- constexpr unsigned ii = ratio_height * ratio_width;
-
- int current_chan = 0;int current_width = 0;
- int current_chan2 = 0;int current_width2 = 0;
-
- data_T data_in_row[CONFIG_T::width][CONFIG_T::n_chan];
-
- ImageHeight: for (unsigned h = 0; h < CONFIG_T::height; h++) {
-#pragma HLS PIPELINE II=ii
-
- ReadData: for(unsigned i = 0; i < CONFIG_T::n_chan*CONFIG_T::width ; i++){
-#pragma HLS UNROLL
- current_chan = i % CONFIG_T::n_chan;
-   current_width = i / CONFIG_T::n_chan;
-   data_in_row[current_width][current_chan] = image.read();
-  }
-
-  RatioHeight: for (unsigned i = 0; i <ratio_height; i++) {
-#pragma HLS UNROLL
- ImageWidth: for (unsigned k = 0; k < CONFIG_T::n_chan*ratio_width*CONFIG_T::width; k++) {
-#pragma HLS UNROLL
- current_chan2 = k % CONFIG_T::n_chan;
-    current_width2 = k / (CONFIG_T::n_chan*ratio_width);
-    data_T out_data = data_in_row[current_width2][current_chan2];
-    resized.write(out_data);
-   }
-  }
- }
-}
-
-
-
-}
-# 21 "firmware/parameters.h" 2
+# 20 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_padding.h" 1
 
 
@@ -62620,7 +62923,7 @@ void zeropad2d_cl(
 }
 
 }
-# 22 "firmware/parameters.h" 2
+# 21 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_padding_stream.h" 1
 
 
@@ -62761,7 +63064,7 @@ void zeropad2d_cl_me(
 
 
 }
-# 23 "firmware/parameters.h" 2
+# 22 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_pooling.h" 1
 
 
@@ -63059,7 +63362,7 @@ void pooling2d_cf(data_T data[CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_
 }
 
 }
-# 24 "firmware/parameters.h" 2
+# 23 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_pooling_stream.h" 1
 
 
@@ -63934,8 +64237,7 @@ struct __promote<float> { typedef float type; };
 
 template<>
 struct __promote<half> { typedef half type; };
-# 4 "firmware/nnet_utils/nnet_pooling_stream.h" 2
-
+# 5 "firmware/nnet_utils/nnet_pooling_stream.h" 2
 
 
 
@@ -63950,13 +64252,14 @@ namespace nnet {
 
 template <class T, int N, class CONFIG_T>
 T reduce_pool(T x[N]) {
-#pragma HLS INLINE
- if (CONFIG_T::pool_op == Max) {
+
+    if (CONFIG_T::pool_op == Max) {
         Op_max<T> op_max;
         return reduce<T, N, Op_max<T>>(x, op_max);
     } else {
         Op_add<T> op_add;
         T sum = reduce<T, N, Op_add<T>>(x, op_add);
+
         return sum / N;
     }
 }
@@ -64060,8 +64363,8 @@ void pooling2d_encoded_cl(
     hls::stream<data_T> &data,
     hls::stream<res_T> &res
 ) {
-    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 129, __PRETTY_FUNCTION__));
-    ((CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 130, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 130, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 131, __PRETTY_FUNCTION__));
 
     res_T res_pack;
 #pragma HLS DATA_PACK variable=&res_pack
@@ -64095,14 +64398,14 @@ void compute_pool_buffer_2d(
     ap_shift_reg<typename data_T::value_type, CONFIG_T::in_width> line_buffer[(CONFIG_T::pool_height - 1 > 1 ? CONFIG_T::pool_height - 1 : 1)][CONFIG_T::n_filt],
     hls::stream<res_T> &res
 ) {
-#pragma HLS INLINE
- const static int lShiftX = CONFIG_T::pool_width - 1;
+
+    const static int lShiftX = CONFIG_T::pool_width - 1;
 _ssdm_SpecConstant(&lShiftX);
-# 165 "firmware/nnet_utils/nnet_pooling_stream.h"
+# 166 "firmware/nnet_utils/nnet_pooling_stream.h"
 
     const static int lShiftY = CONFIG_T::pool_height - 1;
 _ssdm_SpecConstant(&lShiftY);
-# 166 "firmware/nnet_utils/nnet_pooling_stream.h"
+# 167 "firmware/nnet_utils/nnet_pooling_stream.h"
 
     static int pX = 0;
     static int pY = 0;
@@ -64164,8 +64467,8 @@ void pooling2d_buffer_cl(
     hls::stream<data_T> &data,
     hls::stream<res_T> &res
 ) {
-    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 227, __PRETTY_FUNCTION__));
-    ((CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 228, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 228, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 229, __PRETTY_FUNCTION__));
 
     static ap_shift_reg<typename data_T::value_type, CONFIG_T::in_width> line_buffer[(CONFIG_T::pool_height - 1 > 1 ? CONFIG_T::pool_height - 1 : 1)][CONFIG_T::n_filt];
 #pragma HLS ARRAY_PARTITION variable = &line_buffer complete dim = 2
@@ -64180,26 +64483,225 @@ void pooling2d_buffer_cl(
     }
 }
 
+
 template<class data_T, class res_T, typename CONFIG_T>
-void pooling2d_cl(
-    hls::stream<data_T> &data,
-    hls::stream<res_T> &res
-) {
-#pragma HLS inline region
- switch(CONFIG_T::implementation){
-        case conv_implementation::linebuffer:
-            pooling2d_buffer_cl<data_T, res_T, CONFIG_T>(data, res);
-            break;
-        case conv_implementation::encoded:
-            pooling2d_encoded_cl<data_T, res_T, CONFIG_T>(data, res);
-            break;
+  void pooling2d_large_cl_nopad_pad_me(
+      hls::stream<data_T> &data,
+      hls::stream<res_T> &res) {
+
+
+
+    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 252, __PRETTY_FUNCTION__));
+    std::cout<< "USE POOL2D LARGE" << std::endl;
+
+
+    const static int rowsize = (CONFIG_T::in_width+CONFIG_T::pad_left+CONFIG_T::pad_right);
+_ssdm_SpecConstant(&rowsize);
+# 256 "firmware/nnet_utils/nnet_pooling_stream.h"
+
+
+    static ap_shift_reg<data_T, rowsize> layer_in_row[(CONFIG_T::filt_height)-1][CONFIG_T::n_filt];
+#pragma HLS ARRAY_RESHAPE variable=&layer_in_row complete dim=2
+
+ static data_T layer_in[CONFIG_T::pool_height*CONFIG_T::pool_width*CONFIG_T::n_filt];
+#pragma HLS ARRAY_RESHAPE variable=&layer_in complete dim=0
+
+ const static int lShiftX = CONFIG_T::pool_width - 1;
+_ssdm_SpecConstant(&lShiftX);
+# 264 "firmware/nnet_utils/nnet_pooling_stream.h"
+
+    const static int lShiftY = CONFIG_T::pool_height - 1;
+_ssdm_SpecConstant(&lShiftY);
+# 265 "firmware/nnet_utils/nnet_pooling_stream.h"
+
+    static int pX = 0;
+    static int pY = 0;
+    static int sX = 0;
+    static int sY = 0;
+
+    data_T tmpdata[CONFIG_T::n_chan];
+
+
+    for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height * CONFIG_T::in_width; i_ih++) {
+
+
+
+      data_T pTmp;
+      for(int i0 = 0; i0 < CONFIG_T::n_chan; i0++) {
+#pragma HLS UNROLL
+ pTmp = data.read();
+         tmpdata[i0] = pTmp;
+      }
+
+
+
+      nnet::cnnshift_arr<data_T,res_T,CONFIG_T>(tmpdata,layer_in_row,layer_in);
+      if ((sX - lShiftX) == 0 && (sY - lShiftY) == 0 && pY > lShiftY - 1 && pX > lShiftX - 1) {
+
+          for(unsigned i1 = 0; i1 < CONFIG_T::n_filt; i1++) {
+
+
+               data_T pool[CONFIG_T::pool_height * CONFIG_T::pool_width];
+#pragma HLS ARRAY_RESHAPE variable=&pool complete dim=0
+
+ for(unsigned i2 = 0; i2 < CONFIG_T::pool_height*CONFIG_T::pool_width; i2++) {
+#pragma HLS UNROLL
+ pool[i2] = layer_in[i2 * CONFIG_T::n_filt + i1];
+               }
+
+                data_T pool_res = pool[0];
+                for(int i = 1; i < CONFIG_T::pool_height*CONFIG_T::pool_width; i++){
+                    pool_res = pool[i] > pool_res ? pool[i] : pool_res;
+                }
+
+      res.write(pool_res);
+
+           }
+
+    }
+
+    if (pX + 1 == CONFIG_T::in_width)
+    {
+        pX = 0;
+        sX = 0;
+        if (pY + 1 == CONFIG_T::in_height) {
+            pY = 0;
+            sY = 0;
+        } else {
+            pY = pY + 1;
+
+            sY = ((sY - lShiftY) == 0) ? sY - CONFIG_T::stride_height + 1 : sY + 1;
         }
+    } else {
+        pX = pX + 1;
+
+        sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width + 1 : sX + 1;
+    }
+
+
+  }
 }
 
 
 
 
 
+template<class data_T, class res_T, typename CONFIG_T>
+  void pooling2d_large_cl_nopad_pad(
+      hls::stream<data_T> &data,
+      hls::stream<res_T> &res) {
+
+
+
+    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 345, __PRETTY_FUNCTION__));
+    std::cout<< "USE POOL2D LARGE" << std::endl;
+
+
+    const static int rowsize = (CONFIG_T::in_width+CONFIG_T::pad_left+CONFIG_T::pad_right);
+_ssdm_SpecConstant(&rowsize);
+# 349 "firmware/nnet_utils/nnet_pooling_stream.h"
+
+
+    static ap_shift_reg<typename data_T::value_type, rowsize> layer_in_row[(CONFIG_T::filt_height)-1][CONFIG_T::n_filt];
+#pragma HLS ARRAY_RESHAPE variable=&layer_in_row complete dim=2
+
+ static typename data_T::value_type layer_in[CONFIG_T::pool_height*CONFIG_T::pool_width*CONFIG_T::n_filt];
+#pragma HLS ARRAY_RESHAPE variable=&layer_in complete dim=0
+
+ const static int lShiftX = CONFIG_T::pool_width - 1;
+_ssdm_SpecConstant(&lShiftX);
+# 357 "firmware/nnet_utils/nnet_pooling_stream.h"
+
+    const static int lShiftY = CONFIG_T::pool_height - 1;
+_ssdm_SpecConstant(&lShiftY);
+# 358 "firmware/nnet_utils/nnet_pooling_stream.h"
+
+    static int pX = 0;
+    static int pY = 0;
+    static int sX = 0;
+    static int sY = 0;
+
+    typename data_T::value_type tmpdata[CONFIG_T::n_chan];
+#pragma HLS STREAM variable=&tmpdata depth=1 dim=1
+
+ for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height * CONFIG_T::in_width; i_ih++) {
+
+
+
+      data_T pTmp = data.read();
+      for(int i0 = 0; i0 < CONFIG_T::n_chan; i0++) {
+#pragma HLS UNROLL
+ tmpdata[i0] = pTmp[i0];
+      }
+
+
+
+      nnet::cnnshift_arr<typename data_T::value_type, typename res_T::value_type,CONFIG_T>(tmpdata,layer_in_row,layer_in);
+      if ((sX - lShiftX) == 0 && (sY - lShiftY) == 0 && pY > lShiftY - 1 && pX > lShiftX - 1) {
+
+          res_T out;
+          for(unsigned i1 = 0; i1 < CONFIG_T::n_filt; i1++) {
+
+
+               typename data_T::value_type pool[CONFIG_T::pool_height * CONFIG_T::pool_width];
+#pragma HLS ARRAY_RESHAPE variable=&pool complete dim=0
+
+ for(unsigned i2 = 0; i2 < CONFIG_T::pool_height*CONFIG_T::pool_width; i2++) {
+#pragma HLS UNROLL
+ pool[i2] = layer_in[i2 * CONFIG_T::n_filt + i1];
+               }
+
+                typename data_T::value_type pool_res = pool[0];
+                for(int i = 1; i < CONFIG_T::pool_height*CONFIG_T::pool_width; i++){
+                    pool_res = pool[i] > pool_res ? pool[i] : pool_res;
+                }
+
+               out[i1] = pool_res;
+
+           }
+           res.write(out);
+    }
+
+    if (pX + 1 == CONFIG_T::in_width)
+    {
+        pX = 0;
+        sX = 0;
+        if (pY + 1 == CONFIG_T::in_height) {
+            pY = 0;
+            sY = 0;
+        } else {
+            pY = pY + 1;
+
+            sY = ((sY - lShiftY) == 0) ? sY - CONFIG_T::stride_height + 1 : sY + 1;
+        }
+    } else {
+        pX = pX + 1;
+
+        sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width + 1 : sX + 1;
+    }
+
+
+  }
+}
+
+
+template<class data_T, class res_T, typename CONFIG_T>
+void pooling2d_cl(
+    hls::stream<data_T> &data,
+    hls::stream<res_T> &res
+) {
+#pragma HLS inline off
+ switch(CONFIG_T::implementation){
+        case conv_implementation::linebuffer:
+
+            pooling2d_large_cl_nopad_pad_me<data_T, res_T, CONFIG_T>(data, res);
+            break;
+        case conv_implementation::encoded:
+            pooling2d_encoded_cl<data_T, res_T, CONFIG_T>(data, res);
+            break;
+        }
+}
+# 453 "firmware/nnet_utils/nnet_pooling_stream.h"
 template<class data_T, class res_T, typename CONFIG_T>
 void compute_pool_encoded_1d(
     const unsigned w_idx,
@@ -64280,8 +64782,8 @@ void pooling1d_encoded_cl(
     hls::stream<data_T> &data,
     hls::stream<res_T> &res
 ) {
-    ((CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 343, __PRETTY_FUNCTION__));
-    ((CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 344, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 533, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 534, __PRETTY_FUNCTION__));
 
     res_T res_pack;
 #pragma HLS DATA_PACK variable=&res_pack
@@ -64315,7 +64817,7 @@ void compute_pool_buffer_1d(
 #pragma HLS INLINE
  const static int lShiftX = CONFIG_T::pool_width - 1;
 _ssdm_SpecConstant(&lShiftX);
-# 376 "firmware/nnet_utils/nnet_pooling_stream.h"
+# 566 "firmware/nnet_utils/nnet_pooling_stream.h"
 
 
     static int pX = 0;
@@ -64369,7 +64871,7 @@ void pooling1d_buffer_cl(
     hls::stream<data_T> &data,
     hls::stream<res_T> &res
 ) {
-    ((CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 429, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 619, __PRETTY_FUNCTION__));
 
     ReadInputWidth: for (unsigned i_iw = 0; i_iw < CONFIG_T::n_in; i_iw++) {
 #pragma HLS LOOP_FLATTEN
@@ -64438,8 +64940,8 @@ void global_pooling2d_cl(
     hls::stream<data_T> &data,
     hls::stream<res_T> &res
 ) {
-    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 498, __PRETTY_FUNCTION__));
-    ((CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 499, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 688, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 689, __PRETTY_FUNCTION__));
 
     typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt];
 #pragma HLS ARRAY_PARTITION variable=&data_window complete
@@ -64494,8 +64996,8 @@ void global_pooling1d_cl(
     hls::stream<data_T> &data,
     hls::stream<res_T> &res
 ) {
-    ((CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 554, __PRETTY_FUNCTION__));
-    ((CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 555, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0", "firmware/nnet_utils/nnet_pooling_stream.h", 744, __PRETTY_FUNCTION__));
+    ((CONFIG_T::pool_width == CONFIG_T::stride_width) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::pool_width == CONFIG_T::stride_width", "firmware/nnet_utils/nnet_pooling_stream.h", 745, __PRETTY_FUNCTION__));
 
     typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt];
 #pragma HLS ARRAY_PARTITION variable=&data_window complete
@@ -64544,46 +65046,47 @@ void global_pooling1d_cl(
 }
 
 }
-# 25 "firmware/parameters.h" 2
+# 24 "firmware/parameters.h" 2
+
+
+# 1 "firmware/weights/s3.h" 1
+# 12 "firmware/weights/s3.h"
+model_default_t s3[4] = {1,1,1,1};
+# 27 "firmware/parameters.h" 2
+# 1 "firmware/weights/b3.h" 1
+# 12 "firmware/weights/b3.h"
+model_default_t b3[4] = {1,2,3,4};
+# 28 "firmware/parameters.h" 2
 
 
 
-
-
-
-
-struct config2 : nnet::resize_config {
-    static const unsigned height = 56;
-    static const unsigned width = 11;
-    static const unsigned n_chan = 4;
-    static const unsigned new_height = 56;
-    static const unsigned new_width = 55;
+struct config3 : nnet::batchnorm_config {
+    static const unsigned n_in = 56*55*4;
+    static const unsigned n_filt = 4;
+    static const unsigned io_type = nnet::io_stream;
+    static const unsigned reuse_factor = 100000;
+    static const bool store_weights_in_bram = false;
+    typedef model_default_t bias_t;
+    typedef model_default_t scale_t;
+    template<class x_T, class y_T, class res_T>
+    using product = nnet::product::mult<x_T, y_T, res_T>;
 };
 # 23 "firmware/myproject.cpp" 2
 
 
-
-
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> &em_barrel,
+    hls::stream<result_t> &layer55_out,
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
 
 
-#pragma HLS INTERFACE axis port=&input_1,&layer2_out
-
-
- const_size_in_1 = 56*11*4;
-    const_size_out_1 = 56*55*4;
-
-
-
-
-
-
+#pragma HLS INTERFACE axis port=&em_barrel,&layer55_out
 #pragma HLS DATAFLOW
- nnet::resize_nearest_v2<input_t, config2>(input_1, layer2_out);
 
+ const_size_in_1 = 56*55*4;
+    const_size_out_1 = 56*55*4;
+# 54 "firmware/myproject.cpp"
+    nnet::normalize_me<input_t, result_t, config3>(em_barrel, layer55_out, s3, b3);
 }

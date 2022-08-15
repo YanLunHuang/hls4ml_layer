@@ -3,13 +3,13 @@
 ================================================================
 == Vivado HLS Report for 'Block_proc'
 ================================================================
-* Date:           Mon Aug 15 12:57:55 2022
+* Date:           Mon Aug 15 15:02:15 2022
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
 * Solution:       solution1
-* Product family: zynquplus
-* Target device:  xczu9eg-ffvb1156-2-e
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
 
 
 ================================================================
@@ -75,8 +75,8 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %const_size_in_1, i16 2464)" [firmware/myproject.cpp:38]   --->   Operation 2 'write' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %const_size_out_1, i16 12320)" [firmware/myproject.cpp:39]   --->   Operation 3 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %const_size_in_1, i16 12320)" [firmware/myproject.cpp:36]   --->   Operation 2 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %const_size_out_1, i16 12320)" [firmware/myproject.cpp:37]   --->   Operation 3 'write' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 4 'ret' <Predicate = true> <Delay = 0.00>
 
 
@@ -99,8 +99,8 @@ Port [ const_size_out_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; sta
 
 <LifeTime>
 <method=bitvector/>
-write_ln38 (write) [ 00]
-write_ln39 (write) [ 00]
+write_ln36 (write) [ 00]
+write_ln37 (write) [ 00]
 ret_ln0    (ret  ) [ 00]
 </LifeTime>
 
@@ -143,55 +143,46 @@ ret_ln0    (ret  ) [ 00]
 </bind>
 </comp>
 
-<comp id="8" class="1001" name="const_8">
+<comp id="8" class="1004" name="write_ln36_write_fu_8">
 <pin_list>
-<pin id="9" dir="1" index="0" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name=""/></StgValue>
-</bind>
-</comp>
-
-<comp id="10" class="1004" name="write_ln38_write_fu_10">
-<pin_list>
-<pin id="11" dir="0" index="0" bw="0" slack="0"/>
-<pin id="12" dir="0" index="1" bw="16" slack="0"/>
-<pin id="13" dir="0" index="2" bw="13" slack="0"/>
-<pin id="14" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="9" dir="0" index="0" bw="0" slack="0"/>
+<pin id="10" dir="0" index="1" bw="16" slack="0"/>
+<pin id="11" dir="0" index="2" bw="15" slack="0"/>
+<pin id="12" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln38/1 "/>
+<opset="write_ln36/1 "/>
 </bind>
 </comp>
 
-<comp id="18" class="1004" name="write_ln39_write_fu_18">
+<comp id="16" class="1004" name="write_ln37_write_fu_16">
 <pin_list>
-<pin id="19" dir="0" index="0" bw="0" slack="0"/>
-<pin id="20" dir="0" index="1" bw="16" slack="0"/>
-<pin id="21" dir="0" index="2" bw="15" slack="0"/>
-<pin id="22" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="17" dir="0" index="0" bw="0" slack="0"/>
+<pin id="18" dir="0" index="1" bw="16" slack="0"/>
+<pin id="19" dir="0" index="2" bw="15" slack="0"/>
+<pin id="20" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln39/1 "/>
+<opset="write_ln37/1 "/>
 </bind>
 </comp>
 
 </comp_list>
 
 <net_list>
-<net id="15"><net_src comp="4" pin="0"/><net_sink comp="10" pin=0"/></net>
+<net id="13"><net_src comp="4" pin="0"/><net_sink comp="8" pin=0"/></net>
 
-<net id="16"><net_src comp="0" pin="0"/><net_sink comp="10" pin=1"/></net>
+<net id="14"><net_src comp="0" pin="0"/><net_sink comp="8" pin=1"/></net>
 
-<net id="17"><net_src comp="6" pin="0"/><net_sink comp="10" pin=2"/></net>
+<net id="15"><net_src comp="6" pin="0"/><net_sink comp="8" pin=2"/></net>
 
-<net id="23"><net_src comp="4" pin="0"/><net_sink comp="18" pin=0"/></net>
+<net id="21"><net_src comp="4" pin="0"/><net_sink comp="16" pin=0"/></net>
 
-<net id="24"><net_src comp="2" pin="0"/><net_sink comp="18" pin=1"/></net>
+<net id="22"><net_src comp="2" pin="0"/><net_sink comp="16" pin=1"/></net>
 
-<net id="25"><net_src comp="8" pin="0"/><net_sink comp="18" pin=2"/></net>
+<net id="23"><net_src comp="6" pin="0"/><net_sink comp="16" pin=2"/></net>
 
 </net_list>
 
@@ -215,8 +206,8 @@ ret_ln0    (ret  ) [ 00]
 |----------|------------------------|
 | Operation|     Functional Unit    |
 |----------|------------------------|
-|   write  | write_ln38_write_fu_10 |
-|          | write_ln39_write_fu_18 |
+|   write  |  write_ln36_write_fu_8 |
+|          | write_ln37_write_fu_16 |
 |----------|------------------------|
 |   Total  |                        |
 |----------|------------------------|

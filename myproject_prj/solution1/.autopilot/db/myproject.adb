@@ -15,7 +15,7 @@
             <Obj class_id="5" tracking_level="0" version="0">
               <type>1</type>
               <id>1</id>
-              <name>input_1_V_V</name>
+              <name>em_barrel_V_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -24,11 +24,11 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>input_1.V.V</originalName>
+              <originalName>em_barrel.V.V</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>16</bitwidth>
+            <bitwidth>32</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>0</if_type>
@@ -43,7 +43,7 @@
             <Obj>
               <type>1</type>
               <id>2</id>
-              <name>layer2_out_V_V</name>
+              <name>layer55_out_V_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -52,11 +52,11 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>layer2_out.V.V</originalName>
+              <originalName>layer55_out.V.V</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>16</bitwidth>
+            <bitwidth>32</bitwidth>
           </Value>
           <direction>1</direction>
           <if_type>0</if_type>
@@ -167,16 +167,16 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>_ln47</name>
+              <name>_ln54</name>
               <fileName>firmware/myproject.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>47</lineNumber>
+              <lineNumber>54</lineNumber>
               <contextFuncName>myproject</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="11" tracking_level="0" version="0">
-                  <first>/home/YL_HUANG/8_12/resize_test</first>
+                  <first>/home/YL_HUANG/8_19/normalize_test</first>
                   <second class_id="12" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -185,13 +185,13 @@
                         <first>firmware/myproject.cpp</first>
                         <second>myproject</second>
                       </first>
-                      <second>47</second>
+                      <second>54</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0</rtlName>
+              <rtlName>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -217,16 +217,16 @@
             <Obj>
               <type>0</type>
               <id>15</id>
-              <name>_ln49</name>
+              <name>_ln55</name>
               <fileName>firmware/myproject.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>49</lineNumber>
+              <lineNumber>55</lineNumber>
               <contextFuncName>myproject</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/YL_HUANG/8_12/resize_test</first>
+                  <first>/home/YL_HUANG/8_19/normalize_test</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -235,7 +235,7 @@
                         <first>firmware/myproject.cpp</first>
                         <second>myproject</second>
                       </first>
-                      <second>49</second>
+                      <second>55</second>
                     </item>
                   </second>
                 </item>
@@ -291,7 +291,7 @@
             <Obj>
               <type>2</type>
               <id>21</id>
-              <name>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s</name>
+              <name>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -307,7 +307,7 @@
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:resize_nearest_v2&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;&gt;</content>
+          <content>&lt;constant:normalize_me&lt;ap_fixed,ap_fixed&lt;32,16,5,3,0&gt;,config3&gt;&gt;</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
@@ -448,26 +448,26 @@
             </item>
             <item class_id_reference="26" object_id="_25">
               <type>0</type>
-              <name>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0</name>
+              <name>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0</name>
               <ssdmobj_id>14</ssdmobj_id>
               <pins>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item class_id_reference="28" object_id="_26">
                   <port class_id_reference="29" object_id="_27">
-                    <name>image_V_V</name>
+                    <name>data_V_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
                   <inst class_id_reference="30" object_id="_28">
                     <type>0</type>
-                    <name>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0</name>
+                    <name>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0</name>
                     <ssdmobj_id>14</ssdmobj_id>
                   </inst>
                 </item>
                 <item class_id_reference="28" object_id="_29">
                   <port class_id_reference="29" object_id="_30">
-                    <name>resized_V_V</name>
+                    <name>res_V_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
@@ -650,17 +650,21 @@
           </second>
         </item>
         <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0 (resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s)</first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0 (normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s)</first>
           <second>
-            <count>2</count>
+            <count>3</count>
             <item_version>0</item_version>
             <item>
+              <first>DSP48E</first>
+              <second>4</second>
+            </item>
+            <item>
               <first>FF</first>
-              <second>815</second>
+              <second>55</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1658</second>
+              <second>204</second>
             </item>
           </second>
         </item>
@@ -687,7 +691,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>9</second>
+              <second>3</second>
             </item>
           </second>
         </item>
@@ -710,7 +714,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>9</second>
+              <second>3</second>
             </item>
           </second>
         </item>
@@ -807,6 +811,29 @@
           </second>
         </item>
         <item>
+          <first>ap_sync_normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
           <first>ap_sync_ready ( and ) </first>
           <second>
             <count>4</count>
@@ -830,30 +857,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sync_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count ( + ) </first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -871,12 +875,12 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>9</second>
+              <second>3</second>
             </item>
           </second>
         </item>
         <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count ( - ) </first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -894,12 +898,12 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>9</second>
+              <second>3</second>
             </item>
           </second>
         </item>
         <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_start ( and ) </first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_start ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -980,7 +984,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sync_reg_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready</first>
+          <first>ap_sync_reg_normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1003,7 +1007,7 @@
           </second>
         </item>
         <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count</first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1068,7 +1072,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sync_reg_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready</first>
+          <first>ap_sync_reg_normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1087,7 +1091,7 @@
           </second>
         </item>
         <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count</first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1117,7 +1121,7 @@
           </second>
         </item>
         <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0</first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1136,7 +1140,7 @@
           </second>
         </item>
         <item>
-          <first>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0 (resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s)</first>
+          <first>normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0 (normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1261,7 +1265,7 @@
         </second>
       </item>
       <item>
-        <first>grp_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s_fu_34</first>
+        <first>grp_normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s_fu_34</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
@@ -1332,7 +1336,7 @@
         </second>
       </item>
       <item>
-        <first>input_1_V_V</first>
+        <first>em_barrel_V_V</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -1347,7 +1351,7 @@
         </second>
       </item>
       <item>
-        <first>layer2_out_V_V</first>
+        <first>layer55_out_V_V</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

@@ -16,7 +16,6 @@ const sc_logic Block_proc::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic Block_proc::ap_const_logic_0 = sc_dt::Log_0;
 const sc_lv<1> Block_proc::ap_ST_fsm_state1 = "1";
 const sc_lv<32> Block_proc::ap_const_lv32_0 = "00000000000000000000000000000000";
-const sc_lv<16> Block_proc::ap_const_lv16_9A0 = "100110100000";
 const sc_lv<16> Block_proc::ap_const_lv16_3020 = "11000000100000";
 const bool Block_proc::ap_const_boolean_1 = true;
 
@@ -166,7 +165,7 @@ void Block_proc::thread_ap_ready() {
 }
 
 void Block_proc::thread_const_size_in_1() {
-    const_size_in_1 = ap_const_lv16_9A0;
+    const_size_in_1 = ap_const_lv16_3020;
 }
 
 void Block_proc::thread_const_size_in_1_ap_vld() {

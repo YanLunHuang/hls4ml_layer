@@ -46,7 +46,6 @@ struct Block_proc : public sc_module {
     static const sc_logic ap_const_logic_0;
     static const sc_lv<1> ap_ST_fsm_state1;
     static const sc_lv<32> ap_const_lv32_0;
-    static const sc_lv<16> ap_const_lv16_9A0;
     static const sc_lv<16> ap_const_lv16_3020;
     static const bool ap_const_boolean_1;
     // Thread declarations

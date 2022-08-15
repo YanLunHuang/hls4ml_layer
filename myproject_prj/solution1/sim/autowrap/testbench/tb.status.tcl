@@ -1,1 +1,1 @@
-set ::AESL_AUTOSIM::gTopFileName /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp
+set ::AESL_AUTOSIM::gTopFileName /home/YL_HUANG/8_19/normalize_test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp

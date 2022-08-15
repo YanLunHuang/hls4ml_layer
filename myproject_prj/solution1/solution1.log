@@ -4,7 +4,7 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
 INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
 INFO: [XFORM 203-1161] The maximum of name length is set into 60.
-INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
@@ -16,59 +16,1217 @@ WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical 
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
 WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
 WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:2
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:5
-WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 919 ; free virtual = 30021
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 919 ; free virtual = 30021
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 1112 ; free virtual = 21601
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 1112 ; free virtual = 21601
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-489] Unrolling loop 'RatioHeight' (firmware/nnet_utils/nnet_image_stream.h:158) in function 'void nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(hls::stream<FORWARD_REFERENCE>&, hls::stream<FORWARD_REFERENCE>&)' completely with a factor of 1.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 915 ; free virtual = 30018
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 1092 ; free virtual = 21585
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 913 ; free virtual = 30016
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ImageHeight' (firmware/nnet_utils/nnet_image_stream.h:148) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
-INFO: [HLS 200-489] Unrolling loop 'ReadData' (firmware/nnet_utils/nnet_image_stream.h:151) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 44.
-INFO: [HLS 200-489] Unrolling loop 'ImageWidth' (firmware/nnet_utils/nnet_image_stream.h:160) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 220.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V' (firmware/nnet_utils/nnet_image_stream.h:146) in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.0' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.1' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.2' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.3' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.4' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.5' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.6' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.7' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.8' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.9' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.10' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 1013 ; free virtual = 21507
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
 INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
 	 'Block__proc'
-	 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1053.574 ; gain = 533.535 ; free physical = 890 ; free virtual = 29994
-WARNING: [XFORM 203-631] Renaming function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>' (firmware/nnet_utils/nnet_image_stream.h:134)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1054.574 ; gain = 534.535 ; free physical = 859 ; free virtual = 29963
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 913 ; free virtual = 21410
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 1017 ; free virtual = 21514
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
-WARNING: [SYN 201-103] Legalizing function name 'resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>' to 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 36.1 seconds; current allocated memory: 157.588 MB.
+INFO: [HLS 200-111]  Elapsed time: 27.12 seconds; current allocated memory: 195.827 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 157.635 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 195.873 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'ImageHeight'.
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.028 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.141 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 997 ; free virtual = 21477
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 997 ; free virtual = 21477
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1010 ; free virtual = 21491
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 1096 ; free virtual = 21577
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 872 ; free virtual = 21352
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 1038 ; free virtual = 21518
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.24 seconds; current allocated memory: 196.209 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 196.255 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 196.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.460 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.524 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 992 ; free virtual = 21539
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 992 ; free virtual = 21539
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 913 ; free virtual = 21459
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 963 ; free virtual = 21510
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 867 ; free virtual = 21413
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 841 ; free virtual = 21388
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.16 seconds; current allocated memory: 196.212 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.257 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 196.412 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.462 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.527 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1001 ; free virtual = 21537
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1001 ; free virtual = 21537
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:47).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 923 ; free virtual = 21459
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 909 ; free virtual = 21445
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 939 ; free virtual = 21475
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:49:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 851 ; free virtual = 21387
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.08 seconds; current allocated memory: 196.364 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 196.550 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.600 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.680 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1046 ; free virtual = 21539
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1046 ; free virtual = 21539
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 968 ; free virtual = 21461
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 1017 ; free virtual = 21511
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 921 ; free virtual = 21415
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:50:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 896 ; free virtual = 21390
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 22.93 seconds; current allocated memory: 196.366 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.411 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.551 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 196.682 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1013 ; free virtual = 21478
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1013 ; free virtual = 21478
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 996 ; free virtual = 21460
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1047 ; free virtual = 21512
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 950 ; free virtual = 21415
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:50:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 989 ; free virtual = 21453
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.23 seconds; current allocated memory: 196.366 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.411 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.554 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.604 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.691 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1004 ; free virtual = 21335
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1004 ; free virtual = 21335
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 924 ; free virtual = 21255
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 975 ; free virtual = 21306
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 879 ; free virtual = 21211
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:50:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 854 ; free virtual = 21185
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.52 seconds; current allocated memory: 196.401 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.447 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.481 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.513 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.636 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.765 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1153 ; free virtual = 21478
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1153 ; free virtual = 21478
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1200 ; free virtual = 21525
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1135 ; free virtual = 21459
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1092 ; free virtual = 21417
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:50:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1140 ; free virtual = 21464
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.67 seconds; current allocated memory: 185.723 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 185.768 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 186.020 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 186.212 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 186.245 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 186.322 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 186.439 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 187.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/em_barrel_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer55_out_V_V' to 'axis' (register, both mode).
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1004 ; free virtual = 21539
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1004 ; free virtual = 21539
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 924 ; free virtual = 21459
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 974 ; free virtual = 21508
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 877 ; free virtual = 21412
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.895 ; gain = 523.855 ; free physical = 915 ; free virtual = 21450
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.26 seconds; current allocated memory: 196.353 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.399 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.541 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 196.592 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.678 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 647 ; free virtual = 22882
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 647 ; free virtual = 22881
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 619 ; free virtual = 22764
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 609 ; free virtual = 22737
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 605 ; free virtual = 22674
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 605 ; free virtual = 22636
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.97 seconds; current allocated memory: 196.356 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.401 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.541 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.591 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 196.672 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 3594 ; free virtual = 12638
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 3592 ; free virtual = 12636
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 6091 ; free virtual = 15136
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 6042 ; free virtual = 15089
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 6000 ; free virtual = 15046
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5930 ; free virtual = 14976
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.68 seconds; current allocated memory: 196.354 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.399 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 196.542 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 196.592 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 3, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 196.678 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5030 ; free virtual = 14131
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5030 ; free virtual = 14131
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4939 ; free virtual = 14040
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4919 ; free virtual = 14021
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4880 ; free virtual = 13982
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4849 ; free virtual = 13950
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.42 seconds; current allocated memory: 196.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.433 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.468 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 196.622 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.751 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4584 ; free virtual = 13733
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4584 ; free virtual = 13733
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4523 ; free virtual = 13672
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4503 ; free virtual = 13652
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4459 ; free virtual = 13607
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 4426 ; free virtual = 13575
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.86 seconds; current allocated memory: 196.355 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.401 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.541 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.591 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 196.672 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_batchnorm.h:79:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:76
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:54:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:5
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5775 ; free virtual = 13327
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5775 ; free virtual = 13327
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:46).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5669 ; free virtual = 13221
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5644 ; free virtual = 13197
+INFO: [XFORM 203-101] Partitioning array 's3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5602 ; free virtual = 13154
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::normalize_me<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' to 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' (firmware/nnet_utils/nnet_batchnorm_stream.h:48:56)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 5573 ; free virtual = 13126
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>' to 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'normalize_me<ap_fixed,ap_fixed<32,16,5,3,0>,config3>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.36 seconds; current allocated memory: 196.354 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.399 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.542 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 196.592 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'BatchNormLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 196.679 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.

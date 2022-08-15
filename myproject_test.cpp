@@ -76,34 +76,34 @@ int main(int argc, char **argv)
       }
 
       //hls-fpga-machine-learning insert data
-      hls::stream<input_t> input_1("input_1");
-      nnet::copy_data_me<float, input_t, 0, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(in, input_1);
-      hls::stream<layer2_t> layer2_out("layer2_out");
+      hls::stream<input_t> em_barrel("em_barrel");
+      nnet::copy_data_me<float, input_t, 0, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(in, em_barrel);
+      hls::stream<result_t> layer55_out("layer55_out");
 
       //hls-fpga-machine-learning insert top-level-function
       unsigned short size_in1,size_out1;
-      myproject(input_1,layer2_out,size_in1,size_out1);
+      myproject(em_barrel,layer55_out,size_in1,size_out1);
 
       if (e % CHECKPOINT == 0) {
         std::cout << "Predictions" << std::endl;
         //hls-fpga-machine-learning insert predictions
-        for(int i = 0; i < OUT_HEIGHT_2*OUT_WIDTH_2*N_CHAN_2; i++) {
+        for(int i = 0; i < N_LAYER_53; i++) {
           std::cout << pr[i] << " ";
         }
         std::cout << std::endl;
         std::cout << "Quantized predictions" << std::endl;
         //hls-fpga-machine-learning insert quantized
-        nnet::print_result_me<layer2_t, OUT_HEIGHT_2*OUT_WIDTH_2*N_CHAN_2>(layer2_out, std::cout, true);
+        nnet::print_result_me<result_t, N_LAYER_53>(layer55_out, std::cout, true);
       }
       e++;
 
       //hls-fpga-machine-learning insert tb-output
-      nnet::print_result_me<layer2_t, OUT_HEIGHT_2*OUT_WIDTH_2*N_CHAN_2>(layer2_out, fout);
+      nnet::print_result_me<result_t, N_LAYER_53>(layer55_out, fout);
 
     }
     fin.close();
     fpr.close();
-  }
+  } 
 
   fout.close();
   std::cout << "INFO: Saved inference results to file: " << RESULTS_LOG << std::endl;

@@ -31,15 +31,15 @@ using namespace sc_dt;
 // [dump_enumeration [get_enumeration_list]] ---------->
 
 
-// wrapc file define: "input_1_V_V"
-#define AUTOTB_TVIN_input_1_V_V  "../tv/cdatafile/c.myproject.autotvin_input_1_V_V.dat"
-#define WRAPC_STREAM_SIZE_IN_input_1_V_V  "../tv/stream_size/stream_size_in_input_1_V_V.dat"
-#define WRAPC_STREAM_INGRESS_STATUS_input_1_V_V  "../tv/stream_size/stream_ingress_status_input_1_V_V.dat"
-// wrapc file define: "layer2_out_V_V"
-#define AUTOTB_TVOUT_layer2_out_V_V  "../tv/cdatafile/c.myproject.autotvout_layer2_out_V_V.dat"
-#define AUTOTB_TVIN_layer2_out_V_V  "../tv/cdatafile/c.myproject.autotvin_layer2_out_V_V.dat"
-#define WRAPC_STREAM_SIZE_OUT_layer2_out_V_V  "../tv/stream_size/stream_size_out_layer2_out_V_V.dat"
-#define WRAPC_STREAM_EGRESS_STATUS_layer2_out_V_V  "../tv/stream_size/stream_egress_status_layer2_out_V_V.dat"
+// wrapc file define: "em_barrel_V_V"
+#define AUTOTB_TVIN_em_barrel_V_V  "../tv/cdatafile/c.myproject.autotvin_em_barrel_V_V.dat"
+#define WRAPC_STREAM_SIZE_IN_em_barrel_V_V  "../tv/stream_size/stream_size_in_em_barrel_V_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V  "../tv/stream_size/stream_ingress_status_em_barrel_V_V.dat"
+// wrapc file define: "layer55_out_V_V"
+#define AUTOTB_TVOUT_layer55_out_V_V  "../tv/cdatafile/c.myproject.autotvout_layer55_out_V_V.dat"
+#define AUTOTB_TVIN_layer55_out_V_V  "../tv/cdatafile/c.myproject.autotvin_layer55_out_V_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_layer55_out_V_V  "../tv/stream_size/stream_size_out_layer55_out_V_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_layer55_out_V_V  "../tv/stream_size/stream_egress_status_layer55_out_V_V.dat"
 // wrapc file define: "const_size_in_1"
 #define AUTOTB_TVOUT_const_size_in_1  "../tv/cdatafile/c.myproject.autotvout_const_size_in_1.dat"
 // wrapc file define: "const_size_out_1"
@@ -47,8 +47,8 @@ using namespace sc_dt;
 
 #define INTER_TCL  "../tv/cdatafile/ref.tcl"
 
-// tvout file define: "layer2_out_V_V"
-#define AUTOTB_TVOUT_PC_layer2_out_V_V  "../tv/rtldatafile/rtl.myproject.autotvout_layer2_out_V_V.dat"
+// tvout file define: "layer55_out_V_V"
+#define AUTOTB_TVOUT_PC_layer55_out_V_V  "../tv/rtldatafile/rtl.myproject.autotvout_layer55_out_V_V.dat"
 // tvout file define: "const_size_in_1"
 #define AUTOTB_TVOUT_PC_const_size_in_1  "../tv/rtldatafile/rtl.myproject.autotvout_const_size_in_1.dat"
 // tvout file define: "const_size_out_1"
@@ -58,8 +58,8 @@ class INTER_TCL_FILE {
 	public:
 		INTER_TCL_FILE(const char* name) {
 			mName = name;
-			input_1_V_V_depth = 0;
-			layer2_out_V_V_depth = 0;
+			em_barrel_V_V_depth = 0;
+			layer55_out_V_V_depth = 0;
 			const_size_in_1_depth = 0;
 			const_size_out_1_depth = 0;
 			trans_num =0;
@@ -81,8 +81,8 @@ class INTER_TCL_FILE {
 
 		string get_depth_list () {
 			stringstream total_list;
-			total_list << "{input_1_V_V " << input_1_V_V_depth << "}\n";
-			total_list << "{layer2_out_V_V " << layer2_out_V_V_depth << "}\n";
+			total_list << "{em_barrel_V_V " << em_barrel_V_V_depth << "}\n";
+			total_list << "{layer55_out_V_V " << layer55_out_V_V_depth << "}\n";
 			total_list << "{const_size_in_1 " << const_size_in_1_depth << "}\n";
 			total_list << "{const_size_out_1 " << const_size_out_1_depth << "}\n";
 			return total_list.str();
@@ -92,8 +92,8 @@ class INTER_TCL_FILE {
 			(*class_num) = (*class_num) > num ? (*class_num) : num;
 		}
 	public:
-		int input_1_V_V_depth;
-		int layer2_out_V_V_depth;
+		int em_barrel_V_V_depth;
+		int layer55_out_V_V_depth;
 		int const_size_in_1_depth;
 		int const_size_out_1_depth;
 		int trans_num;
@@ -104,14 +104,14 @@ class INTER_TCL_FILE {
 };
 
 extern void myproject (
-hls::stream<ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&input_1),
-hls::stream<ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&layer2_out),
+hls::stream<ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&em_barrel),
+hls::stream<ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&layer55_out),
 unsigned short (&const_size_in_1),
 unsigned short (&const_size_out_1));
 
 void AESL_WRAP_myproject (
-hls::stream<ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&input_1),
-hls::stream<ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&layer2_out),
+hls::stream<ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&em_barrel),
+hls::stream<ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> > (&layer55_out),
 unsigned short (&const_size_in_1),
 unsigned short (&const_size_out_1))
 {
@@ -127,50 +127,50 @@ unsigned short (&const_size_out_1))
 		string AESL_num;
 		static AESL_FILE_HANDLER aesl_fh;
 
-		// pop stream input: "input_1"
-		aesl_fh.read(WRAPC_STREAM_SIZE_IN_input_1_V_V, AESL_token); // [[transaction]]
-		aesl_fh.read(WRAPC_STREAM_SIZE_IN_input_1_V_V, AESL_num); // transaction number
+		// pop stream input: "em_barrel"
+		aesl_fh.read(WRAPC_STREAM_SIZE_IN_em_barrel_V_V, AESL_token); // [[transaction]]
+		aesl_fh.read(WRAPC_STREAM_SIZE_IN_em_barrel_V_V, AESL_num); // transaction number
 
 		if (atoi(AESL_num.c_str()) == AESL_transaction_pc)
 		{
-			aesl_fh.read(WRAPC_STREAM_SIZE_IN_input_1_V_V, AESL_token); // pop_size
+			aesl_fh.read(WRAPC_STREAM_SIZE_IN_em_barrel_V_V, AESL_token); // pop_size
 			int aesl_tmp_7 = atoi(AESL_token.c_str());
 			for (int i = 0; i < aesl_tmp_7; i++)
 			{
-				input_1.read();
+				em_barrel.read();
 			}
-			aesl_fh.read(WRAPC_STREAM_SIZE_IN_input_1_V_V, AESL_token); // [[/transaction]]
+			aesl_fh.read(WRAPC_STREAM_SIZE_IN_em_barrel_V_V, AESL_token); // [[/transaction]]
 		}
 
-		// define output stream variables: "layer2_out"
-		std::vector<ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> > aesl_tmp_9;
+		// define output stream variables: "layer55_out"
+		std::vector<ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> > aesl_tmp_9;
 		int aesl_tmp_10;
 		int aesl_tmp_11 = 0;
 
-		// read output stream size: "layer2_out"
-		aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V, AESL_token); // [[transaction]]
-		aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V, AESL_num); // transaction number
+		// read output stream size: "layer55_out"
+		aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V, AESL_token); // [[transaction]]
+		aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V, AESL_num); // transaction number
 
 		if (atoi(AESL_num.c_str()) == AESL_transaction_pc)
 		{
-			aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V, AESL_token); // pop_size
+			aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V, AESL_token); // pop_size
 			aesl_tmp_10 = atoi(AESL_token.c_str());
-			aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V, AESL_token); // [[/transaction]]
+			aesl_fh.read(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V, AESL_token); // [[/transaction]]
 		}
 
-		// output port post check: "layer2_out_V_V"
-		aesl_fh.read(AUTOTB_TVOUT_PC_layer2_out_V_V, AESL_token); // [[transaction]]
+		// output port post check: "layer55_out_V_V"
+		aesl_fh.read(AUTOTB_TVOUT_PC_layer55_out_V_V, AESL_token); // [[transaction]]
 		if (AESL_token != "[[transaction]]")
 		{
 			exit(1);
 		}
-		aesl_fh.read(AUTOTB_TVOUT_PC_layer2_out_V_V, AESL_num); // transaction number
+		aesl_fh.read(AUTOTB_TVOUT_PC_layer55_out_V_V, AESL_num); // transaction number
 
 		if (atoi(AESL_num.c_str()) == AESL_transaction_pc)
 		{
-			aesl_fh.read(AUTOTB_TVOUT_PC_layer2_out_V_V, AESL_token); // data
+			aesl_fh.read(AUTOTB_TVOUT_PC_layer55_out_V_V, AESL_token); // data
 
-			std::vector<sc_bv<16> > layer2_out_V_V_pc_buffer;
+			std::vector<sc_bv<32> > layer55_out_V_V_pc_buffer;
 			int i = 0;
 
 			while (AESL_token != "[[/transaction]]")
@@ -186,7 +186,7 @@ unsigned short (&const_size_out_1))
 					{
 						if (!err)
 						{
-							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'layer2_out_V_V', possible cause: There are uninitialized variables in the C design." << endl;
+							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'layer55_out_V_V', possible cause: There are uninitialized variables in the C design." << endl;
 							err = true;
 						}
 						AESL_token.replace(x_found, 1, "0");
@@ -208,7 +208,7 @@ unsigned short (&const_size_out_1))
 					{
 						if (!err)
 						{
-							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'layer2_out_V_V', possible cause: There are uninitialized variables in the C design." << endl;
+							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'layer55_out_V_V', possible cause: There are uninitialized variables in the C design." << endl;
 							err = true;
 						}
 						AESL_token.replace(x_found, 1, "0");
@@ -222,13 +222,13 @@ unsigned short (&const_size_out_1))
 				// push token into output port buffer
 				if (AESL_token != "")
 				{
-					layer2_out_V_V_pc_buffer.push_back(AESL_token.c_str());
+					layer55_out_V_V_pc_buffer.push_back(AESL_token.c_str());
 					i++;
 				}
 
-				aesl_fh.read(AUTOTB_TVOUT_PC_layer2_out_V_V, AESL_token); // data or [[/transaction]]
+				aesl_fh.read(AUTOTB_TVOUT_PC_layer55_out_V_V, AESL_token); // data or [[/transaction]]
 
-				if (AESL_token == "[[[/runtime]]]" || aesl_fh.eof(AUTOTB_TVOUT_PC_layer2_out_V_V))
+				if (AESL_token == "[[[/runtime]]]" || aesl_fh.eof(AUTOTB_TVOUT_PC_layer55_out_V_V))
 				{
 					exit(1);
 				}
@@ -246,7 +246,7 @@ unsigned short (&const_size_out_1))
 
 				for (int tmp_aesl_tmp_9 = 0; tmp_aesl_tmp_9 < aesl_tmp_10 - aesl_tmp_9_size; tmp_aesl_tmp_9++)
 				{
-					ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> tmp;
+					ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> tmp;
 					aesl_tmp_9.push_back(tmp);
 				}
 			}
@@ -254,37 +254,37 @@ unsigned short (&const_size_out_1))
 			// ***********************************
 			if (i > 0)
 			{
-				// RTL Name: layer2_out_V_V
+				// RTL Name: layer55_out_V_V
 				{
-					// bitslice(15, 0)
+					// bitslice(31, 0)
 					// {
-						// celement: layer2_out.V.V(15, 0)
+						// celement: layer55_out.V.V(31, 0)
 						// {
-							sc_lv<16>* layer2_out_V_V_lv0_0_0_1 = new sc_lv<16>[aesl_tmp_10 - aesl_tmp_11];
+							sc_lv<32>* layer55_out_V_V_lv0_0_0_1 = new sc_lv<32>[aesl_tmp_10 - aesl_tmp_11];
 						// }
 					// }
 
-					// bitslice(15, 0)
+					// bitslice(31, 0)
 					{
 						int hls_map_index = 0;
-						// celement: layer2_out.V.V(15, 0)
+						// celement: layer55_out.V.V(31, 0)
 						{
 							// carray: (aesl_tmp_11) => (aesl_tmp_10 - 1) @ (1)
 							for (int i_0 = aesl_tmp_11; i_0 <= aesl_tmp_10 - 1; i_0 += 1)
 							{
 								if (&(aesl_tmp_9[0]) != NULL) // check the null address if the c port is array or others
 								{
-									layer2_out_V_V_lv0_0_0_1[hls_map_index].range(15, 0) = sc_bv<16>(layer2_out_V_V_pc_buffer[hls_map_index].range(15, 0));
+									layer55_out_V_V_lv0_0_0_1[hls_map_index].range(31, 0) = sc_bv<32>(layer55_out_V_V_pc_buffer[hls_map_index].range(31, 0));
 									hls_map_index++;
 								}
 							}
 						}
 					}
 
-					// bitslice(15, 0)
+					// bitslice(31, 0)
 					{
 						int hls_map_index = 0;
-						// celement: layer2_out.V.V(15, 0)
+						// celement: layer55_out.V.V(31, 0)
 						{
 							// carray: (aesl_tmp_11) => (aesl_tmp_10 - 1) @ (1)
 							for (int i_0 = aesl_tmp_11; i_0 <= aesl_tmp_10 - 1; i_0 += 1)
@@ -294,10 +294,10 @@ unsigned short (&const_size_out_1))
 								// sub_1st_elem           : 0
 								// ori_name_1st_elem      : aesl_tmp_9[0]
 								// output_left_conversion : (aesl_tmp_9[i_0]).range()
-								// output_type_conversion : (layer2_out_V_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str()
+								// output_type_conversion : (layer55_out_V_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str()
 								if (&(aesl_tmp_9[0]) != NULL) // check the null address if the c port is array or others
 								{
-									(aesl_tmp_9[i_0]).range() = (layer2_out_V_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str();
+									(aesl_tmp_9[i_0]).range() = (layer55_out_V_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str();
 									hls_map_index++;
 								}
 							}
@@ -577,10 +577,10 @@ unsigned short (&const_size_out_1))
 			delete [] const_size_out_1_pc_buffer;
 		}
 
-		// push back output stream: "layer2_out"
+		// push back output stream: "layer55_out"
 		for (int i = 0; i < aesl_tmp_10; i++)
 		{
-			layer2_out.write(aesl_tmp_9[i]);
+			layer55_out.write(aesl_tmp_9[i]);
 		}
 
 		AESL_transaction_pc++;
@@ -592,23 +592,23 @@ unsigned short (&const_size_out_1))
 
 		static AESL_FILE_HANDLER aesl_fh;
 
-		// "input_1_V_V"
-		char* tvin_input_1_V_V = new char[50];
-		aesl_fh.touch(AUTOTB_TVIN_input_1_V_V);
-		char* wrapc_stream_size_in_input_1_V_V = new char[50];
-		aesl_fh.touch(WRAPC_STREAM_SIZE_IN_input_1_V_V);
-		char* wrapc_stream_ingress_status_input_1_V_V = new char[50];
-		aesl_fh.touch(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V);
+		// "em_barrel_V_V"
+		char* tvin_em_barrel_V_V = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_em_barrel_V_V);
+		char* wrapc_stream_size_in_em_barrel_V_V = new char[50];
+		aesl_fh.touch(WRAPC_STREAM_SIZE_IN_em_barrel_V_V);
+		char* wrapc_stream_ingress_status_em_barrel_V_V = new char[50];
+		aesl_fh.touch(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V);
 
-		// "layer2_out_V_V"
-		char* tvin_layer2_out_V_V = new char[50];
-		aesl_fh.touch(AUTOTB_TVIN_layer2_out_V_V);
-		char* tvout_layer2_out_V_V = new char[50];
-		aesl_fh.touch(AUTOTB_TVOUT_layer2_out_V_V);
-		char* wrapc_stream_size_out_layer2_out_V_V = new char[50];
-		aesl_fh.touch(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V);
-		char* wrapc_stream_egress_status_layer2_out_V_V = new char[50];
-		aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_layer2_out_V_V);
+		// "layer55_out_V_V"
+		char* tvin_layer55_out_V_V = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_layer55_out_V_V);
+		char* tvout_layer55_out_V_V = new char[50];
+		aesl_fh.touch(AUTOTB_TVOUT_layer55_out_V_V);
+		char* wrapc_stream_size_out_layer55_out_V_V = new char[50];
+		aesl_fh.touch(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V);
+		char* wrapc_stream_egress_status_layer55_out_V_V = new char[50];
+		aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_layer55_out_V_V);
 
 		// "const_size_in_1"
 		char* tvout_const_size_in_1 = new char[50];
@@ -622,68 +622,68 @@ unsigned short (&const_size_out_1))
 		static INTER_TCL_FILE tcl_file(INTER_TCL);
 		int leading_zero;
 
-		// dump stream tvin: "input_1"
-		std::vector<ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> > aesl_tmp_6;
+		// dump stream tvin: "em_barrel"
+		std::vector<ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> > aesl_tmp_6;
 		int aesl_tmp_7 = 0;
-		while (!input_1.empty())
+		while (!em_barrel.empty())
 		{
-			aesl_tmp_6.push_back(input_1.read());
+			aesl_tmp_6.push_back(em_barrel.read());
 			aesl_tmp_7++;
 		}
 
-		// dump stream tvin: "layer2_out"
-		std::vector<ap_fixed<16, 14, (ap_q_mode) 5, (ap_o_mode)3, 0> > aesl_tmp_9;
+		// dump stream tvin: "layer55_out"
+		std::vector<ap_fixed<32, 16, (ap_q_mode) 5, (ap_o_mode)3, 0> > aesl_tmp_9;
 		int aesl_tmp_10 = 0;
-		while (!layer2_out.empty())
+		while (!layer55_out.empty())
 		{
-			aesl_tmp_9.push_back(layer2_out.read());
+			aesl_tmp_9.push_back(layer55_out.read());
 			aesl_tmp_10++;
 		}
 
-		// push back input stream: "input_1"
+		// push back input stream: "em_barrel"
 		for (int i = 0; i < aesl_tmp_7; i++)
 		{
-			input_1.write(aesl_tmp_6[i]);
+			em_barrel.write(aesl_tmp_6[i]);
 		}
 
-		// push back input stream: "layer2_out"
+		// push back input stream: "layer55_out"
 		for (int i = 0; i < aesl_tmp_10; i++)
 		{
-			layer2_out.write(aesl_tmp_9[i]);
+			layer55_out.write(aesl_tmp_9[i]);
 		}
 
 // [call_c_dut] ---------->
 
 		CodeState = CALL_C_DUT;
-		myproject(input_1, layer2_out, const_size_in_1, const_size_out_1);
+		myproject(em_barrel, layer55_out, const_size_in_1, const_size_out_1);
 
 		CodeState = DUMP_OUTPUTS;
-		// record input size to tv3: "input_1"
-		int aesl_tmp_8 = input_1.size();
+		// record input size to tv3: "em_barrel"
+		int aesl_tmp_8 = em_barrel.size();
 
-		// pop output stream: "layer2_out"
+		// pop output stream: "layer55_out"
 		int aesl_tmp_11 = aesl_tmp_10;
 		aesl_tmp_10 = 0;
      aesl_tmp_9.clear();
-		while (!layer2_out.empty())
+		while (!layer55_out.empty())
 		{
-			aesl_tmp_9.push_back(layer2_out.read());
+			aesl_tmp_9.push_back(layer55_out.read());
 			aesl_tmp_10++;
 		}
 
 		// [[transaction]]
-		sprintf(tvin_input_1_V_V, "[[transaction]] %d\n", AESL_transaction);
-		aesl_fh.write(AUTOTB_TVIN_input_1_V_V, tvin_input_1_V_V);
-		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, tvin_input_1_V_V);
+		sprintf(tvin_em_barrel_V_V, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_em_barrel_V_V, tvin_em_barrel_V_V);
+		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, tvin_em_barrel_V_V);
 
-		sc_bv<16>* input_1_V_V_tvin_wrapc_buffer = new sc_bv<16>[aesl_tmp_7 - aesl_tmp_8];
+		sc_bv<32>* em_barrel_V_V_tvin_wrapc_buffer = new sc_bv<32>[aesl_tmp_7 - aesl_tmp_8];
 
-		// RTL Name: input_1_V_V
+		// RTL Name: em_barrel_V_V
 		{
-			// bitslice(15, 0)
+			// bitslice(31, 0)
 			{
 				int hls_map_index = 0;
-				// celement: input_1.V.V(15, 0)
+				// celement: em_barrel.V.V(31, 0)
 				{
 					// carray: (0) => (aesl_tmp_7 - aesl_tmp_8 - 1) @ (1)
 					for (int i_0 = 0; i_0 <= aesl_tmp_7 - aesl_tmp_8 - 1; i_0 += 1)
@@ -692,13 +692,13 @@ unsigned short (&const_size_out_1))
 						// ori_name              : aesl_tmp_6[i_0]
 						// sub_1st_elem          : 0
 						// ori_name_1st_elem     : aesl_tmp_6[0]
-						// regulate_c_name       : input_1_V_V
+						// regulate_c_name       : em_barrel_V_V
 						// input_type_conversion : (aesl_tmp_6[i_0]).range().to_string(SC_BIN).c_str()
 						if (&(aesl_tmp_6[0]) != NULL) // check the null address if the c port is array or others
 						{
-							sc_lv<16> input_1_V_V_tmp_mem;
-							input_1_V_V_tmp_mem = (aesl_tmp_6[i_0]).range().to_string(SC_BIN).c_str();
-							input_1_V_V_tvin_wrapc_buffer[hls_map_index].range(15, 0) = input_1_V_V_tmp_mem.range(15, 0);
+							sc_lv<32> em_barrel_V_V_tmp_mem;
+							em_barrel_V_V_tmp_mem = (aesl_tmp_6[i_0]).range().to_string(SC_BIN).c_str();
+							em_barrel_V_V_tvin_wrapc_buffer[hls_map_index].range(31, 0) = em_barrel_V_V_tmp_mem.range(31, 0);
                                  	       hls_map_index++;
 						}
 					}
@@ -709,58 +709,58 @@ unsigned short (&const_size_out_1))
 		// dump tv to file
 		for (int i = 0; i < aesl_tmp_7 - aesl_tmp_8; i++)
 		{
-			sprintf(tvin_input_1_V_V, "%s\n", (input_1_V_V_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
-			aesl_fh.write(AUTOTB_TVIN_input_1_V_V, tvin_input_1_V_V);
+			sprintf(tvin_em_barrel_V_V, "%s\n", (em_barrel_V_V_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_em_barrel_V_V, tvin_em_barrel_V_V);
 		}
 
 		// dump stream ingress status to file
      if (aesl_tmp_7 > aesl_tmp_8)
      {
-		sc_int<32> stream_ingress_size_input_1_V_V = aesl_tmp_7;
-		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, stream_ingress_size_input_1_V_V.to_string().c_str());
-		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, "\n");
+		sc_int<32> stream_ingress_size_em_barrel_V_V = aesl_tmp_7;
+		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, stream_ingress_size_em_barrel_V_V.to_string().c_str());
+		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, "\n");
 
 		for (int i = 0; i < aesl_tmp_7 - aesl_tmp_8; i++)
 		{
-			stream_ingress_size_input_1_V_V--;
-			aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, stream_ingress_size_input_1_V_V.to_string().c_str());
-			aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, "\n");
+			stream_ingress_size_em_barrel_V_V--;
+			aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, stream_ingress_size_em_barrel_V_V.to_string().c_str());
+			aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, "\n");
 		}
      }
      else {
-		    sc_int<32> stream_ingress_size_input_1_V_V = 0;
-		    aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, stream_ingress_size_input_1_V_V.to_string().c_str());
-		    aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, "\n");
+		    sc_int<32> stream_ingress_size_em_barrel_V_V = 0;
+		    aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, stream_ingress_size_em_barrel_V_V.to_string().c_str());
+		    aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, "\n");
      }
 
-		tcl_file.set_num(aesl_tmp_7 - aesl_tmp_8, &tcl_file.input_1_V_V_depth);
-		sprintf(tvin_input_1_V_V, "[[/transaction]] \n");
-		aesl_fh.write(AUTOTB_TVIN_input_1_V_V, tvin_input_1_V_V);
-		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_input_1_V_V, tvin_input_1_V_V);
+		tcl_file.set_num(aesl_tmp_7 - aesl_tmp_8, &tcl_file.em_barrel_V_V_depth);
+		sprintf(tvin_em_barrel_V_V, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_em_barrel_V_V, tvin_em_barrel_V_V);
+		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_em_barrel_V_V, tvin_em_barrel_V_V);
 
 		// release memory allocation
-		delete [] input_1_V_V_tvin_wrapc_buffer;
+		delete [] em_barrel_V_V_tvin_wrapc_buffer;
 
 		// dump stream size
-		sprintf(wrapc_stream_size_in_input_1_V_V, "[[transaction]] %d\n", AESL_transaction);
-		aesl_fh.write(WRAPC_STREAM_SIZE_IN_input_1_V_V, wrapc_stream_size_in_input_1_V_V);
-		sprintf(wrapc_stream_size_in_input_1_V_V, "%d\n", aesl_tmp_7 - aesl_tmp_8);
-		aesl_fh.write(WRAPC_STREAM_SIZE_IN_input_1_V_V, wrapc_stream_size_in_input_1_V_V);
-		sprintf(wrapc_stream_size_in_input_1_V_V, "[[/transaction]] \n");
-		aesl_fh.write(WRAPC_STREAM_SIZE_IN_input_1_V_V, wrapc_stream_size_in_input_1_V_V);
+		sprintf(wrapc_stream_size_in_em_barrel_V_V, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(WRAPC_STREAM_SIZE_IN_em_barrel_V_V, wrapc_stream_size_in_em_barrel_V_V);
+		sprintf(wrapc_stream_size_in_em_barrel_V_V, "%d\n", aesl_tmp_7 - aesl_tmp_8);
+		aesl_fh.write(WRAPC_STREAM_SIZE_IN_em_barrel_V_V, wrapc_stream_size_in_em_barrel_V_V);
+		sprintf(wrapc_stream_size_in_em_barrel_V_V, "[[/transaction]] \n");
+		aesl_fh.write(WRAPC_STREAM_SIZE_IN_em_barrel_V_V, wrapc_stream_size_in_em_barrel_V_V);
 
 		// [[transaction]]
-		sprintf(tvout_layer2_out_V_V, "[[transaction]] %d\n", AESL_transaction);
-		aesl_fh.write(AUTOTB_TVOUT_layer2_out_V_V, tvout_layer2_out_V_V);
+		sprintf(tvout_layer55_out_V_V, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVOUT_layer55_out_V_V, tvout_layer55_out_V_V);
 
-		sc_bv<16>* layer2_out_V_V_tvout_wrapc_buffer = new sc_bv<16>[aesl_tmp_10 - aesl_tmp_11];
+		sc_bv<32>* layer55_out_V_V_tvout_wrapc_buffer = new sc_bv<32>[aesl_tmp_10 - aesl_tmp_11];
 
-		// RTL Name: layer2_out_V_V
+		// RTL Name: layer55_out_V_V
 		{
-			// bitslice(15, 0)
+			// bitslice(31, 0)
 			{
 				int hls_map_index = 0;
-				// celement: layer2_out.V.V(15, 0)
+				// celement: layer55_out.V.V(31, 0)
 				{
 					// carray: (aesl_tmp_11) => (aesl_tmp_10 - 1) @ (1)
 					for (int i_0 = aesl_tmp_11; i_0 <= aesl_tmp_10 - 1; i_0 += 1)
@@ -769,13 +769,13 @@ unsigned short (&const_size_out_1))
 						// ori_name              : aesl_tmp_9[i_0]
 						// sub_1st_elem          : 0
 						// ori_name_1st_elem     : aesl_tmp_9[0]
-						// regulate_c_name       : layer2_out_V_V
+						// regulate_c_name       : layer55_out_V_V
 						// input_type_conversion : (aesl_tmp_9[i_0]).range().to_string(SC_BIN).c_str()
 						if (&(aesl_tmp_9[0]) != NULL) // check the null address if the c port is array or others
 						{
-							sc_lv<16> layer2_out_V_V_tmp_mem;
-							layer2_out_V_V_tmp_mem = (aesl_tmp_9[i_0]).range().to_string(SC_BIN).c_str();
-							layer2_out_V_V_tvout_wrapc_buffer[hls_map_index].range(15, 0) = layer2_out_V_V_tmp_mem.range(15, 0);
+							sc_lv<32> layer55_out_V_V_tmp_mem;
+							layer55_out_V_V_tmp_mem = (aesl_tmp_9[i_0]).range().to_string(SC_BIN).c_str();
+							layer55_out_V_V_tvout_wrapc_buffer[hls_map_index].range(31, 0) = layer55_out_V_V_tmp_mem.range(31, 0);
                                  	       hls_map_index++;
 						}
 					}
@@ -786,24 +786,24 @@ unsigned short (&const_size_out_1))
 		// dump tv to file
 		for (int i = 0; i < aesl_tmp_10 - aesl_tmp_11; i++)
 		{
-			sprintf(tvout_layer2_out_V_V, "%s\n", (layer2_out_V_V_tvout_wrapc_buffer[i]).to_string(SC_HEX).c_str());
-			aesl_fh.write(AUTOTB_TVOUT_layer2_out_V_V, tvout_layer2_out_V_V);
+			sprintf(tvout_layer55_out_V_V, "%s\n", (layer55_out_V_V_tvout_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVOUT_layer55_out_V_V, tvout_layer55_out_V_V);
 		}
 
-		tcl_file.set_num(aesl_tmp_10 - aesl_tmp_11, &tcl_file.layer2_out_V_V_depth);
-		sprintf(tvout_layer2_out_V_V, "[[/transaction]] \n");
-		aesl_fh.write(AUTOTB_TVOUT_layer2_out_V_V, tvout_layer2_out_V_V);
+		tcl_file.set_num(aesl_tmp_10 - aesl_tmp_11, &tcl_file.layer55_out_V_V_depth);
+		sprintf(tvout_layer55_out_V_V, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVOUT_layer55_out_V_V, tvout_layer55_out_V_V);
 
 		// release memory allocation
-		delete [] layer2_out_V_V_tvout_wrapc_buffer;
+		delete [] layer55_out_V_V_tvout_wrapc_buffer;
 
 		// dump stream size
-		sprintf(wrapc_stream_size_out_layer2_out_V_V, "[[transaction]] %d\n", AESL_transaction);
-		aesl_fh.write(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V, wrapc_stream_size_out_layer2_out_V_V);
-		sprintf(wrapc_stream_size_out_layer2_out_V_V, "%d\n", aesl_tmp_10 - aesl_tmp_11);
-		aesl_fh.write(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V, wrapc_stream_size_out_layer2_out_V_V);
-		sprintf(wrapc_stream_size_out_layer2_out_V_V, "[[/transaction]] \n");
-		aesl_fh.write(WRAPC_STREAM_SIZE_OUT_layer2_out_V_V, wrapc_stream_size_out_layer2_out_V_V);
+		sprintf(wrapc_stream_size_out_layer55_out_V_V, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V, wrapc_stream_size_out_layer55_out_V_V);
+		sprintf(wrapc_stream_size_out_layer55_out_V_V, "%d\n", aesl_tmp_10 - aesl_tmp_11);
+		aesl_fh.write(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V, wrapc_stream_size_out_layer55_out_V_V);
+		sprintf(wrapc_stream_size_out_layer55_out_V_V, "[[/transaction]] \n");
+		aesl_fh.write(WRAPC_STREAM_SIZE_OUT_layer55_out_V_V, wrapc_stream_size_out_layer55_out_V_V);
 
 		// [[transaction]]
 		sprintf(tvout_const_size_in_1, "[[transaction]] %d\n", AESL_transaction);
@@ -901,20 +901,20 @@ unsigned short (&const_size_out_1))
 		// release memory allocation
 		delete [] const_size_out_1_tvout_wrapc_buffer;
 
-		// push back output stream: "layer2_out"
+		// push back output stream: "layer55_out"
 		for (int i = 0; i < aesl_tmp_10; i++)
 		{
-			layer2_out.write(aesl_tmp_9[i]);
+			layer55_out.write(aesl_tmp_9[i]);
 		}
 
 		CodeState = DELETE_CHAR_BUFFERS;
-		// release memory allocation: "input_1_V_V"
-		delete [] tvin_input_1_V_V;
-		delete [] wrapc_stream_size_in_input_1_V_V;
-		// release memory allocation: "layer2_out_V_V"
-		delete [] tvout_layer2_out_V_V;
-		delete [] tvin_layer2_out_V_V;
-		delete [] wrapc_stream_size_out_layer2_out_V_V;
+		// release memory allocation: "em_barrel_V_V"
+		delete [] tvin_em_barrel_V_V;
+		delete [] wrapc_stream_size_in_em_barrel_V_V;
+		// release memory allocation: "layer55_out_V_V"
+		delete [] tvout_layer55_out_V_V;
+		delete [] tvin_layer55_out_V_V;
+		delete [] wrapc_stream_size_out_layer55_out_V_V;
 		// release memory allocation: "const_size_in_1"
 		delete [] tvout_const_size_in_1;
 		// release memory allocation: "const_size_out_1"

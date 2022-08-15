@@ -130,7 +130,7 @@ always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign const_size_in_1 = 16'd2464;
+assign const_size_in_1 = 16'd12320;
 
 assign const_size_out_1 = 16'd12320;
 

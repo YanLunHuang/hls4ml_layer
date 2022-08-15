@@ -80,9 +80,9 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.myproject.autotvin_input_1_V_V.dat"
-         "c.myproject.autotvin_layer2_out_V_V.dat"
-         "c.myproject.autotvout_layer2_out_V_V.dat"
+         "c.myproject.autotvin_em_barrel_V_V.dat"
+         "c.myproject.autotvin_layer55_out_V_V.dat"
+         "c.myproject.autotvout_layer55_out_V_V.dat"
          "c.myproject.autotvout_const_size_in_1.dat"
          "c.myproject.autotvout_const_size_out_1.dat"
     }
@@ -109,7 +109,7 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.myproject.autotvout_layer2_out_V_V.dat"
+         "rtl.myproject.autotvout_layer55_out_V_V.dat"
          "rtl.myproject.autotvout_const_size_in_1.dat"
          "rtl.myproject.autotvout_const_size_out_1.dat"
     }

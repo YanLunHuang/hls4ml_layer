@@ -3,4 +3,4 @@
 # Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
 
-/opt/Xilinx/Vivado/2019.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xczu9eg-ffvb1156-2-e ../xilinx_com_hls_myproject_1_0.zip
+/opt/Xilinx/Vivado/2019.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xcvu9p-flgb2104-2-i ../xilinx_com_hls_myproject_1_0.zip

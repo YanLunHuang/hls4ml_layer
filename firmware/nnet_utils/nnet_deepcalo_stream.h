@@ -16,14 +16,14 @@ void film(
 	
 	input2_T scalar_gamma;
 	res_T out_data;
-	#pragma HLS DATA_PACK variable=out_data
+	
 	input2_T in_data2 = data2.read();	
 	for (int i = 0; i < CONFIG_T::n_inp1/input1_T::size; i++) {
-		#pragma HLS UNROLL
+		
 		input1_T in_data1 = data1.read();
 		
 		FilmPack: for (int k = 0; k < input1_T::size; k++) {
-			#pragma HLS UNROLL
+			
 			
 			out_data[k] = in_data1[k]*(in_data2[k]+1) + in_data2[input1_T::size+k];
 		}

@@ -9,14 +9,14 @@
 
 //hls-fpga-machine-learning insert numbers
 #define N_INPUT_1_1 56
-#define N_INPUT_2_1 11
+#define N_INPUT_2_1 55
 #define N_INPUT_3_1 4
-#define OUT_HEIGHT_2 56
-#define OUT_WIDTH_2 55
-#define N_CHAN_2 4
+
+#define N_LAYER_53 56*55*4
 
 //hls-fpga-machine-learning insert layer-precision
-typedef ap_fixed<16,14> input_t;
-typedef ap_fixed<16,14> layer2_t;
+typedef ap_fixed<32,16> model_default_t;
+typedef ap_fixed<32,16> input_t;
+typedef ap_fixed<32,16> result_t;
 
 #endif

@@ -39,10 +39,10 @@ set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
-set TargetInfo xczu9eg:-ffvb1156:-2-e
+set TargetInfo xcvu9p:-flgb2104:-2-i
 set SourceFiles {sc {} c ../../firmware/myproject.cpp}
 set SourceFlags {sc {} c {{ -std=c++0x} {}}}
-set DirectiveFile /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/solution1.directive
+set DirectiveFile /home/YL_HUANG/8_19/normalize_test/myproject_prj/solution1/solution1.directive
 set TBFiles {verilog {../../tb_data ../../firmware/weights ../../myproject_test.cpp} bc {../../tb_data ../../firmware/weights ../../myproject_test.cpp} sc {../../tb_data ../../firmware/weights ../../myproject_test.cpp} vhdl {../../tb_data ../../firmware/weights ../../myproject_test.cpp} c {} cas {../../tb_data ../../firmware/weights ../../myproject_test.cpp}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
@@ -59,5 +59,5 @@ set DefaultPlatform DefaultPlatform
 set multiClockList {}
 set SCPortClockMap {}
 set intNbAccess 0
-set PlatformFiles {{DefaultPlatform {xilinx/zynquplus/zynquplus xilinx/zynquplus/zynquplus_fpv7}}}
+set PlatformFiles {{DefaultPlatform {xilinx/virtexuplus/virtexuplus xilinx/virtexuplus/virtexuplus_fpv7}}}
 set HPFPO 0

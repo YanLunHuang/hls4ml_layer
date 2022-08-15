@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Block_proc'" level="0">
-<item name = "Date">Mon Aug 15 12:58:01 2022
+<item name = "Date">Mon Aug 15 15:02:16 2022
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
 <item name = "Solution">solution1</item>
-<item name = "Product family">zynquplus</item>
-<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flgb2104-2-i</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -53,7 +53,9 @@
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 9, -</column>
 <column name="Register">-, -, 2, -, -</column>
-<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Available SLR">1440, 2280, 788160, 394080, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4320, 6840, 2364480, 1182240, 960</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>

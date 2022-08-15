@@ -75,16 +75,16 @@
             <Obj>
               <type>0</type>
               <id>3</id>
-              <name>const_size_in_1_write_ln38</name>
+              <name>const_size_in_1_write_ln36</name>
               <fileName>firmware/myproject.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>myproject</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/YL_HUANG/8_12/resize_test</first>
+                  <first>/home/YL_HUANG/8_19/normalize_test</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -93,7 +93,7 @@
                         <first>firmware/myproject.cpp</first>
                         <second>myproject</second>
                       </first>
-                      <second>38</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
@@ -125,16 +125,16 @@
             <Obj>
               <type>0</type>
               <id>4</id>
-              <name>const_size_out_1_write_ln39</name>
+              <name>const_size_out_1_write_ln37</name>
               <fileName>firmware/myproject.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>39</lineNumber>
+              <lineNumber>37</lineNumber>
               <contextFuncName>myproject</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/YL_HUANG/8_12/resize_test</first>
+                  <first>/home/YL_HUANG/8_19/normalize_test</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -143,7 +143,7 @@
                         <first>firmware/myproject.cpp</first>
                         <second>myproject</second>
                       </first>
-                      <second>39</second>
+                      <second>37</second>
                     </item>
                   </second>
                 </item>
@@ -159,7 +159,7 @@
             <item_version>0</item_version>
             <item>12</item>
             <item>13</item>
-            <item>15</item>
+            <item>14</item>
           </oprand_edges>
           <opcode>write</opcode>
           <m_Display>0</m_Display>
@@ -205,7 +205,7 @@
         </item>
       </nodes>
       <consts class_id="15" tracking_level="0" version="0">
-        <count>2</count>
+        <count>1</count>
         <item_version>0</item_version>
         <item class_id="16" tracking_level="1" version="0" object_id="_6">
           <Value>
@@ -228,36 +228,13 @@
             <bitwidth>16</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>2464</content>
-        </item>
-        <item class_id_reference="16" object_id="_7">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>14</id>
-              <name>empty</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>16</bitwidth>
-          </Value>
-          <const_type>0</const_type>
           <content>12320</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="18" tracking_level="1" version="0" object_id="_8">
+        <item class_id="18" tracking_level="1" version="0" object_id="_7">
           <Obj>
             <type>3</type>
             <id>6</id>
@@ -286,31 +263,31 @@
       <edges class_id="19" tracking_level="0" version="0">
         <count>4</count>
         <item_version>0</item_version>
-        <item class_id="20" tracking_level="1" version="0" object_id="_9">
+        <item class_id="20" tracking_level="1" version="0" object_id="_8">
           <id>9</id>
           <edge_type>1</edge_type>
           <source_obj>1</source_obj>
           <sink_obj>3</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_10">
+        <item class_id_reference="20" object_id="_9">
           <id>11</id>
           <edge_type>1</edge_type>
           <source_obj>10</source_obj>
           <sink_obj>3</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_11">
+        <item class_id_reference="20" object_id="_10">
           <id>13</id>
           <edge_type>1</edge_type>
           <source_obj>2</source_obj>
           <sink_obj>4</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_12">
-          <id>15</id>
+        <item class_id_reference="20" object_id="_11">
+          <id>14</id>
           <edge_type>1</edge_type>
-          <source_obj>14</source_obj>
+          <source_obj>10</source_obj>
           <sink_obj>4</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -319,7 +296,7 @@
     <cdfg_regions class_id="21" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="22" tracking_level="1" version="0" object_id="_13">
+      <item class_id="22" tracking_level="1" version="0" object_id="_12">
         <mId>1</mId>
         <mTag>Block__proc</mTag>
         <mType>0</mType>
@@ -342,26 +319,26 @@
         <mDfPipe class_id="-1"/>
       </item>
     </cdfg_regions>
-    <fsm class_id="24" tracking_level="1" version="0" object_id="_14">
+    <fsm class_id="24" tracking_level="1" version="0" object_id="_13">
       <states class_id="25" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="26" tracking_level="1" version="0" object_id="_15">
+        <item class_id="26" tracking_level="1" version="0" object_id="_14">
           <id>1</id>
           <operations class_id="27" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
-            <item class_id="28" tracking_level="1" version="0" object_id="_16">
+            <item class_id="28" tracking_level="1" version="0" object_id="_15">
               <id>3</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_17">
+            <item class_id_reference="28" object_id="_16">
               <id>4</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_18">
+            <item class_id_reference="28" object_id="_17">
               <id>5</id>
               <stage>1</stage>
               <latency>1</latency>
@@ -374,7 +351,7 @@
         <item_version>0</item_version>
       </transitions>
     </fsm>
-    <res class_id="30" tracking_level="1" version="0" object_id="_19">
+    <res class_id="30" tracking_level="1" version="0" object_id="_18">
       <dp_component_resource class_id="31" tracking_level="0" version="0">
         <count>0</count>
         <item_version>0</item_version>
@@ -548,7 +525,7 @@
       <count>2</count>
       <item_version>0</item_version>
       <item class_id="44" tracking_level="0" version="0">
-        <first>10</first>
+        <first>8</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -556,7 +533,7 @@
         </second>
       </item>
       <item>
-        <first>18</first>
+        <first>16</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -576,7 +553,7 @@
       <count>2</count>
       <item_version>0</item_version>
       <item class_id="47" tracking_level="0" version="0">
-        <first>write_ln38_write_fu_10</first>
+        <first>write_ln36_write_fu_8</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -584,7 +561,7 @@
         </second>
       </item>
       <item>
-        <first>write_ln39_write_fu_18</first>
+        <first>write_ln37_write_fu_16</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

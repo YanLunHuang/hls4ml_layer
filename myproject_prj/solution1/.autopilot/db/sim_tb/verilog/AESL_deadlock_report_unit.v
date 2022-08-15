@@ -135,7 +135,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
     endfunction
 
     // get the proc path based on dl vector
-    function [552:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
+    function [584:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
         integer index;
         begin
             index = proc_index(dl_vec);
@@ -144,7 +144,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     proc_path = "myproject.Block_proc_U0";
                 end
                 1 : begin
-                    proc_path = "myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0";
+                    proc_path = "myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0";
                 end
                 default : begin
                     proc_path = "unknown";
@@ -164,7 +164,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
     endtask
 
     // print the start of a cycle
-    task print_cycle_start(input reg [552:0] proc_path, input integer cycle_id);
+    task print_cycle_start(input reg [584:0] proc_path, input integer cycle_id);
         begin
             $display("/////////////////////////");
             $display("// Dependence cycle %0d:", cycle_id);
@@ -187,7 +187,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
     endtask
 
     // print one proc component in the cycle
-    task print_cycle_proc_comp(input reg [552:0] proc_path, input integer cycle_comp_id);
+    task print_cycle_proc_comp(input reg [584:0] proc_path, input integer cycle_comp_id);
         begin
             $display("// (%0d): Process: %0s", cycle_comp_id, proc_path);
             $fdisplay(fp, "Dependence_Process_ID %0d", cycle_comp_id);
@@ -207,9 +207,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 0 : begin
                     case(index2)
                     1: begin
-                        if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]))) begin
+                        if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count[0]))) begin
                             chan_path = "";
-                            if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]))) begin
+                            if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count[0]))) begin
                                 $display("//      Deadlocked by sync logic between input processes");
                                 $display("//      Please increase channel depth");
                             end
@@ -220,9 +220,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 1 : begin
                     case(index2)
                     0: begin
-                        if (((AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]) & AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
+                        if (((AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count[0]) & AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
                             chan_path = "";
-                            if (((AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]) & AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
+                            if (((AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0_ap_ready_count[0]) & AESL_inst_myproject.normalize_me_ap_fixed_ap_fixed_32_16_5_3_0_config3_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
                                 $display("//      Deadlocked by sync logic between input processes");
                                 $display("//      Please increase channel depth");
                             end
