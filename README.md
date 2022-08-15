@@ -1,5 +1,7 @@
-# Image_only_model
-### This is the original one.
-### There are some problem inside this branch.
-### The weight data sended from testbench are empty.
-### You have to use carefully!!!
+# Some detail
+```bash
+This version uses single stream.
+I modified the II & removed some unused pragma
+The reuse factor will be used in array of stream, but not single stream.
+( I'll make a new version about array of stream to test. )
+```
