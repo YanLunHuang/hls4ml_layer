@@ -1,0 +1,966 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:62:82
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:40:5
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 899 ; free virtual = 11019
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 899 ; free virtual = 11019
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'ResWrite' (firmware/nnet_utils/nnet_conv2d_stream.h:176) in function 'void nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(hls::stream<FORWARD_REFERENCE>&, hls::stream<FORWARD_REFERENCE>&, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:283) in function 'void nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>(FORWARD_REFERENCE*, FORWARD_REFERENCE (*) [FORWARD_REFERENCE::reuse_factor], FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_dense_resource.h:294) in function 'void nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>(FORWARD_REFERENCE*, FORWARD_REFERENCE (*) [FORWARD_REFERENCE::reuse_factor], FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:131).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:125).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:119).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:113).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:122).
+INFO: [XFORM 203-603] Inlining function 'nnet::shift_right_small<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:118).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>' into 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:172).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:367).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 888 ; free virtual = 11012
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 880 ; free virtual = 11004
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.3' (firmware/nnet_utils/nnet_dense_resource.h:291) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:80:51).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:47) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:159) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (firmware/nnet_utils/nnet_dense_resource.h:285) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1' (firmware/nnet_utils/nnet_dense_resource.h:296) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.4' (firmware/nnet_utils/nnet_conv2d_stream.h:178) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:108) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:111) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_conv2d_stream.h:82) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:83) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/nnet_conv2d_stream.h:89) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_conv2d_stream.h:91) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpdata.V' (firmware/nnet_utils/nnet_conv2d_stream.h:135) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_in.V'  in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w2.V' (firmware/myproject.cpp:32) in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 2 completely.
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'layer_in_row.Array.V' .
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 2 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'w2.V' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'w2.V' has read operations in process function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'Block__proc'
+	 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'
+	 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 842 ; free virtual = 10968
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:157:24) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' to 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' (firmware/nnet_utils/nnet_padding_stream.h:26:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:84:1)
+INFO: [HLS 200-472] Inferring partial write operation for 'output.V' (firmware/nnet_utils/nnet_conv2d_stream.h:92:6)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 795 ; free virtual = 10924
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' to 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.25 seconds; current allocated memory: 196.199 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 196.244 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 196.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 196.994 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' (Function: cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('output_V_addr_8_write_ln92', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118) of variable 'tmp_30', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118 on array 'output_V' and 'load' operation ('output_V_load_8', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('output_V_load', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'output_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 197.336 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 197.797 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 197.908 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 197.958 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 198.493 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 199.249 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 199.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 199.572 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 199.771 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 200.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layecud' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layedEe' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeeOg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layefYi' due to the length limit 60
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:62:82
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:40:5
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 635 ; free virtual = 10466
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 635 ; free virtual = 10466
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:131).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:125).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:119).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:113).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:122).
+INFO: [XFORM 203-603] Inlining function 'nnet::shift_right_small<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:118).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>' into 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:172).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:367).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 609 ; free virtual = 10292
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 608 ; free virtual = 10273
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.3' (firmware/nnet_utils/nnet_dense_resource.h:291) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:80:51).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:47) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:159) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:283) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2.1' (firmware/nnet_utils/nnet_dense_resource.h:285) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1' (firmware/nnet_utils/nnet_dense_resource.h:294) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1.1' (firmware/nnet_utils/nnet_dense_resource.h:296) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'ResWrite' (firmware/nnet_utils/nnet_conv2d_stream.h:176) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.4.1' (firmware/nnet_utils/nnet_conv2d_stream.h:178) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:108) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:111) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_conv2d_stream.h:82) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:83) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/nnet_conv2d_stream.h:89) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_conv2d_stream.h:91) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpdata.V' (firmware/nnet_utils/nnet_conv2d_stream.h:135) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_in.V'  in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w2.V' (firmware/myproject.cpp:32) in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 2 completely.
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'layer_in_row.Array.V' .
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 2 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'w2.V' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'w2.V' has read operations in process function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'Block__proc'
+	 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'
+	 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 602 ; free virtual = 9869
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:157:24) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' to 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' (firmware/nnet_utils/nnet_padding_stream.h:26:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:84:1)
+INFO: [HLS 200-472] Inferring partial write operation for 'output.V' (firmware/nnet_utils/nnet_conv2d_stream.h:92:6)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 611 ; free virtual = 9668
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' to 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.69 seconds; current allocated memory: 196.819 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 196.864 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 197.325 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 197.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' (Function: cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('output_V_addr_8_write_ln92', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118) of variable 'tmp_30', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118 on array 'output_V' and 'load' operation ('output_V_load_8', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('output_V_load', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'output_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 197.953 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 198.415 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 198.495 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 198.545 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 199.097 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 199.854 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 200.002 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 200.193 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 200.379 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 201.412 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layecud' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layedEe' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeeOg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layefYi' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeg8j' due to the length limit 60
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:62:82
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:40:5
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 898 ; free virtual = 8405
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 898 ; free virtual = 8405
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:131).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:125).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:119).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:113).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:122).
+INFO: [XFORM 203-603] Inlining function 'nnet::shift_right_small<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:118).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>' into 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:172).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:367).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 852 ; free virtual = 8360
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 854 ; free virtual = 8362
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.3' (firmware/nnet_utils/nnet_dense_resource.h:291) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:80:51).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:47) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:159) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:283) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2.1' (firmware/nnet_utils/nnet_dense_resource.h:285) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1' (firmware/nnet_utils/nnet_dense_resource.h:294) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1.1' (firmware/nnet_utils/nnet_dense_resource.h:296) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'ResWrite' (firmware/nnet_utils/nnet_conv2d_stream.h:176) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.4.1' (firmware/nnet_utils/nnet_conv2d_stream.h:178) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:108) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:111) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_conv2d_stream.h:82) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:83) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/nnet_conv2d_stream.h:89) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_conv2d_stream.h:91) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpdata.V' (firmware/nnet_utils/nnet_conv2d_stream.h:135) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_in.V'  in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w2.V' (firmware/myproject.cpp:32) in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 2 completely.
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'layer_in_row.Array.V' .
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 2 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'w2.V' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'w2.V' has read operations in process function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'Block__proc'
+	 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'
+	 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 617 ; free virtual = 7925
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:157:24) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' to 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' (firmware/nnet_utils/nnet_padding_stream.h:26:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:84:1)
+INFO: [HLS 200-472] Inferring partial write operation for 'output.V' (firmware/nnet_utils/nnet_conv2d_stream.h:92:6)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 618 ; free virtual = 7875
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' to 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.4 seconds; current allocated memory: 196.850 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 196.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 197.340 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 197.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' (Function: cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('output_V_addr_8_write_ln92', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118) of variable 'tmp_30', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118 on array 'output_V' and 'load' operation ('output_V_load_8', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('output_V_load', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'output_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 197.968 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 198.429 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 198.525 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 198.575 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 199.132 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 199.900 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 200.034 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 200.225 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 200.426 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 201.443 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layecud' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layedEe' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeeOg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layefYi' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeg8j' due to the length limit 60
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:62:82
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:40:5
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1502 ; free virtual = 8345
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1502 ; free virtual = 8345
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:131).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:125).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:119).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:113).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:122).
+INFO: [XFORM 203-603] Inlining function 'nnet::shift_right_small<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:118).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>' into 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:172).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:367).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1451 ; free virtual = 8294
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1441 ; free virtual = 8284
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.3' (firmware/nnet_utils/nnet_dense_resource.h:291) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:80:51).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:47) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:159) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:283) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2.1' (firmware/nnet_utils/nnet_dense_resource.h:285) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1' (firmware/nnet_utils/nnet_dense_resource.h:294) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1.1' (firmware/nnet_utils/nnet_dense_resource.h:296) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'ResWrite' (firmware/nnet_utils/nnet_conv2d_stream.h:176) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.4.1' (firmware/nnet_utils/nnet_conv2d_stream.h:178) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:108) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:111) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_conv2d_stream.h:82) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:83) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/nnet_conv2d_stream.h:89) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_conv2d_stream.h:91) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpdata.V' (firmware/nnet_utils/nnet_conv2d_stream.h:135) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_in.V'  in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w2.V' (firmware/myproject.cpp:32) in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 2 completely.
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'layer_in_row.Array.V' .
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 2 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'w2.V' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'w2.V' has read operations in process function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'Block__proc'
+	 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'
+	 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 1465 ; free virtual = 8310
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:157:24) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' to 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' (firmware/nnet_utils/nnet_padding_stream.h:26:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:84:1)
+INFO: [HLS 200-472] Inferring partial write operation for 'output.V' (firmware/nnet_utils/nnet_conv2d_stream.h:92:6)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 1423 ; free virtual = 8267
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' to 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.33 seconds; current allocated memory: 196.822 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 196.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 197.327 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 197.596 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' (Function: cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('output_V_addr_8_write_ln92', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118) of variable 'tmp_30', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118 on array 'output_V' and 'load' operation ('output_V_load_8', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('output_V_load', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'output_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 197.956 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 198.417 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 198.497 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 198.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 4, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 199.107 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 199.885 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 200.034 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 200.225 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 200.411 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 201.444 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layecud' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layedEe' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeeOg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layefYi' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeg8j' due to the length limit 60
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:62:82
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:40:5
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1504 ; free virtual = 8393
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1504 ; free virtual = 8393
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'Loop-5.2.1' (firmware/nnet_utils/nnet_conv2d_stream.h:178) in function 'void nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(hls::stream<FORWARD_REFERENCE>&, hls::stream<FORWARD_REFERENCE>&, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_dense_resource.h:285) in function 'void nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>(FORWARD_REFERENCE*, FORWARD_REFERENCE (*) [FORWARD_REFERENCE::reuse_factor], FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (firmware/nnet_utils/nnet_dense_resource.h:296) in function 'void nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>(FORWARD_REFERENCE*, FORWARD_REFERENCE (*) [FORWARD_REFERENCE::reuse_factor], FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:131).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:125).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:119).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:113).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:122).
+INFO: [XFORM 203-603] Inlining function 'nnet::shift_right_small<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:118).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_large_rf_gt_nin_rem0<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_mult>' into 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:172).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_large_cl_nopad_pad_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:367).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1494 ; free virtual = 8383
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 1487 ; free virtual = 8376
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.3' (firmware/nnet_utils/nnet_dense_resource.h:291) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:80:51).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:47) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:159) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:283) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3.1' (firmware/nnet_utils/nnet_dense_resource.h:294) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'ResWrite' (firmware/nnet_utils/nnet_conv2d_stream.h:176) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:108) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:111) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (firmware/nnet_utils/nnet_conv2d_stream.h:80) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_conv2d_stream.h:82) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (firmware/nnet_utils/nnet_conv2d_stream.h:83) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/nnet_conv2d_stream.h:89) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_conv2d_stream.h:91) in function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpdata.V' (firmware/nnet_utils/nnet_conv2d_stream.h:135) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_in.V'  in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w2.V' (firmware/myproject.cpp:32) in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'layer_out.i'  in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'tmpinput.V' (firmware/nnet_utils/nnet_conv2d_stream.h:105) in dimension 2 completely.
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'layer_in_row.Array.V' .
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer_in_row.Array.V' in dimension 2 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'w2.V' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'w2.V' has read operations in process function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'Block__proc'
+	 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'
+	 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 1457 ; free virtual = 8348
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (firmware/nnet_utils/nnet_conv2d_stream.h:157:24) in function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' to 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' (firmware/nnet_utils/nnet_padding_stream.h:26:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::product_dense<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'product_dense<ap_fixed,ap_fixed,ap_fixed >' (firmware/nnet_utils/nnet_dense_resource.h:37:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:157:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::cnnshift_arr<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' (firmware/nnet_utils/nnet_conv2d_stream.h:84:1)
+INFO: [HLS 200-472] Inferring partial write operation for 'output.V' (firmware/nnet_utils/nnet_conv2d_stream.h:92:6)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1043.586 ; gain = 523.547 ; free physical = 1415 ; free virtual = 8306
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' to 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'product_dense<ap_fixed,ap_fixed,ap_fixed >' to 'product_dense_ap_fixed_ap_fixed_ap_fixed_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl_me<ap_fixed,ap_fixed<16,14,5,3,0>,config2>' to 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.43 seconds; current allocated memory: 196.786 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 196.831 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.66 seconds; current allocated memory: 197.291 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 197.560 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' (Function: cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('output_V_addr_8_write_ln92', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118) of variable 'tmp_30', firmware/nnet_utils/nnet_conv2d_stream.h:92->firmware/nnet_utils/nnet_conv2d_stream.h:118 on array 'output_V' and 'load' operation ('output_V_load_8', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('output_V_load', firmware/nnet_utils/nnet_conv2d_stream.h:84->firmware/nnet_utils/nnet_conv2d_stream.h:118) on array 'output_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'output_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 197.919 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 198.380 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'product_dense_ap_fixed_ap_fixed_ap_fixed_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'product_dense<ap_fixed,ap_fixed,ap_fixed >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 198.460 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 198.511 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_me_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 8, Final II = 8, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 199.076 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 199.897 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 200.009 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 200.200 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 200.386 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 201.419 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_0' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layecud' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layedEe' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_1_1' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layeeOg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layer_in_row_Array_V_0_2' to 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layefYi' due to the length limit 60

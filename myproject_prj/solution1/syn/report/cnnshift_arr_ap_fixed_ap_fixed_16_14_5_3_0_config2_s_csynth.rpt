@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vivado HLS Report for 'cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s'
+================================================================
+* Date:           Thu Aug 18 12:36:12 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 2.671 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        6|        6| 30.000 ns | 30.000 ns |    7|    7| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        0|      -|    1024|     512|    -|
+|Multiplexer      |        -|      -|       -|     183|    -|
+|Register         |        -|      -|     759|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|    1783|     695|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |           Memory           |                            Module                            | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |layer_in_row_Array_V_0_0_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_0_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_0_1_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_1_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_0_2_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_2_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_0_3_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_3_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_0_4_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_4_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_0_5_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_5_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_0_6_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_6_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_0_7_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    |layer_in_row_Array_V_1_7_U  |cnnshift_arr_ap_fixed_ap_fixed_16_14_5_3_0_config2_s_layebkb  |        0|  64|  32|    0|     5|   16|     1|           80|
+    +----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                       |                                                              |        0|1024| 512|    0|    80|  256|    16|         1280|
+    +----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm          |  41|          8|    1|          8|
+    |output_V_address0  |  41|          8|    4|         32|
+    |output_V_address1  |  41|          8|    4|         32|
+    |output_V_d0        |  33|          6|  128|        768|
+    |output_V_d1        |  27|          5|  128|        640|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              | 183|         35|  265|       1480|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------+-----+----+-----+-----------+
+    |            Name           |  FF | LUT| Bits| Const Bits|
+    +---------------------------+-----+----+-----+-----------+
+    |DataIn_V_assign_1_reg_803  |   16|   0|   16|          0|
+    |DataIn_V_assign_2_reg_769  |   16|   0|   16|          0|
+    |DataIn_V_assign_3_reg_813  |   16|   0|   16|          0|
+    |DataIn_V_assign_4_reg_775  |   16|   0|   16|          0|
+    |DataIn_V_assign_6_reg_781  |   16|   0|   16|          0|
+    |DataIn_V_assign_8_reg_791  |   16|   0|   16|          0|
+    |DataIn_V_assign_s_reg_797  |   16|   0|   16|          0|
+    |DataOut_V_10_reg_840       |   16|   0|   16|          0|
+    |DataOut_V_12_reg_808       |   16|   0|   16|          0|
+    |DataOut_V_14_reg_876       |   16|   0|   16|          0|
+    |DataOut_V_1_reg_902        |   16|   0|   16|          0|
+    |DataOut_V_3_reg_871        |   16|   0|   16|          0|
+    |DataOut_V_5_reg_907        |   16|   0|   16|          0|
+    |DataOut_V_7_reg_786        |   16|   0|   16|          0|
+    |DataOut_V_9_reg_922        |   16|   0|   16|          0|
+    |ap_CS_fsm                  |    7|   0|    7|          0|
+    |ap_port_reg_data_V_read    |  128|   0|  128|          0|
+    |reg_304                    |   32|   0|   32|          0|
+    |reg_308                    |   32|   0|   32|          0|
+    |tmp_10_reg_897             |   32|   0|   32|          0|
+    |tmp_14_reg_917             |   64|   0|   64|          0|
+    |tmp_18_reg_892             |   16|   0|   16|          0|
+    |tmp_1_reg_830              |   32|   0|   32|          0|
+    |tmp_20_reg_927             |   16|   0|   16|          0|
+    |tmp_22_reg_856             |   16|   0|   16|          0|
+    |tmp_31_reg_932             |   32|   0|   32|          0|
+    |tmp_5_reg_861              |   32|   0|   32|          0|
+    |tmp_6_reg_866              |   32|   0|   32|          0|
+    |trunc_ln203_1_reg_835      |   32|   0|   32|          0|
+    |trunc_ln203_reg_764        |   16|   0|   16|          0|
+    +---------------------------+-----+----+-----+-----------+
+    |Total                      |  759|   0|  759|          0|
+    +---------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |                     Source Object                    |    C Type    |
++-------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs | cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2> | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs | cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2> | return value |
+|ap_start           |  in |    1| ap_ctrl_hs | cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2> | return value |
+|ap_done            | out |    1| ap_ctrl_hs | cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2> | return value |
+|ap_idle            | out |    1| ap_ctrl_hs | cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2> | return value |
+|ap_ready           | out |    1| ap_ctrl_hs | cnnshift_arr<ap_fixed,ap_fixed<16,14,5,3,0>,config2> | return value |
+|data_V_read        |  in |  128|   ap_none  |                      data_V_read                     |    scalar    |
+|output_V_address0  | out |    4|  ap_memory |                       output_V                       |     array    |
+|output_V_ce0       | out |    1|  ap_memory |                       output_V                       |     array    |
+|output_V_we0       | out |    1|  ap_memory |                       output_V                       |     array    |
+|output_V_d0        | out |  128|  ap_memory |                       output_V                       |     array    |
+|output_V_q0        |  in |  128|  ap_memory |                       output_V                       |     array    |
+|output_V_address1  | out |    4|  ap_memory |                       output_V                       |     array    |
+|output_V_ce1       | out |    1|  ap_memory |                       output_V                       |     array    |
+|output_V_we1       | out |    1|  ap_memory |                       output_V                       |     array    |
+|output_V_d1        | out |  128|  ap_memory |                       output_V                       |     array    |
+|output_V_q1        |  in |  128|  ap_memory |                       output_V                       |     array    |
++-------------------+-----+-----+------------+------------------------------------------------------+--------------+
+
