@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'myproject'
 ================================================================
-* Date:           Mon Aug 15 12:58:01 2022
+* Date:           Thu Aug 25 11:11:27 2022
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
@@ -81,10 +81,10 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 5 [2/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)" [firmware/myproject.cpp:47]   --->   Operation 5 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 5 [2/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)" [firmware/myproject.cpp:47]   --->   Operation 5 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 6 [1/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)" [firmware/myproject.cpp:47]   --->   Operation 6 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 6 [1/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)" [firmware/myproject.cpp:47]   --->   Operation 6 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
 ST_4 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str2) nounwind" [firmware/myproject.cpp:46]   --->   Operation 7 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>

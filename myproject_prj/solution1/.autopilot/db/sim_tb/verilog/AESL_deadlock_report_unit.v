@@ -144,7 +144,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     proc_path = "myproject.Block_proc_U0";
                 end
                 1 : begin
-                    proc_path = "myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0";
+                    proc_path = "myproject.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0";
                 end
                 default : begin
                     proc_path = "unknown";
@@ -207,9 +207,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 0 : begin
                     case(index2)
                     1: begin
-                        if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]))) begin
+                        if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]))) begin
                             chan_path = "";
-                            if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]))) begin
+                            if (((AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]) & AESL_inst_myproject.Block_proc_U0.ap_idle & ~(AESL_inst_myproject.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]))) begin
                                 $display("//      Deadlocked by sync logic between input processes");
                                 $display("//      Please increase channel depth");
                             end
@@ -220,9 +220,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 1 : begin
                     case(index2)
                     0: begin
-                        if (((AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]) & AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
+                        if (((AESL_inst_myproject.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]) & AESL_inst_myproject.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
                             chan_path = "";
-                            if (((AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]) & AESL_inst_myproject.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
+                            if (((AESL_inst_myproject.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count[0]) & AESL_inst_myproject.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0.ap_idle & ~(AESL_inst_myproject.Block_proc_U0_ap_ready_count[0]))) begin
                                 $display("//      Deadlocked by sync logic between input processes");
                                 $display("//      Please increase channel depth");
                             end

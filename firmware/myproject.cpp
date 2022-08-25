@@ -44,6 +44,6 @@ void myproject(
 
     //hls-fpga-machine-learning insert layers
     #pragma HLS DATAFLOW 
-    nnet::resize_nearest_v2<input_t, config2>(input_1, layer2_out); // up_sampling2d
+    nnet::resize_nearest_v1<input_t, config2>(input_1, layer2_out); // up_sampling2d
 
 }

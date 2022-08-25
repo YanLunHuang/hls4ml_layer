@@ -7,16 +7,16 @@
 source /opt/Xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'YL_HUANG' on host 'r7515ed520.EE.NCTU.edu.tw' (Linux_x86_64 version 3.10.0-1160.11.1.el7.x86_64) on Mon Aug 15 12:57:19 CST 2022
+INFO: [HLS 200-10] For user 'YL_HUANG' on host 'r7515ed520.EE.NCTU.edu.tw' (Linux_x86_64 version 3.10.0-1160.11.1.el7.x86_64) on Thu Aug 25 11:10:41 CST 2022
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
-INFO: [HLS 200-10] In directory '/home/YL_HUANG/8_12/resize_test'
+INFO: [HLS 200-10] In directory '/home/YL_HUANG/9_2/upsampling'
 Sourcing Tcl script 'build_prj.tcl'
-INFO: [HLS 200-10] Creating and opening project '/home/YL_HUANG/8_12/resize_test/myproject_prj'.
+INFO: [HLS 200-10] Creating and opening project '/home/YL_HUANG/9_2/upsampling/myproject_prj'.
 INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
 INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
-INFO: [HLS 200-10] Creating and opening solution '/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1'.
+INFO: [HLS 200-10] Creating and opening solution '/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1'.
 INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
 INFO: [XFORM 203-1161] The maximum of name length is set into 60.
 INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
@@ -46,104 +46,106 @@ WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmwa
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:2
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:5
 WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 919 ; free virtual = 30021
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 919 ; free virtual = 30021
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54333 ; free virtual = 95637
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54333 ; free virtual = 95637
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-489] Unrolling loop 'RatioHeight' (firmware/nnet_utils/nnet_image_stream.h:158) in function 'void nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(hls::stream<FORWARD_REFERENCE>&, hls::stream<FORWARD_REFERENCE>&)' completely with a factor of 1.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 915 ; free virtual = 30018
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54328 ; free virtual = 95633
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 913 ; free virtual = 30016
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ImageHeight' (firmware/nnet_utils/nnet_image_stream.h:148) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
-INFO: [HLS 200-489] Unrolling loop 'ReadData' (firmware/nnet_utils/nnet_image_stream.h:151) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 44.
-INFO: [HLS 200-489] Unrolling loop 'ImageWidth' (firmware/nnet_utils/nnet_image_stream.h:160) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 220.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V' (firmware/nnet_utils/nnet_image_stream.h:146) in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.0' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.1' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.2' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.3' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.4' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.5' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.6' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.7' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.8' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.9' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.10' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54326 ; free virtual = 95632
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ResizeHeight' (firmware/nnet_utils/nnet_image_stream.h:154) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'ImageWidth' (firmware/nnet_utils/nnet_image_stream.h:146) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 11.
+INFO: [HLS 200-489] Unrolling loop 'ReadData' (firmware/nnet_utils/nnet_image_stream.h:147) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'ImageWidth2' (firmware/nnet_utils/nnet_image_stream.h:155) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 11.
+INFO: [HLS 200-489] Unrolling loop 'ResizeWidth' (firmware/nnet_utils/nnet_image_stream.h:156) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'ResizeChan' (firmware/nnet_utils/nnet_image_stream.h:157) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V' (firmware/nnet_utils/nnet_image_stream.h:142) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.0' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.1' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.2' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.3' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.4' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.5' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.6' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.7' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.8' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.9' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.10' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
 INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
 	 'Block__proc'
-	 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1053.574 ; gain = 533.535 ; free physical = 890 ; free virtual = 29994
-WARNING: [XFORM 203-631] Renaming function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>' (firmware/nnet_utils/nnet_image_stream.h:134)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1054.574 ; gain = 534.535 ; free physical = 859 ; free virtual = 29963
+	 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54295 ; free virtual = 95601
+WARNING: [XFORM 203-631] Renaming function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>' (firmware/nnet_utils/nnet_image_stream.h:133)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54280 ; free virtual = 95587
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
-WARNING: [SYN 201-103] Legalizing function name 'resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>' to 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>' to 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 36.1 seconds; current allocated memory: 157.588 MB.
+INFO: [HLS 200-111]  Elapsed time: 39.52 seconds; current allocated memory: 157.647 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 157.635 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 157.694 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-42] -- Implementing module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'ImageHeight'.
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 132, distance = 1, offset = 1)
-   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 194, distance = 1, offset = 1)
-   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 209, distance = 1, offset = 1)
-   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 217, distance = 1, offset = 1)
-   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 219, distance = 1, offset = 1)
-   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:165).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 1)
+   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
+   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 132, distance = 1, offset = 1)
+   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 194, distance = 1, offset = 1)
+   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 209, distance = 1, offset = 1)
+   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 217, distance = 1, offset = 1)
+   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 219, distance = 1, offset = 1)
+   between axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160) and axis write on port 'resized_V_V' (firmware/nnet_utils/nnet_image_stream.h:160).
 INFO: [SCHED 204-61] Pipelining result : Target II = 5, Final II = 220, Depth = 222.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 4.88 seconds; current allocated memory: 158.908 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.87 seconds; current allocated memory: 158.959 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.99 seconds; current allocated memory: 160.649 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.99 seconds; current allocated memory: 160.719 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 160.714 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 160.783 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 160.783 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 160.853 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 160.897 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 160.983 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-10] -- Generating RTL for module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 171.542 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 171.613 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -153,13 +155,13 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/const_size_in_1'
 INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/const_size_out_1' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
-INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 175.922 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.83 seconds; current allocated memory: 175.977 MB.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 1273.89 MHz
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1194.180 ; gain = 674.141 ; free physical = 787 ; free virtual = 29901
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.680 ; gain = 662.641 ; free physical = 54208 ; free virtual = 95523
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
-***** C/RTL SYNTHESIS COMPLETED IN 0h0m38s *****
+***** C/RTL SYNTHESIS COMPLETED IN 0h0m41s *****
 ***** C/RTL SIMULATION *****
 INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
@@ -186,29 +188,29 @@ Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: /opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_top glbl -prj myproject.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject -debug wave 
 Multi-threading is on. Using 14 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_myproject_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_V.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_V.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/AESL_axi_s_layer2_out_V_V.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/AESL_axi_s_layer2_out_V_V.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_layer2_out_V_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/Block_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/Block_proc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Block_proc
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module myproject
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module regslice_both
 INFO: [VRFC 10-311] analyzing module regslice_forward
 INFO: [VRFC 10-311] analyzing module regslice_reverse
@@ -227,7 +229,7 @@ Compiling module xil_defaultlib.Block_proc
 Compiling module xil_defaultlib.ibuf(W=17)
 Compiling module xil_defaultlib.obuf(W=17)
 Compiling module xil_defaultlib.regslice_both(DataWidth=16)
-Compiling module xil_defaultlib.resize_nearest_v2_ap_fixed_16_14...
+Compiling module xil_defaultlib.resize_nearest_v1_ap_fixed_16_14...
 Compiling module xil_defaultlib.myproject
 Compiling module xil_defaultlib.fifo(DEPTH=2464,WIDTH=16)
 Compiling module xil_defaultlib.AESL_axi_s_input_1_V_V
@@ -246,9 +248,9 @@ Built simulation snapshot myproject
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Aug 15 12:58:28 2022. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Mon Aug 15 12:58:28 2022...
+source /home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 25 11:11:54 2022. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 25 11:11:54 2022...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -326,9 +328,9 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 // RTL Simulation : 0 / 1 [0.00%] @ "113000"
 // RTL Simulation : 1 / 1 [100.00%] @ "61738000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 61757500 ps : File "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 371
+$finish called at time : 61757500 ps : File "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 371
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Aug 15 12:58:40 2022...
+INFO: [Common 17-206] Exiting xsim at Thu Aug 25 11:12:05 2022...
 INFO: [COSIM 212-316] Starting C post checking ...
 Processing input 0
 Predictions
@@ -339,7 +341,7 @@ INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
 INFO:
-Report time       : Mon Aug 15 12:58:40 CST 2022.
+Report time       : Thu Aug 25 11:12:06 CST 2022.
 Solution          : solution1.
 Simulation tool   : xsim.
 
@@ -352,7 +354,7 @@ Simulation tool   : xsim.
 |   Verilog|      Pass|          12323|          12323|          12323|             NA|             NA|             NA|
 +----------+----------+-----------------------------------------------+-----------------------------------------------+
 
-***** C/RTL SIMULATION COMPLETED IN 0h0m36s *****
+***** C/RTL SIMULATION COMPLETED IN 0h0m37s *****
 ***** C/RTL VALIDATION *****
 INFO: Test PASSED
 ***** EXPORT IP *****
@@ -367,7 +369,7 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 15 12:58:52 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 25 11:12:17 2022...
 ***** EXPORT IP COMPLETED IN 0h0m11s *****
-INFO: [HLS 200-112] Total elapsed time: 92.64 seconds; peak allocated memory: 175.922 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Mon Aug 15 12:58:52 2022...
+INFO: [HLS 200-112] Total elapsed time: 96.68 seconds; peak allocated memory: 175.977 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Thu Aug 25 11:12:17 2022...

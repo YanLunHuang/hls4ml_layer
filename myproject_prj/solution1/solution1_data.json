@@ -70,19 +70,19 @@
     "Vhdl": [
       "impl\/vhdl\/Block_proc.vhd",
       "impl\/vhdl\/regslice_core.vhd",
-      "impl\/vhdl\/resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s.vhd",
+      "impl\/vhdl\/resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s.vhd",
       "impl\/vhdl\/myproject.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/Block_proc.v",
       "impl\/verilog\/regslice_core.v",
-      "impl\/verilog\/resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s.v",
+      "impl\/verilog\/resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s.v",
       "impl\/verilog\/myproject.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "DesignXml": "\/home\/YL_HUANG\/8_12\/resize_test\/myproject_prj\/solution1\/.autopilot\/db\/myproject.design.xml",
-    "DebugDir": "\/home\/YL_HUANG\/8_12\/resize_test\/myproject_prj\/solution1\/.debug",
-    "ProtoInst": ["\/home\/YL_HUANG\/8_12\/resize_test\/myproject_prj\/solution1\/.debug\/myproject.protoinst"]
+    "DesignXml": "\/home\/YL_HUANG\/9_2\/upsampling\/myproject_prj\/solution1\/.autopilot\/db\/myproject.design.xml",
+    "DebugDir": "\/home\/YL_HUANG\/9_2\/upsampling\/myproject_prj\/solution1\/.debug",
+    "ProtoInst": ["\/home\/YL_HUANG\/9_2\/upsampling\/myproject_prj\/solution1\/.debug\/myproject.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -239,8 +239,8 @@
       "ModuleName": "myproject",
       "Instances": [
         {
-          "ModuleName": "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s",
-          "InstanceName": "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0"
+          "ModuleName": "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s",
+          "InstanceName": "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0"
         },
         {
           "ModuleName": "Block_proc",
@@ -256,7 +256,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "1"
       },
-      "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s": {
+      "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -294,7 +294,7 @@
           "URAM": "0"
         }
       },
-      "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s": {
+      "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s": {
         "Latency": {
           "LatencyBest": "12323",
           "LatencyAvg": "12323",
@@ -357,7 +357,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-08-15 12:58:03 CST",
+    "Time": "2022-08-25 11:11:29 CST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

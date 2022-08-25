@@ -169,14 +169,14 @@
 						<id>14</id>
 						<name>_ln47</name>
 						<fileName>firmware/myproject.cpp</fileName>
-						<fileDirectory>/home/YL_HUANG/8_12/resize_test</fileDirectory>
+						<fileDirectory>/home/YL_HUANG/9_2/upsampling</fileDirectory>
 						<lineNumber>47</lineNumber>
 						<contextFuncName>myproject</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="11" tracking_level="0" version="0">
-								<first>/home/YL_HUANG/8_12/resize_test</first>
+								<first>/home/YL_HUANG/9_2/upsampling</first>
 								<second class_id="12" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -219,14 +219,14 @@
 						<id>15</id>
 						<name>_ln49</name>
 						<fileName>firmware/myproject.cpp</fileName>
-						<fileDirectory>/home/YL_HUANG/8_12/resize_test</fileDirectory>
+						<fileDirectory>/home/YL_HUANG/9_2/upsampling</fileDirectory>
 						<lineNumber>49</lineNumber>
 						<contextFuncName>myproject</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/YL_HUANG/8_12/resize_test</first>
+								<first>/home/YL_HUANG/9_2/upsampling</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -291,7 +291,7 @@
 					<Obj>
 						<type>2</type>
 						<id>21</id>
-						<name>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s</name>
+						<name>resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -307,7 +307,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:resize_nearest_v2&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;&gt;</content>
+				<content>&lt;constant:resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;&gt;</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -448,7 +448,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_25">
 						<type>0</type>
-						<name>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0</name>
+						<name>resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0</name>
 						<ssdmobj_id>14</ssdmobj_id>
 						<pins>
 							<count>2</count>
@@ -461,7 +461,7 @@
 								</port>
 								<inst class_id_reference="30" object_id="_28">
 									<type>0</type>
-									<name>resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0</name>
+									<name>resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0</name>
 									<ssdmobj_id>14</ssdmobj_id>
 								</inst>
 							</item>
@@ -735,7 +735,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s_fu_34</first>
+			<first>grp_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s_fu_34</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>

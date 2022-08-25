@@ -7,7 +7,7 @@ sv xil_defaultlib "AESL_deadlock_detection_unit.v"
 sv xil_defaultlib "AESL_deadlock_report_unit.v"
 sv xil_defaultlib "AESL_deadlock_detector.v"
 sv xil_defaultlib "Block_proc.v"
-sv xil_defaultlib "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s.v"
+sv xil_defaultlib "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s.v"
 sv xil_defaultlib "myproject.v"
 sv xil_defaultlib "regslice_core.v"
 

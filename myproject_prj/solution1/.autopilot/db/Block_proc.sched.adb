@@ -77,14 +77,14 @@
 						<id>3</id>
 						<name>const_size_in_1_write_ln38</name>
 						<fileName>firmware/myproject.cpp</fileName>
-						<fileDirectory>/home/YL_HUANG/8_12/resize_test</fileDirectory>
+						<fileDirectory>/home/YL_HUANG/9_2/upsampling</fileDirectory>
 						<lineNumber>38</lineNumber>
 						<contextFuncName>myproject</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/home/YL_HUANG/8_12/resize_test</first>
+								<first>/home/YL_HUANG/9_2/upsampling</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -127,14 +127,14 @@
 						<id>4</id>
 						<name>const_size_out_1_write_ln39</name>
 						<fileName>firmware/myproject.cpp</fileName>
-						<fileDirectory>/home/YL_HUANG/8_12/resize_test</fileDirectory>
+						<fileDirectory>/home/YL_HUANG/9_2/upsampling</fileDirectory>
 						<lineNumber>39</lineNumber>
 						<contextFuncName>myproject</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/YL_HUANG/8_12/resize_test</first>
+								<first>/home/YL_HUANG/9_2/upsampling</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>

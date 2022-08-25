@@ -12,7 +12,7 @@
 #include "AESL_pkg.h"
 
 #include "Block_proc.h"
-#include "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s.h"
+#include "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s.h"
 
 namespace ap_rtl {
 
@@ -47,7 +47,7 @@ struct myproject : public sc_module {
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
     Block_proc* Block_proc_U0;
-    resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s* resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0;
+    resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s* resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0;
     sc_signal< sc_logic > ap_rst_n_inv;
     sc_signal< sc_logic > Block_proc_U0_ap_start;
     sc_signal< sc_logic > Block_proc_U0_ap_done;
@@ -59,26 +59,26 @@ struct myproject : public sc_module {
     sc_signal< sc_lv<16> > Block_proc_U0_const_size_out_1;
     sc_signal< sc_logic > Block_proc_U0_const_size_out_1_ap_vld;
     sc_signal< sc_logic > ap_sync_continue;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_start;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_done;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_continue;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_idle;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_image_V_V_TREADY;
-    sc_signal< sc_lv<16> > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TDATA;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TVALID;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_start;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_done;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_continue;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_idle;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_image_V_V_TREADY;
+    sc_signal< sc_lv<16> > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TDATA;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TVALID;
     sc_signal< sc_logic > ap_sync_done;
     sc_signal< sc_logic > ap_sync_ready;
     sc_signal< sc_logic > ap_sync_reg_Block_proc_U0_ap_ready;
     sc_signal< sc_logic > ap_sync_Block_proc_U0_ap_ready;
     sc_signal< sc_lv<2> > Block_proc_U0_ap_ready_count;
-    sc_signal< sc_logic > ap_sync_reg_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
-    sc_signal< sc_logic > ap_sync_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
-    sc_signal< sc_lv<2> > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count;
+    sc_signal< sc_logic > ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
+    sc_signal< sc_logic > ap_sync_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
+    sc_signal< sc_lv<2> > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count;
     sc_signal< sc_logic > Block_proc_U0_start_full_n;
     sc_signal< sc_logic > Block_proc_U0_start_write;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_start_full_n;
-    sc_signal< sc_logic > resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_start_write;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_full_n;
+    sc_signal< sc_logic > resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_write;
     static const sc_lv<16> ap_const_lv16_0;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
@@ -99,7 +99,7 @@ struct myproject : public sc_module {
     void thread_ap_sync_continue();
     void thread_ap_sync_done();
     void thread_ap_sync_ready();
-    void thread_ap_sync_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready();
+    void thread_ap_sync_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready();
     void thread_const_size_in_1();
     void thread_const_size_in_1_ap_vld();
     void thread_const_size_out_1();
@@ -107,10 +107,10 @@ struct myproject : public sc_module {
     void thread_input_1_V_V_TREADY();
     void thread_layer2_out_V_V_TDATA();
     void thread_layer2_out_V_V_TVALID();
-    void thread_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_continue();
-    void thread_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_start();
-    void thread_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_start_full_n();
-    void thread_resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_start_write();
+    void thread_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_continue();
+    void thread_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_start();
+    void thread_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_full_n();
+    void thread_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_write();
     void thread_hdltv_gen();
 };
 

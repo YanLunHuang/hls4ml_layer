@@ -2,12 +2,12 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Aug 15 12:58:29 2022
-# Process ID: 1232
-# Current directory: /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog
+# Start of session at: Thu Aug 25 11:11:55 2022
+# Process ID: 16517
+# Current directory: /home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/myproject/xsim_script.tcl}
-# Log file: /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/xsim.log
-# Journal file: /home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/xsim.jou
+# Log file: /home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/xsim.log
+# Journal file: /home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/myproject/xsim_script.tcl
 # xsim {myproject} -autoloadwcfg -tclbatch {myproject.tcl}
@@ -80,6 +80,6 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 // RTL Simulation : 0 / 1 [0.00%] @ "113000"
 // RTL Simulation : 1 / 1 [100.00%] @ "61738000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 61757500 ps : File "/home/YL_HUANG/8_12/resize_test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 371
+$finish called at time : 61757500 ps : File "/home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 371
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Aug 15 12:58:40 2022...
+INFO: [Common 17-206] Exiting xsim at Thu Aug 25 11:12:05 2022...

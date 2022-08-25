@@ -40,7 +40,7 @@
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-codeRepl:9  call fastcc void @"resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)
+codeRepl:9  call fastcc void @"resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)
 
 ]]></Node>
 <StgValue><ssdm name="call_ln47"/></StgValue>
@@ -58,7 +58,7 @@ codeRepl:9  call fastcc void @"resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, conf
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-codeRepl:9  call fastcc void @"resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)
+codeRepl:9  call fastcc void @"resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)
 
 ]]></Node>
 <StgValue><ssdm name="call_ln47"/></StgValue>
@@ -237,13 +237,13 @@ codeRepl:10  ret void
 
 
 <dataflows>
-<dataflow id="26" from="resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>" to="call_ln47" fromId="25" toId="5">
+<dataflow id="26" from="resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>" to="call_ln47" fromId="25" toId="5">
 </dataflow>
 <dataflow id="27" from="input_1_V_V" to="call_ln47" fromId="21" toId="5">
 </dataflow>
 <dataflow id="28" from="layer2_out_V_V" to="call_ln47" fromId="22" toId="5">
 </dataflow>
-<dataflow id="29" from="resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>" to="call_ln47" fromId="25" toId="6">
+<dataflow id="29" from="resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>" to="call_ln47" fromId="25" toId="6">
 </dataflow>
 <dataflow id="30" from="input_1_V_V" to="call_ln47" fromId="21" toId="6">
 </dataflow>

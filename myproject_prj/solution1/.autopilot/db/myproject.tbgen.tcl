@@ -78,17 +78,17 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"InputProcess" : [
 			{"ID" : "1", "Name" : "Block_proc_U0", "ReadyCount" : "Block_proc_U0_ap_ready_count"},
-			{"ID" : "2", "Name" : "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0", "ReadyCount" : "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count"}],
+			{"ID" : "2", "Name" : "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0", "ReadyCount" : "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count"}],
 		"OutputProcess" : [
 			{"ID" : "1", "Name" : "Block_proc_U0"},
-			{"ID" : "2", "Name" : "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0"}],
+			{"ID" : "2", "Name" : "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0"}],
 		"Port" : [
 			{"Name" : "input_1_V_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0", "Port" : "image_V_V"}]},
+					{"ID" : "2", "SubInstance" : "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0", "Port" : "image_V_V"}]},
 			{"Name" : "layer2_out_V_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0", "Port" : "resized_V_V"}]},
+					{"ID" : "2", "SubInstance" : "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0", "Port" : "resized_V_V"}]},
 			{"Name" : "const_size_in_1", "Type" : "Vld", "Direction" : "O",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "Block_proc_U0", "Port" : "const_size_in_1"}]},
@@ -111,8 +111,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "const_size_in_1", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "const_size_out_1", "Type" : "Vld", "Direction" : "O"}]},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0", "Parent" : "0", "Child" : ["3", "4"],
-		"CDFG" : "resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s",
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0", "Parent" : "0", "Child" : ["3", "4"],
+		"CDFG" : "resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -131,8 +131,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "resized_V_V", "Type" : "Axis", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "resized_V_V_TDATA_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.regslice_both_image_V_V_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_U0.regslice_both_resized_V_V_U", "Parent" : "2"}]}
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0.regslice_both_image_V_V_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0.regslice_both_resized_V_V_U", "Parent" : "2"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -144,7 +144,7 @@ set ArgLastReadFirstWriteLatency {
 	Block_proc {
 		const_size_in_1 {Type O LastRead -1 FirstWrite 0}
 		const_size_out_1 {Type O LastRead -1 FirstWrite 0}}
-	resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s {
+	resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s {
 		image_V_V {Type I LastRead 45 FirstWrite -1}
 		resized_V_V {Type O LastRead -1 FirstWrite 2}}}
 

@@ -19,56 +19,56 @@ WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmwa
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:2
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:5
 WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file firmware/myproject.cpp
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 919 ; free virtual = 30021
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 919 ; free virtual = 30021
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54333 ; free virtual = 95637
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54333 ; free virtual = 95637
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-489] Unrolling loop 'RatioHeight' (firmware/nnet_utils/nnet_image_stream.h:158) in function 'void nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(hls::stream<FORWARD_REFERENCE>&, hls::stream<FORWARD_REFERENCE>&)' completely with a factor of 1.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 915 ; free virtual = 30018
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54328 ; free virtual = 95633
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 913 ; free virtual = 30016
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ImageHeight' (firmware/nnet_utils/nnet_image_stream.h:148) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
-INFO: [HLS 200-489] Unrolling loop 'ReadData' (firmware/nnet_utils/nnet_image_stream.h:151) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 44.
-INFO: [HLS 200-489] Unrolling loop 'ImageWidth' (firmware/nnet_utils/nnet_image_stream.h:160) in function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 220.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V' (firmware/nnet_utils/nnet_image_stream.h:146) in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.0' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.1' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.2' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.3' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.4' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.5' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.6' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.7' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.8' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.9' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
-INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.10' (firmware/nnet_utils/nnet_image_stream.h:146) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54326 ; free virtual = 95632
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ResizeHeight' (firmware/nnet_utils/nnet_image_stream.h:154) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'ImageWidth' (firmware/nnet_utils/nnet_image_stream.h:146) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 11.
+INFO: [HLS 200-489] Unrolling loop 'ReadData' (firmware/nnet_utils/nnet_image_stream.h:147) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'ImageWidth2' (firmware/nnet_utils/nnet_image_stream.h:155) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 11.
+INFO: [HLS 200-489] Unrolling loop 'ResizeWidth' (firmware/nnet_utils/nnet_image_stream.h:156) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'ResizeChan' (firmware/nnet_utils/nnet_image_stream.h:157) in function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V' (firmware/nnet_utils/nnet_image_stream.h:142) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.0' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.1' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.2' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.3' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.4' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.5' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.6' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.7' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.8' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.9' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
+INFO: [XFORM 203-102] Partitioning array 'data_in_row.V.10' (firmware/nnet_utils/nnet_image_stream.h:142) automatically.
 INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
 	 'Block__proc'
-	 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1053.574 ; gain = 533.535 ; free physical = 890 ; free virtual = 29994
-WARNING: [XFORM 203-631] Renaming function 'nnet::resize_nearest_v2<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>' (firmware/nnet_utils/nnet_image_stream.h:134)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1054.574 ; gain = 534.535 ; free physical = 859 ; free virtual = 29963
+	 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54295 ; free virtual = 95601
+WARNING: [XFORM 203-631] Renaming function 'nnet::resize_nearest_v1<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>' (firmware/nnet_utils/nnet_image_stream.h:133)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 54280 ; free virtual = 95587
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
-WARNING: [SYN 201-103] Legalizing function name 'resize_nearest_v2<ap_fixed<16, 14, 5, 3, 0>, config2>' to 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>' to 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 36.1 seconds; current allocated memory: 157.588 MB.
+INFO: [HLS 200-111]  Elapsed time: 39.52 seconds; current allocated memory: 157.647 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 157.635 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 157.694 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' 
+INFO: [HLS 200-42] -- Implementing module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'ImageHeight'.
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
-WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v2_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 1)
-   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:155).
+WARNING: [SCHED 204-68] The II Violation in module 'resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s' (Loop: ImageHeight): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150) and axis read on port 'image_V_V' (firmware/nnet_utils/nnet_image_stream.h:150).
