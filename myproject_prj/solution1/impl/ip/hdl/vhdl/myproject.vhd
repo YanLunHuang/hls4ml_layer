@@ -11,8 +11,14 @@ use IEEE.numeric_std.all;
 
 entity myproject is
 port (
-    input_1_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
-    layer2_out_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    input_1_0_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+    input_1_1_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+    input_1_2_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+    input_1_3_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+    layer2_out_0_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    layer2_out_1_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    layer2_out_2_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    layer2_out_3_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
     const_size_in_1 : OUT STD_LOGIC_VECTOR (15 downto 0);
     const_size_out_1 : OUT STD_LOGIC_VECTOR (15 downto 0);
     ap_clk : IN STD_LOGIC;
@@ -21,10 +27,22 @@ port (
     const_size_out_1_ap_vld : OUT STD_LOGIC;
     ap_start : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
-    input_1_V_V_TVALID : IN STD_LOGIC;
-    input_1_V_V_TREADY : OUT STD_LOGIC;
-    layer2_out_V_V_TVALID : OUT STD_LOGIC;
-    layer2_out_V_V_TREADY : IN STD_LOGIC;
+    input_1_0_V_V_TVALID : IN STD_LOGIC;
+    input_1_0_V_V_TREADY : OUT STD_LOGIC;
+    input_1_1_V_V_TVALID : IN STD_LOGIC;
+    input_1_1_V_V_TREADY : OUT STD_LOGIC;
+    input_1_2_V_V_TVALID : IN STD_LOGIC;
+    input_1_2_V_V_TREADY : OUT STD_LOGIC;
+    input_1_3_V_V_TVALID : IN STD_LOGIC;
+    input_1_3_V_V_TREADY : OUT STD_LOGIC;
+    layer2_out_0_V_V_TVALID : OUT STD_LOGIC;
+    layer2_out_0_V_V_TREADY : IN STD_LOGIC;
+    layer2_out_1_V_V_TVALID : OUT STD_LOGIC;
+    layer2_out_1_V_V_TREADY : IN STD_LOGIC;
+    layer2_out_2_V_V_TVALID : OUT STD_LOGIC;
+    layer2_out_2_V_V_TREADY : IN STD_LOGIC;
+    layer2_out_3_V_V_TVALID : OUT STD_LOGIC;
+    layer2_out_3_V_V_TREADY : IN STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC );
 end;
@@ -33,7 +51,7 @@ end;
 architecture behav of myproject is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "myproject,hls_ip_2019_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xczu9eg-ffvb1156-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=0.785000,HLS_SYN_LAT=12323,HLS_SYN_TPT=12324,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=823,HLS_SYN_LUT=1737,HLS_VERSION=2019_2}";
+    "myproject,hls_ip_2019_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xczu9eg-ffvb1156-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=0.785000,HLS_SYN_LAT=3083,HLS_SYN_TPT=3084,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=658,HLS_SYN_LUT=786,HLS_VERSION=2019_2}";
     constant ap_const_lv16_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
@@ -52,26 +70,35 @@ architecture behav of myproject is
     signal Block_proc_U0_const_size_out_1 : STD_LOGIC_VECTOR (15 downto 0);
     signal Block_proc_U0_const_size_out_1_ap_vld : STD_LOGIC;
     signal ap_sync_continue : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_start : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_done : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_continue : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_idle : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_image_V_V_TREADY : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TDATA : STD_LOGIC_VECTOR (15 downto 0);
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TVALID : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_start : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_done : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_continue : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_idle : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_0_V_V_TREADY : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_1_V_V_TREADY : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_2_V_V_TREADY : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_3_V_V_TREADY : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_0_V_V_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_0_V_V_TVALID : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_1_V_V_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_1_V_V_TVALID : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_2_V_V_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_2_V_V_TVALID : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_3_V_V_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_3_V_V_TVALID : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
     signal ap_sync_reg_Block_proc_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_Block_proc_U0_ap_ready : STD_LOGIC;
     signal Block_proc_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    signal ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready : STD_LOGIC := '0';
-    signal ap_sync_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    signal ap_sync_reg_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal Block_proc_U0_start_full_n : STD_LOGIC;
     signal Block_proc_U0_start_write : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_full_n : STD_LOGIC;
-    signal resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_write : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_start_full_n : STD_LOGIC;
+    signal resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_start_write : STD_LOGIC;
 
     component Block_proc IS
     port (
@@ -89,7 +116,7 @@ architecture behav of myproject is
     end component;
 
 
-    component resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s IS
+    component resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -98,12 +125,30 @@ architecture behav of myproject is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        image_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
-        image_V_V_TVALID : IN STD_LOGIC;
-        image_V_V_TREADY : OUT STD_LOGIC;
-        resized_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
-        resized_V_V_TVALID : OUT STD_LOGIC;
-        resized_V_V_TREADY : IN STD_LOGIC );
+        image_0_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+        image_0_V_V_TVALID : IN STD_LOGIC;
+        image_0_V_V_TREADY : OUT STD_LOGIC;
+        image_1_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+        image_1_V_V_TVALID : IN STD_LOGIC;
+        image_1_V_V_TREADY : OUT STD_LOGIC;
+        image_2_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+        image_2_V_V_TVALID : IN STD_LOGIC;
+        image_2_V_V_TREADY : OUT STD_LOGIC;
+        image_3_V_V_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+        image_3_V_V_TVALID : IN STD_LOGIC;
+        image_3_V_V_TREADY : OUT STD_LOGIC;
+        resized_0_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        resized_0_V_V_TVALID : OUT STD_LOGIC;
+        resized_0_V_V_TREADY : IN STD_LOGIC;
+        resized_1_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        resized_1_V_V_TVALID : OUT STD_LOGIC;
+        resized_1_V_V_TREADY : IN STD_LOGIC;
+        resized_2_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        resized_2_V_V_TVALID : OUT STD_LOGIC;
+        resized_2_V_V_TREADY : IN STD_LOGIC;
+        resized_3_V_V_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        resized_3_V_V_TVALID : OUT STD_LOGIC;
+        resized_3_V_V_TREADY : IN STD_LOGIC );
     end component;
 
 
@@ -123,21 +168,39 @@ begin
         const_size_out_1 => Block_proc_U0_const_size_out_1,
         const_size_out_1_ap_vld => Block_proc_U0_const_size_out_1_ap_vld);
 
-    resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0 : component resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s
+    resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0 : component resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_start,
-        ap_done => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_done,
-        ap_continue => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_continue,
-        ap_idle => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_idle,
-        ap_ready => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready,
-        image_V_V_TDATA => input_1_V_V_TDATA,
-        image_V_V_TVALID => input_1_V_V_TVALID,
-        image_V_V_TREADY => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_image_V_V_TREADY,
-        resized_V_V_TDATA => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TDATA,
-        resized_V_V_TVALID => resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TVALID,
-        resized_V_V_TREADY => layer2_out_V_V_TREADY);
+        ap_start => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_start,
+        ap_done => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_done,
+        ap_continue => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_continue,
+        ap_idle => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_idle,
+        ap_ready => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready,
+        image_0_V_V_TDATA => input_1_0_V_V_TDATA,
+        image_0_V_V_TVALID => input_1_0_V_V_TVALID,
+        image_0_V_V_TREADY => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_0_V_V_TREADY,
+        image_1_V_V_TDATA => input_1_1_V_V_TDATA,
+        image_1_V_V_TVALID => input_1_1_V_V_TVALID,
+        image_1_V_V_TREADY => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_1_V_V_TREADY,
+        image_2_V_V_TDATA => input_1_2_V_V_TDATA,
+        image_2_V_V_TVALID => input_1_2_V_V_TVALID,
+        image_2_V_V_TREADY => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_2_V_V_TREADY,
+        image_3_V_V_TDATA => input_1_3_V_V_TDATA,
+        image_3_V_V_TVALID => input_1_3_V_V_TVALID,
+        image_3_V_V_TREADY => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_3_V_V_TREADY,
+        resized_0_V_V_TDATA => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_0_V_V_TDATA,
+        resized_0_V_V_TVALID => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_0_V_V_TVALID,
+        resized_0_V_V_TREADY => layer2_out_0_V_V_TREADY,
+        resized_1_V_V_TDATA => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_1_V_V_TDATA,
+        resized_1_V_V_TVALID => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_1_V_V_TVALID,
+        resized_1_V_V_TREADY => layer2_out_1_V_V_TREADY,
+        resized_2_V_V_TDATA => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_2_V_V_TDATA,
+        resized_2_V_V_TVALID => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_2_V_V_TVALID,
+        resized_2_V_V_TREADY => layer2_out_2_V_V_TREADY,
+        resized_3_V_V_TDATA => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_3_V_V_TDATA,
+        resized_3_V_V_TVALID => resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_3_V_V_TVALID,
+        resized_3_V_V_TREADY => layer2_out_3_V_V_TREADY);
 
 
 
@@ -159,16 +222,16 @@ begin
     end process;
 
 
-    ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_assign_proc : process(ap_clk)
+    ap_sync_reg_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= ap_const_logic_0;
+                ap_sync_reg_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= ap_const_logic_0;
             else
                 if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
-                    ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= ap_const_logic_0;
+                    ap_sync_reg_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= ap_const_logic_0;
                 else 
-                    ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= ap_sync_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
+                    ap_sync_reg_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= ap_sync_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready;
                 end if; 
             end if;
         end if;
@@ -186,13 +249,13 @@ begin
         end if;
     end process;
 
-    resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count_assign_proc : process (ap_clk)
+    resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
-                resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count <= std_logic_vector(unsigned(resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
-            elsif (((ap_sync_ready = ap_const_logic_0) and (resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready = ap_const_logic_1))) then 
-                resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count <= std_logic_vector(unsigned(resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
+            if (((resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
+                resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count <= std_logic_vector(unsigned(resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
+            elsif (((ap_sync_ready = ap_const_logic_0) and (resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready = ap_const_logic_1))) then 
+                resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count <= std_logic_vector(unsigned(resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
             end if; 
         end if;
     end process;
@@ -201,7 +264,7 @@ begin
     Block_proc_U0_start_full_n <= ap_const_logic_1;
     Block_proc_U0_start_write <= ap_const_logic_0;
     ap_done <= ap_sync_done;
-    ap_idle <= (resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_idle and Block_proc_U0_ap_idle);
+    ap_idle <= (resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_idle and Block_proc_U0_ap_idle);
     ap_ready <= ap_sync_ready;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
@@ -211,18 +274,27 @@ begin
 
     ap_sync_Block_proc_U0_ap_ready <= (ap_sync_reg_Block_proc_U0_ap_ready or Block_proc_U0_ap_ready);
     ap_sync_continue <= ap_sync_done;
-    ap_sync_done <= (resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_done and Block_proc_U0_ap_done);
-    ap_sync_ready <= (ap_sync_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready and ap_sync_Block_proc_U0_ap_ready);
-    ap_sync_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= (resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready or ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready);
+    ap_sync_done <= (resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_done and Block_proc_U0_ap_done);
+    ap_sync_ready <= (ap_sync_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready and ap_sync_Block_proc_U0_ap_ready);
+    ap_sync_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready <= (resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready or ap_sync_reg_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready);
     const_size_in_1 <= Block_proc_U0_const_size_in_1;
     const_size_in_1_ap_vld <= Block_proc_U0_const_size_in_1_ap_vld;
     const_size_out_1 <= Block_proc_U0_const_size_out_1;
     const_size_out_1_ap_vld <= Block_proc_U0_const_size_out_1_ap_vld;
-    input_1_V_V_TREADY <= resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_image_V_V_TREADY;
-    layer2_out_V_V_TDATA <= resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TDATA;
-    layer2_out_V_V_TVALID <= resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_resized_V_V_TVALID;
-    resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_continue <= ap_sync_done;
-    resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_start <= ((ap_sync_reg_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_ap_ready xor ap_const_logic_1) and ap_start);
-    resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_full_n <= ap_const_logic_1;
-    resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0_start_write <= ap_const_logic_0;
+    input_1_0_V_V_TREADY <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_0_V_V_TREADY;
+    input_1_1_V_V_TREADY <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_1_V_V_TREADY;
+    input_1_2_V_V_TREADY <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_2_V_V_TREADY;
+    input_1_3_V_V_TREADY <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_image_3_V_V_TREADY;
+    layer2_out_0_V_V_TDATA <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_0_V_V_TDATA;
+    layer2_out_0_V_V_TVALID <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_0_V_V_TVALID;
+    layer2_out_1_V_V_TDATA <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_1_V_V_TDATA;
+    layer2_out_1_V_V_TVALID <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_1_V_V_TVALID;
+    layer2_out_2_V_V_TDATA <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_2_V_V_TDATA;
+    layer2_out_2_V_V_TVALID <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_2_V_V_TVALID;
+    layer2_out_3_V_V_TDATA <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_3_V_V_TDATA;
+    layer2_out_3_V_V_TVALID <= resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_resized_3_V_V_TVALID;
+    resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_continue <= ap_sync_done;
+    resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_start <= ((ap_sync_reg_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_ap_ready xor ap_const_logic_1) and ap_start);
+    resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_start_full_n <= ap_const_logic_1;
+    resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0_start_write <= ap_const_logic_0;
 end behav;

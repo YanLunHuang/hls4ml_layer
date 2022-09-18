@@ -1,5 +1,5 @@
 regslice_core
 regslice_core
 Block_proc
-resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s
+resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s
 myproject

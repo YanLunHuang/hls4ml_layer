@@ -25,8 +25,8 @@
 
 
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> input_1[4],
+    hls::stream<layer2_t> layer2_out[4],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
@@ -44,6 +44,6 @@ void myproject(
 
     //hls-fpga-machine-learning insert layers
     #pragma HLS DATAFLOW 
-    nnet::resize_nearest_v1<input_t, config2>(input_1, layer2_out); // up_sampling2d
+    nnet::resize_nearest_array<input_t, config2>(input_1, layer2_out); // up_sampling2d
 
 }

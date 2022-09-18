@@ -28,8 +28,8 @@
 
 // Prototype of top level function for C-synthesis
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> input_1[4],
+    hls::stream<layer2_t> layer2_out[4],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 );

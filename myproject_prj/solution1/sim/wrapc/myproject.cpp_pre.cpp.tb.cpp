@@ -2,13 +2,13 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.cpp"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.cpp"
-# 19 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.cpp"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.cpp"
+# 19 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.cpp"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 1 3
 # 36 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 3
        
@@ -26414,10 +26414,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 20 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.cpp" 2
+# 20 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.cpp" 2
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.h" 1
-# 23 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.h"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.h" 1
+# 23 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/include/ap_int.h" 1
 # 54 "/opt/Xilinx/Vivado/2019.2/include/ap_int.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/include/ap_common.h" 1
@@ -65145,7 +65145,7 @@ inline bool operator!=(
 }
 # 399 "/opt/Xilinx/Vivado/2019.2/include/ap_fixed.h" 2
 # 368 "/opt/Xilinx/Vivado/2019.2/include/ap_int.h" 2
-# 24 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.h" 2
+# 24 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.h" 2
 
 # 1 "/opt/Xilinx/Vivado/2019.2/include/hls_stream.h" 1
 # 79 "/opt/Xilinx/Vivado/2019.2/include/hls_stream.h"
@@ -72449,16 +72449,16 @@ class stream
 };
 
 }
-# 26 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.h" 2
+# 26 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.h" 2
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/defines.h" 1
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/defines.h" 1
 
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/include/ap_int.h" 1
-# 5 "/home/YL_HUANG/9_2/upsampling/firmware/defines.h" 2
+# 5 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/defines.h" 2
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h" 1
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h" 1
 
 
 
@@ -72486,16 +72486,16 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 5 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h" 2
+# 5 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h" 2
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdio" 1 3
 # 39 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdio" 3
        
 # 40 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdio" 3
-# 7 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h" 2
+# 7 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h" 2
 
 
-# 8 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h"
+# 8 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h"
 namespace nnet {
 
 
@@ -72519,17 +72519,17 @@ struct array {
             return *this;
 
         
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h" 3 4
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h" 3 4
        ((
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h"
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h"
        N == other.size && "Array sizes must match."
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h" 3 4
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h" 3 4
        ) ? static_cast<void> (0) : __assert_fail (
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h"
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h"
        "N == other.size && \"Array sizes must match.\""
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h" 3 4
-       , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h", 30, __PRETTY_FUNCTION__))
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h"
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h" 3 4
+       , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h", 30, __PRETTY_FUNCTION__))
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h"
                                                            ;
 
         for (unsigned i = 0; i < N; i++) {
@@ -72541,41 +72541,41 @@ struct array {
 };
 
 }
-# 7 "/home/YL_HUANG/9_2/upsampling/firmware/defines.h" 2
+# 7 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/defines.h" 2
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdio" 1 3
 # 39 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdio" 3
        
 # 40 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdio" 3
-# 9 "/home/YL_HUANG/9_2/upsampling/firmware/defines.h" 2
-# 19 "/home/YL_HUANG/9_2/upsampling/firmware/defines.h"
+# 9 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/defines.h" 2
+# 19 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/defines.h"
 typedef ap_fixed<16,14> input_t;
 typedef ap_fixed<16,14> layer2_t;
-# 28 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.h" 2
+# 28 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.h" 2
 
 
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> input_1[4],
+    hls::stream<layer2_t> layer2_out[4],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 );
-# 22 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.cpp" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 1
+# 22 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.cpp" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 1
 
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/include/ap_int.h" 1
-# 5 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
+# 5 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
 
 
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 1
-# 24 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 1
+# 24 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/stdlib.h" 1 3
-# 25 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 2
+# 25 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 26 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 2
+# 26 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 1 3
 # 36 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 3
        
@@ -74417,7 +74417,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1082 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 2 3
-# 27 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 2
+# 27 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 2
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/map" 1 3
@@ -77623,12 +77623,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 63 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/map" 2 3
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 2
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 2
 
 
 
 
-# 33 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 33 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
 namespace nnet {
 
 
@@ -77833,17 +77833,17 @@ void save_layer_output(data_T *data, const char *layer_name, size_t layer_size) 
         std::fstream out;
         out.open(filename.str(), std::ios::app);
         
-# 236 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 236 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 3 4
        ((
-# 236 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 236 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
        out.is_open()
-# 236 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 236 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 3 4
        ) ? static_cast<void> (0) : __assert_fail (
-# 236 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 236 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
        "out.is_open()"
-# 236 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 3 4
-       , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h", 236, __PRETTY_FUNCTION__))
-# 236 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 236 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 3 4
+       , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h", 236, __PRETTY_FUNCTION__))
+# 236 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
                             ;
         for(int i = 0; i < layer_size; i++) {
             out << float(data[i]) << " ";
@@ -77875,17 +77875,17 @@ void save_layer_output(hls::stream<data_T> &data, const char *layer_name, size_t
         std::fstream out;
         out.open(filename.str(), std::ios::app);
         
-# 266 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 266 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 3 4
        ((
-# 266 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 266 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
        out.is_open()
-# 266 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 266 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 3 4
        ) ? static_cast<void> (0) : __assert_fail (
-# 266 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 266 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
        "out.is_open()"
-# 266 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 3 4
-       , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h", 266, __PRETTY_FUNCTION__))
-# 266 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h"
+# 266 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 3 4
+       , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h", 266, __PRETTY_FUNCTION__))
+# 266 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h"
                             ;
         for (size_t i = 0; i < layer_size / data_T::size; i++) {
             data_T ctype = data.read();
@@ -77926,14 +77926,16 @@ void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {
 }
 
 template<class src_T, class dst_T, size_t OFFSET, size_t SIZE>
-void copy_data_me(std::vector<src_T> src, hls::stream<dst_T> &dst) {
+void copy_data_me(std::vector<src_T> src, hls::stream<dst_T> dst[4]) {
     typename std::vector<src_T>::const_iterator in_begin = src.cbegin() + OFFSET;
     typename std::vector<src_T>::const_iterator in_end = in_begin + SIZE;
 
     dst_T dst_pack;
+ int j=0;
     for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {
         dst_pack = dst_T(*i);
-        dst.write(dst_pack);
+        dst[j++].write(dst_pack);
+  if(j==4)j=0;
     }
 }
 
@@ -77963,11 +77965,14 @@ void print_result(res_T result[SIZE], std::ostream &out, bool keep = false) {
 
 
 template<class res_T, size_t SIZE>
-void print_result_me(hls::stream<res_T> &result, std::ostream &out, bool keep = false) {
+void print_result_me(hls::stream<res_T> result[4], std::ostream &out, bool keep = false) {
+ int j=0;
     for(int i = 0; i < SIZE; i++) {
-        res_T res_pack = result.read();
+        res_T res_pack = result[j].read();
         out << res_pack << " ";
-        if (keep) result.write(res_pack);
+        if (keep) result[j].write(res_pack);
+  if(j==3)j=0;
+  else j++;
     }
  out << std::endl;
 }
@@ -78079,24 +78084,24 @@ constexpr int pow2(int x){
 }
 
 }
-# 9 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
+# 9 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation.h" 1
-# 23 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation.h"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation.h" 1
+# 23 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 1 3
 # 39 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 3
        
 # 40 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 3
-# 24 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation.h" 2
+# 24 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation.h" 2
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_common.h" 1
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_common.h"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_common.h" 1
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_common.h"
 namespace nnet {
 
 
 enum io_type {io_parallel = 0, io_serial, io_stream};
 enum strategy { latency, resource };
-# 44 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_common.h"
+# 44 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_common.h"
  template<class T, int N, class Op>
  T reduce(const T* x, Op op)
  {
@@ -78152,7 +78157,7 @@ enum strategy { latency, resource };
  };
 
 }
-# 26 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation.h" 2
+# 26 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation.h" 2
 
 namespace nnet {
 
@@ -78992,20 +78997,20 @@ void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in])
 }
 
 }
-# 11 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation_stream.h" 1
-# 23 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation_stream.h"
+# 11 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation_stream.h" 1
+# 23 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation_stream.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 1 3
 # 39 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 3
        
 # 40 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 3
-# 24 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation_stream.h" 2
+# 24 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation_stream.h" 2
 
 
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_types.h" 1
-# 28 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation_stream.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_stream.h" 1
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_types.h" 1
+# 28 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation_stream.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_stream.h" 1
 
 
 
@@ -79124,9 +79129,9 @@ void broadcast_stream(hls::stream<data_T> &data, hls::stream<res_T> &res) {
     }
 }
 }
-# 29 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation_stream.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation.h" 1
-# 30 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_activation_stream.h" 2
+# 29 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation_stream.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation.h" 1
+# 30 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_activation_stream.h" 2
 
 namespace nnet {
 
@@ -79749,24 +79754,24 @@ void prelu(hls::stream<data_T> &data, typename data_T::value_type alpha[CONFIG_T
 
 
 }
-# 12 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_batchnorm.h" 1
-# 24 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_batchnorm.h"
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense.h" 1
+# 12 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_batchnorm.h" 1
+# 24 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_batchnorm.h"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense.h" 1
 
 
 
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_mult.h" 1
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_mult.h" 1
 
 
 
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_helpers.h" 1
-# 6 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_mult.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_helpers.h" 1
+# 6 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_mult.h" 2
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 8 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_mult.h" 2
+# 8 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_mult.h" 2
 
 namespace nnet {
 
@@ -79880,11 +79885,11 @@ cast(typename CONFIG_T::accum_t x){
 }
 
 }
-# 6 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_latency.h" 1
-# 27 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_latency.h"
+# 6 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_latency.h" 1
+# 27 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_latency.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 28 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_latency.h" 2
+# 28 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_latency.h" 2
 
 namespace nnet {
 
@@ -79987,11 +79992,11 @@ void dense_latency(
 }
 
 }
-# 7 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 1
-# 26 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 7 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 1
+# 26 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 27 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 2
+# 27 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 2
 # 1 "/usr/include/assert.h" 1 3 4
 # 65 "/usr/include/assert.h" 3 4
 
@@ -80016,10 +80021,10 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 28 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 2
+# 28 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 2
 
 
-# 29 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 29 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
 namespace nnet {
 
 template<class data_T, class weight_T, class ret_T>
@@ -80048,30 +80053,30 @@ void dense_resource_rf_leq_nin(
     const int nout = CONFIG_T::n_out;
 
     
-# 56 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 56 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ((
-# 56 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 56 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    (multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed"
-# 56 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 56 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 56 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 56 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    "(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\""
-# 56 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h", 56, __PRETTY_FUNCTION__))
-# 56 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 56 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h", 56, __PRETTY_FUNCTION__))
+# 56 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
                                                                                                          ;
     
-# 57 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 57 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ((
-# 57 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 57 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    (multiplier_limit == block_factor) && "This function is correct only for RF <= N_IN"
-# 57 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 57 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 57 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 57 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    "(multiplier_limit == block_factor) && \"This function is correct only for RF <= N_IN\""
-# 57 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h", 57, __PRETTY_FUNCTION__))
-# 57 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 57 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h", 57, __PRETTY_FUNCTION__))
+# 57 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
                                                                                                ;
 
 #pragma HLS function_instantiate variable=weights,biases
@@ -80138,30 +80143,30 @@ void dense_resource_rf_gt_nin_rem0(
     const int nout = CONFIG_T::n_out;
 
     
-# 122 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 122 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ((
-# 122 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 122 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    (multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed"
-# 122 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 122 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 122 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 122 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    "(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\""
-# 122 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h", 122, __PRETTY_FUNCTION__))
-# 122 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 122 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h", 122, __PRETTY_FUNCTION__))
+# 122 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
                                                                                                          ;
     
-# 123 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 123 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ((
-# 123 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 123 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    (rufactor > nin && rufactor % nin == 0) && "This function is correct only for RF > N_IN && RF % N_IN == 0"
-# 123 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 123 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 123 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 123 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    "(rufactor > nin && rufactor % nin == 0) && \"This function is correct only for RF > N_IN && RF % N_IN == 0\""
-# 123 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h", 123, __PRETTY_FUNCTION__))
-# 123 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 123 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h", 123, __PRETTY_FUNCTION__))
+# 123 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
                                                                                                                      ;
 
 #pragma HLS function_instantiate variable=weights,biases
@@ -80241,30 +80246,30 @@ void dense_resource_rf_gt_nin(
     const int nout = CONFIG_T::n_out;
 
     
-# 201 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 201 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ((
-# 201 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 201 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    (multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed"
-# 201 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 201 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 201 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 201 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    "(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\""
-# 201 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h", 201, __PRETTY_FUNCTION__))
-# 201 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 201 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h", 201, __PRETTY_FUNCTION__))
+# 201 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
                                                                                                          ;
     
-# 202 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 202 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ((
-# 202 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 202 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    (rufactor > nin) && "This function is correct only for RF > N_IN"
-# 202 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+# 202 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 202 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 202 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
    "(rufactor > nin) && \"This function is correct only for RF > N_IN\""
-# 202 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h", 202, __PRETTY_FUNCTION__))
-# 202 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_resource.h"
+# 202 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h", 202, __PRETTY_FUNCTION__))
+# 202 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_resource.h"
                                                                             ;
 
 #pragma HLS function_instantiate variable=weights,biases
@@ -80350,11 +80355,11 @@ void dense_resource(
 }
 
 }
-# 8 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense.h" 2
+# 8 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense.h" 2
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 11 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense.h" 2
+# 11 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense.h" 2
 
 namespace nnet {
 
@@ -80397,10 +80402,10 @@ void dense(
 }
 
 }
-# 25 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_batchnorm.h" 2
+# 25 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_batchnorm.h" 2
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 27 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_batchnorm.h" 2
+# 27 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_batchnorm.h" 2
 
 namespace nnet {
 
@@ -80537,9 +80542,9 @@ void normalize_ternary_tanh(data_T data[CONFIG_T::n_in], ap_int<2> res[CONFIG_T:
 }
 
 }
-# 13 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_batchnorm_stream.h" 1
-# 28 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_batchnorm_stream.h"
+# 13 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_batchnorm_stream.h" 1
+# 28 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_batchnorm_stream.h"
 namespace nnet {
 
 
@@ -80645,10 +80650,10 @@ void normalize_ternary_tanh(
 }
 
 }
-# 14 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d.h" 1
-# 24 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d.h"
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_latency.h" 1
+# 14 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d.h" 1
+# 24 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d.h"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_latency.h" 1
 
 
 
@@ -80657,7 +80662,7 @@ void normalize_ternary_tanh(
 # 39 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdlib" 3
        
 # 40 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdlib" 3
-# 6 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_latency.h" 2
+# 6 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_latency.h" 2
 
 namespace nnet {
 
@@ -81037,8 +81042,8 @@ void pointwise_conv_2d_cl(
 }
 
 }
-# 25 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_resource.h" 1
+# 25 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_resource.h" 1
 
 
 
@@ -81254,12 +81259,12 @@ void conv_2d_resource_cl(
 }
 
 }
-# 26 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d.h" 2
+# 26 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d.h" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdlib" 1 3
 # 39 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdlib" 3
        
 # 40 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdlib" 3
-# 27 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d.h" 2
+# 27 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d.h" 2
 
 namespace nnet {
 
@@ -81323,8 +81328,8 @@ void conv_2d_cl(
 }
 
 }
-# 15 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 1
+# 15 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 1
 
 
 
@@ -81457,10 +81462,10 @@ class ap_shift_reg
   protected:
     __SHIFT_T__ Array[__SHIFT_DEPTH__];
 };
-# 5 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 2
+# 5 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 2
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv_stream.h" 1
-# 9 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv_stream.h"
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv_stream.h" 1
+# 9 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv_stream.h"
 namespace nnet {
 
 enum class conv_implementation { linebuffer=0, encoded=1};
@@ -81827,7 +81832,7 @@ void compute_output_buffer_1d(
 }
 
 }
-# 7 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 2
+# 7 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 2
 
 
 namespace nnet {
@@ -81860,30 +81865,30 @@ void conv_2d_encoded_cl(
     typename CONFIG_T::bias_t biases[CONFIG_T::n_filt])
 {
     
-# 38 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 38 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ((
-# 38 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 38 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 38 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 38 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 38 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 38 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    "CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 38 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h", 38, __PRETTY_FUNCTION__))
-# 38 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 38 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h", 38, __PRETTY_FUNCTION__))
+# 38 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
                                                                                                                      ;
     
-# 39 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 39 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ((
-# 39 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 39 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    CONFIG_T::filt_height == CONFIG_T::filt_width
-# 39 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 39 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 39 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 39 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    "CONFIG_T::filt_height == CONFIG_T::filt_width"
-# 39 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h", 39, __PRETTY_FUNCTION__))
-# 39 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 39 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h", 39, __PRETTY_FUNCTION__))
+# 39 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
                                                         ;
 
     hls::stream<typename data_T::value_type> data_window[CONFIG_T::filt_height * CONFIG_T::filt_width * CONFIG_T::n_chan];
@@ -81979,17 +81984,17 @@ void conv_2d_large_cl_nopad_pad_me(
        ) {
 
     
-# 133 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 133 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ((
-# 133 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 133 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 133 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 133 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 133 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 133 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    "CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 133 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h", 133, __PRETTY_FUNCTION__))
-# 133 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 133 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h", 133, __PRETTY_FUNCTION__))
+# 133 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
                                                                                                                      ;
     std::cout << "USE CONV2D LARGE"<< std::endl;
 
@@ -82072,7 +82077,7 @@ void conv_2d_large_cl_nopad_pad_me(
 
    sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width + 1 : sX + 1;
   }
-# 225 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 225 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
  }
 }
 
@@ -82091,17 +82096,17 @@ void conv_2d_large_cl_nopad_pad(
        ) {
 
     
-# 242 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 242 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ((
-# 242 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 242 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 242 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 242 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 242 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 242 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    "CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 242 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h", 242, __PRETTY_FUNCTION__))
-# 242 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 242 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h", 242, __PRETTY_FUNCTION__))
+# 242 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
                                                                                                                      ;
     std::cout << "USE CONV2D LARGE"<< std::endl;
 
@@ -82192,7 +82197,7 @@ void conv_2d_large_cl_nopad_pad(
 
    sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width + 1 : sX + 1;
   }
-# 342 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 342 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
  }
 }
 
@@ -82206,17 +82211,17 @@ void conv_2d_buffer_cl(
     typename CONFIG_T::bias_t biases[CONFIG_T::n_filt])
 {
     
-# 354 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 354 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ((
-# 354 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 354 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 354 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+# 354 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 354 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 354 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
    "CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 354 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h", 354, __PRETTY_FUNCTION__))
-# 354 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_conv2d_stream.h"
+# 354 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h", 354, __PRETTY_FUNCTION__))
+# 354 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_conv2d_stream.h"
                                                                                                                      ;
 
     static ap_shift_reg<typename data_T::value_type, CONFIG_T::in_width> line_buffer[(CONFIG_T::filt_height - 1 > 1 ? CONFIG_T::filt_height - 1 : 1)][CONFIG_T::n_chan];
@@ -82260,13 +82265,13 @@ void conv_2d_cl_me(
 }
 
 }
-# 16 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense.h" 1
-# 17 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_compressed.h" 1
-# 26 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_compressed.h"
+# 16 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense.h" 1
+# 17 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_compressed.h" 1
+# 26 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_compressed.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 27 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_compressed.h" 2
+# 27 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_compressed.h" 2
 
 namespace nnet {
 
@@ -82348,8 +82353,8 @@ void dense_compressed(
 }
 
 }
-# 18 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_stream.h" 1
+# 18 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_stream.h" 1
 
 
 
@@ -82357,7 +82362,7 @@ void dense_compressed(
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 8 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_stream.h" 2
+# 8 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_stream.h" 2
 # 1 "/usr/include/assert.h" 1 3 4
 # 65 "/usr/include/assert.h" 3 4
 
@@ -82382,10 +82387,10 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 9 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_stream.h" 2
+# 9 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_stream.h" 2
 
 
-# 10 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_dense_stream.h"
+# 10 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_dense_stream.h"
 namespace nnet {
 
 template<class data_T, class res_T, typename CONFIG_T>
@@ -82445,15 +82450,15 @@ void dense(
 }
 
 }
-# 19 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image.h" 1
+# 19 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image.h" 1
 
 
 
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 7 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image.h" 2
+# 7 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image.h" 2
 
 namespace nnet {
 
@@ -82488,8 +82493,8 @@ void resize_nearest(
 }
 
 }
-# 20 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 1
+# 20 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 1
 
 
 
@@ -82504,30 +82509,30 @@ void resize_nearest(
     hls::stream<data_T> &resized
 ) {
     
-# 14 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 14 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ((
-# 14 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 14 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    CONFIG_T::new_height % CONFIG_T::height == 0
-# 14 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 14 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 14 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 14 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    "CONFIG_T::new_height % CONFIG_T::height == 0"
-# 14 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 14, __PRETTY_FUNCTION__))
-# 14 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 14 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 14, __PRETTY_FUNCTION__))
+# 14 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                        ;
     
-# 15 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 15 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ((
-# 15 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 15 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    CONFIG_T::new_width % CONFIG_T::width == 0
-# 15 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 15 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 15 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 15 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    "CONFIG_T::new_width % CONFIG_T::width == 0"
-# 15 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 15, __PRETTY_FUNCTION__))
-# 15 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 15 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 15, __PRETTY_FUNCTION__))
+# 15 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                      ;
     constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
     constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
@@ -82561,30 +82566,30 @@ void resize_nearest_hls4ml(
     hls::stream<data_T> &resized
 ) {
     
-# 47 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 47 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ((
-# 47 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 47 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    CONFIG_T::new_height % CONFIG_T::height == 0
-# 47 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 47 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 47 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 47 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    "CONFIG_T::new_height % CONFIG_T::height == 0"
-# 47 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 47, __PRETTY_FUNCTION__))
-# 47 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 47 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 47, __PRETTY_FUNCTION__))
+# 47 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                        ;
     
-# 48 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 48 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ((
-# 48 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 48 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    CONFIG_T::new_width % CONFIG_T::width == 0
-# 48 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 48 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 48 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 48 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
    "CONFIG_T::new_width % CONFIG_T::width == 0"
-# 48 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 48, __PRETTY_FUNCTION__))
-# 48 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 48 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 48, __PRETTY_FUNCTION__))
+# 48 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                      ;
     constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
     constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
@@ -82621,30 +82626,30 @@ void resize_nearest_chi_rui(
     hls::stream<data_T> &resized
 ) {
  
-# 83 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 83 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ((
-# 83 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 83 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 CONFIG_T::new_height % CONFIG_T::height == 0
-# 83 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 83 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ) ? static_cast<void> (0) : __assert_fail (
-# 83 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 83 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 "CONFIG_T::new_height % CONFIG_T::height == 0"
-# 83 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-, "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 83, __PRETTY_FUNCTION__))
-# 83 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 83 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 83, __PRETTY_FUNCTION__))
+# 83 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                     ;
  
-# 84 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 84 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ((
-# 84 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 84 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 CONFIG_T::new_width % CONFIG_T::width == 0
-# 84 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 84 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ) ? static_cast<void> (0) : __assert_fail (
-# 84 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 84 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 "CONFIG_T::new_width % CONFIG_T::width == 0"
-# 84 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-, "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 84, __PRETTY_FUNCTION__))
-# 84 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 84 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 84, __PRETTY_FUNCTION__))
+# 84 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                   ;
  constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
  constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
@@ -82698,30 +82703,30 @@ void resize_nearest_v1(
     hls::stream<data_T> &resized
 ) {
  
-# 136 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 136 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ((
-# 136 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 136 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 CONFIG_T::new_height % CONFIG_T::height == 0
-# 136 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 136 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ) ? static_cast<void> (0) : __assert_fail (
-# 136 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 136 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 "CONFIG_T::new_height % CONFIG_T::height == 0"
-# 136 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-, "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 136, __PRETTY_FUNCTION__))
-# 136 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 136 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 136, __PRETTY_FUNCTION__))
+# 136 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                     ;
  
-# 137 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 137 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ((
-# 137 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 137 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 CONFIG_T::new_width % CONFIG_T::width == 0
-# 137 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 137 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ) ? static_cast<void> (0) : __assert_fail (
-# 137 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 137 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 "CONFIG_T::new_width % CONFIG_T::width == 0"
-# 137 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-, "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 137, __PRETTY_FUNCTION__))
-# 137 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 137 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 137, __PRETTY_FUNCTION__))
+# 137 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                   ;
  constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
  constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
@@ -82760,30 +82765,30 @@ void resize_nearest_v2(
     hls::stream<data_T> &resized
 ) {
  
-# 174 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 174 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ((
-# 174 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 174 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 CONFIG_T::new_height % CONFIG_T::height == 0
-# 174 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 174 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ) ? static_cast<void> (0) : __assert_fail (
-# 174 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 174 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 "CONFIG_T::new_height % CONFIG_T::height == 0"
-# 174 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-, "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 174, __PRETTY_FUNCTION__))
-# 174 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 174 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 174, __PRETTY_FUNCTION__))
+# 174 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                     ;
  
-# 175 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 175 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ((
-# 175 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 175 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 CONFIG_T::new_width % CONFIG_T::width == 0
-# 175 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
+# 175 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
 ) ? static_cast<void> (0) : __assert_fail (
-# 175 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 175 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
 "CONFIG_T::new_width % CONFIG_T::width == 0"
-# 175 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h" 3 4
-, "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h", 175, __PRETTY_FUNCTION__))
-# 175 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_image_stream.h"
+# 175 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 175, __PRETTY_FUNCTION__))
+# 175 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
                                                   ;
  constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
  constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
@@ -82819,14 +82824,76 @@ CONFIG_T::new_width % CONFIG_T::width == 0
 
 
 
+template<class data_T, typename CONFIG_T>
+void resize_nearest_array(
+    hls::stream<data_T> image[CONFIG_T::n_chan],
+    hls::stream<data_T> resized[CONFIG_T::n_chan]
+) {
+ 
+# 215 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+((
+# 215 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
+CONFIG_T::new_height % CONFIG_T::height == 0
+# 215 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+) ? static_cast<void> (0) : __assert_fail (
+# 215 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
+"CONFIG_T::new_height % CONFIG_T::height == 0"
+# 215 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 215, __PRETTY_FUNCTION__))
+# 215 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
+                                                    ;
+ 
+# 216 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+((
+# 216 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
+CONFIG_T::new_width % CONFIG_T::width == 0
+# 216 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+) ? static_cast<void> (0) : __assert_fail (
+# 216 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
+"CONFIG_T::new_width % CONFIG_T::width == 0"
+# 216 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h" 3 4
+, "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h", 216, __PRETTY_FUNCTION__))
+# 216 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_image_stream.h"
+                                                  ;
+ constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
+ constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
+ constexpr unsigned ii = ratio_height * ratio_width;
+
+ data_T data_in_row[CONFIG_T::width][CONFIG_T::n_chan];
+
+ ImageHeight: for (unsigned h = 0; h < CONFIG_T::height; h++) {
+#pragma HLS PIPELINE II=CONFIG_T::new_width
+  ImageWidth: for (unsigned i = 0; i < CONFIG_T::width; i++) {
+   ReadData: for(unsigned j = 0; j < CONFIG_T::n_chan ; j++){
+
+#pragma HLS loop_flatten
+    data_in_row[i][j] = image[j].read();
+   }
+  }
+
+  ResizeHeight: for (unsigned i = 0; i <ratio_height; i++) {
+   ImageWidth2: for (unsigned l = 0; l < CONFIG_T::width; l++) {
+    ResizeWidth: for (unsigned j = 0; j < ratio_width; j++) {
+     ResizeChan: for (unsigned k = 0; k < CONFIG_T::n_chan; k++) {
+#pragma HLS loop_flatten
+      data_T out_data = data_in_row[l][k];
+      resized[k].write(out_data);
+     }
+    }
+   }
+  }
+ }
 }
-# 21 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_padding.h" 1
+
+
+}
+# 21 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_padding.h" 1
 
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 5 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_padding.h" 2
+# 5 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_padding.h" 2
 
 namespace nnet {
 
@@ -82969,13 +83036,13 @@ void zeropad2d_cl(
 }
 
 }
-# 22 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_padding_stream.h" 1
+# 22 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_padding_stream.h" 1
 
 
 
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 5 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_padding_stream.h" 2
+# 5 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_padding_stream.h" 2
 
 namespace nnet {
 
@@ -83111,8 +83178,8 @@ void zeropad2d_cl_me(
 
 
 }
-# 23 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 1
+# 23 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 1
 
 
 
@@ -83260,30 +83327,30 @@ void pooling1d_cl(data_T data[CONFIG_T::n_in * CONFIG_T::n_filt], res_T res[CONF
 template<class data_T, class res_T, typename CONFIG_T>
 void global_pooling1d_cl(data_T data[CONFIG_T::n_in * CONFIG_T::n_filt], res_T res[CONFIG_T::n_filt]) {
   
-# 147 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 3 4
+# 147 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 3 4
  ((
-# 147 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h"
+# 147 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h"
  CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 147 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 3 4
+# 147 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 3 4
  ) ? static_cast<void> (0) : __assert_fail (
-# 147 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h"
+# 147 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h"
  "CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 147 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 3 4
- , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h", 147, __PRETTY_FUNCTION__))
-# 147 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h"
+# 147 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 3 4
+ , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h", 147, __PRETTY_FUNCTION__))
+# 147 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h"
                                                             ;
   
-# 148 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 3 4
+# 148 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 3 4
  ((
-# 148 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h"
+# 148 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h"
  CONFIG_T::pool_width == CONFIG_T::stride_width
-# 148 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 3 4
+# 148 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 3 4
  ) ? static_cast<void> (0) : __assert_fail (
-# 148 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h"
+# 148 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h"
  "CONFIG_T::pool_width == CONFIG_T::stride_width"
-# 148 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 3 4
- , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h", 148, __PRETTY_FUNCTION__))
-# 148 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h"
+# 148 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 3 4
+ , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h", 148, __PRETTY_FUNCTION__))
+# 148 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h"
                                                        ;
 
 
@@ -83433,8 +83500,8 @@ void pooling2d_cf(data_T data[CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_
 }
 
 }
-# 24 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 1
+# 24 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 1
 
 
 
@@ -84270,11 +84337,11 @@ struct __promote<float> { typedef float type; };
 
 template<>
 struct __promote<half> { typedef half type; };
-# 5 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 2
+# 5 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 2
 
 
-# 1 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling.h" 1
-# 8 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 2
+# 1 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling.h" 1
+# 8 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 2
 
 
 
@@ -84397,30 +84464,30 @@ void pooling2d_encoded_cl(
     hls::stream<res_T> &res
 ) {
     
-# 129 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 129 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 129 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 129 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 129 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 129 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 129 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 129 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 129 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 129, __PRETTY_FUNCTION__))
-# 129 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 129 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 129, __PRETTY_FUNCTION__))
+# 129 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                                                                                      ;
     
-# 130 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 130 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 130 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 130 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width
-# 130 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 130 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 130 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 130 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width"
-# 130 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 130, __PRETTY_FUNCTION__))
-# 130 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 130 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 130, __PRETTY_FUNCTION__))
+# 130 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                                                                              ;
 
     res_T res_pack;
@@ -84519,30 +84586,30 @@ void pooling2d_buffer_cl(
     hls::stream<res_T> &res
 ) {
     
-# 227 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 227 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 227 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 227 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 227 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 227 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 227 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 227 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 227 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 227, __PRETTY_FUNCTION__))
-# 227 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 227 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 227, __PRETTY_FUNCTION__))
+# 227 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                                                                                      ;
     
-# 228 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 228 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 228 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 228 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width
-# 228 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 228 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 228 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 228 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width"
-# 228 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 228, __PRETTY_FUNCTION__))
-# 228 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 228 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 228, __PRETTY_FUNCTION__))
+# 228 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                                                                              ;
 
     static ap_shift_reg<typename data_T::value_type, CONFIG_T::in_width> line_buffer[(CONFIG_T::pool_height - 1 > 1 ? CONFIG_T::pool_height - 1 : 1)][CONFIG_T::n_filt];
@@ -84659,30 +84726,30 @@ void pooling1d_encoded_cl(
     hls::stream<res_T> &res
 ) {
     
-# 343 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 343 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 343 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 343 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 343 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 343 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 343 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 343 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 343 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 343, __PRETTY_FUNCTION__))
-# 343 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 343 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 343, __PRETTY_FUNCTION__))
+# 343 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                               ;
     
-# 344 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 344 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 344 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 344 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pool_width == CONFIG_T::stride_width
-# 344 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 344 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 344 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 344 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pool_width == CONFIG_T::stride_width"
-# 344 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 344, __PRETTY_FUNCTION__))
-# 344 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 344 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 344, __PRETTY_FUNCTION__))
+# 344 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                          ;
 
     res_T res_pack;
@@ -84769,17 +84836,17 @@ void pooling1d_buffer_cl(
     hls::stream<res_T> &res
 ) {
     
-# 429 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 429 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 429 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 429 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 429 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 429 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 429 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 429 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 429 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 429, __PRETTY_FUNCTION__))
-# 429 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 429 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 429, __PRETTY_FUNCTION__))
+# 429 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                               ;
 
     ReadInputWidth: for (unsigned i_iw = 0; i_iw < CONFIG_T::n_in; i_iw++) {
@@ -84850,30 +84917,30 @@ void global_pooling2d_cl(
     hls::stream<res_T> &res
 ) {
     
-# 498 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 498 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 498 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 498 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 498 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 498 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 498 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 498 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pad_top == 0 && CONFIG_T::pad_bottom == 0 && CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 498 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 498, __PRETTY_FUNCTION__))
-# 498 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 498 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 498, __PRETTY_FUNCTION__))
+# 498 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                                                                                      ;
     
-# 499 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 499 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 499 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 499 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width
-# 499 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 499 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 499 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 499 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pool_height == CONFIG_T::stride_height && CONFIG_T::pool_width == CONFIG_T::stride_width"
-# 499 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 499, __PRETTY_FUNCTION__))
-# 499 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 499 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 499, __PRETTY_FUNCTION__))
+# 499 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                                                                              ;
 
     typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt];
@@ -84930,30 +84997,30 @@ void global_pooling1d_cl(
     hls::stream<res_T> &res
 ) {
     
-# 554 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 554 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 554 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 554 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0
-# 554 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 554 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 554 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 554 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pad_left == 0 && CONFIG_T::pad_right == 0"
-# 554 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 554, __PRETTY_FUNCTION__))
-# 554 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 554 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 554, __PRETTY_FUNCTION__))
+# 554 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                               ;
     
-# 555 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 555 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ((
-# 555 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 555 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    CONFIG_T::pool_width == CONFIG_T::stride_width
-# 555 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+# 555 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
    ) ? static_cast<void> (0) : __assert_fail (
-# 555 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 555 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
    "CONFIG_T::pool_width == CONFIG_T::stride_width"
-# 555 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
-   , "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h", 555, __PRETTY_FUNCTION__))
-# 555 "/home/YL_HUANG/9_2/upsampling/firmware/nnet_utils/nnet_pooling_stream.h"
+# 555 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h" 3 4
+   , "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h", 555, __PRETTY_FUNCTION__))
+# 555 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/nnet_utils/nnet_pooling_stream.h"
                                                          ;
 
     typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt];
@@ -85003,7 +85070,7 @@ void global_pooling1d_cl(
 }
 
 }
-# 25 "/home/YL_HUANG/9_2/upsampling/firmware/parameters.h" 2
+# 25 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/parameters.h" 2
 
 
 
@@ -85018,14 +85085,14 @@ struct config2 : nnet::resize_config {
     static const unsigned new_height = 56;
     static const unsigned new_width = 55;
 };
-# 23 "/home/YL_HUANG/9_2/upsampling/firmware/myproject.cpp" 2
+# 23 "/home/YL_HUANG/9_23/hls4ml_layer/firmware/myproject.cpp" 2
 
 
 
 
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> input_1[4],
+    hls::stream<layer2_t> layer2_out[4],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
@@ -85043,6 +85110,6 @@ void myproject(
 
 
 #pragma HLS DATAFLOW
-    nnet::resize_nearest_v1<input_t, config2>(input_1, layer2_out);
+    nnet::resize_nearest_array<input_t, config2>(input_1, layer2_out);
 
 }

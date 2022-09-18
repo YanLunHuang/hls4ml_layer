@@ -1,4 +1,4 @@
-Report time       : Thu Aug 25 11:12:06 CST 2022.
+Report time       : Sun Sep 18 15:06:19 CST 2022.
 Solution          : solution1.
 Simulation tool   : xsim.
 
@@ -8,5 +8,5 @@ Simulation tool   : xsim.
 |          |          |      min      |      avg      |      max      |      min      |      avg      |      max      |
 +----------+----------+-----------------------------------------------+-----------------------------------------------+
 |      VHDL|        NA|             NA|             NA|             NA|             NA|             NA|             NA|
-|   Verilog|      Pass|          12323|          12323|          12323|             NA|             NA|             NA|
+|   Verilog|      Pass|           3083|           3083|           3083|             NA|             NA|             NA|
 +----------+----------+-----------------------------------------------+-----------------------------------------------+

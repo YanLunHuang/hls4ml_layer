@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'myproject'
 ================================================================
-* Date:           Thu Aug 25 11:11:27 2022
+* Date:           Sun Sep 18 15:05:43 2022
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
@@ -25,22 +25,22 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-------+-------+----------+
-    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline |
-    |   min   |   max   |    min    |    max    |  min  |  max  |   Type   |
-    +---------+---------+-----------+-----------+-------+-------+----------+
-    |    12323|    12323| 61.615 us | 61.615 us |  12324|  12324| dataflow |
-    +---------+---------+-----------+-----------+-------+-------+----------+
+    +---------+---------+-----------+-----------+------+------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
+    +---------+---------+-----------+-----------+------+------+----------+
+    |     3083|     3083| 15.415 us | 15.415 us |  3084|  3084| dataflow |
+    +---------+---------+-----------+-----------+------+------+----------+
 
     + Detail: 
         * Instance: 
-        +------------------------------------------------------------+--------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |                                                            |                                                  |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
-        |                          Instance                          |                      Module                      |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
-        +------------------------------------------------------------+--------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |grp_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s_fu_34  |resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s  |    12323|    12323| 61.615 us | 61.615 us |  12323|  12323|   none  |
-        |call_ln0_Block_proc_fu_42                                   |Block_proc                                        |        0|        0|    0 ns   |    0 ns   |      0|      0|   none  |
-        +------------------------------------------------------------+--------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                               |                                                     |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                            Instance                           |                        Module                       |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s_fu_46  |resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s  |     3083|     3083| 15.415 us | 15.415 us |  3083|  3083|   none  |
+        |call_ln0_Block_proc_fu_66                                      |Block_proc                                           |        0|        0|    0 ns   |    0 ns   |     0|     0|   none  |
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
 
         * Loop: 
         N/A
@@ -87,22 +87,34 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 5 [2/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)" [firmware/myproject.cpp:47]   --->   Operation 5 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 5 [2/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_array<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_0_V_V, i16* %input_1_1_V_V, i16* %input_1_2_V_V, i16* %input_1_3_V_V, i16* %layer2_out_0_V_V, i16* %layer2_out_1_V_V, i16* %layer2_out_2_V_V, i16* %layer2_out_3_V_V)" [firmware/myproject.cpp:47]   --->   Operation 5 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 6 [1/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_V_V, i16* %layer2_out_V_V)" [firmware/myproject.cpp:47]   --->   Operation 6 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 6 [1/2] (0.00ns)   --->   "call fastcc void @"resize_nearest_array<ap_fixed<16, 14, 5, 3, 0>, config2>"(i16* %input_1_0_V_V, i16* %input_1_1_V_V, i16* %input_1_2_V_V, i16* %input_1_3_V_V, i16* %layer2_out_0_V_V, i16* %layer2_out_1_V_V, i16* %layer2_out_2_V_V, i16* %layer2_out_3_V_V)" [firmware/myproject.cpp:47]   --->   Operation 6 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
 ST_4 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str2) nounwind" [firmware/myproject.cpp:46]   --->   Operation 7 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %input_1_V_V), !map !35"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %layer2_out_V_V), !map !39"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %const_size_in_1), !map !43"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %const_size_out_1), !map !47"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @myproject_str) nounwind"   --->   Operation 12 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %input_1_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [firmware/myproject.cpp:35]   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %layer2_out_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [firmware/myproject.cpp:35]   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 15 [1/1] (0.00ns)   --->   "call fastcc void @Block__proc(i16* %const_size_in_1, i16* %const_size_out_1)"   --->   Operation 15 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_4 : Operation 16 [1/1] (0.00ns)   --->   "ret void" [firmware/myproject.cpp:49]   --->   Operation 16 'ret' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %layer2_out_3_V_V), !map !35"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %layer2_out_2_V_V), !map !41"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %layer2_out_1_V_V), !map !47"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %layer2_out_0_V_V), !map !53"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %input_1_3_V_V), !map !59"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %input_1_2_V_V), !map !63"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %input_1_1_V_V), !map !67"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %input_1_0_V_V), !map !71"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %const_size_in_1), !map !75"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %const_size_out_1), !map !79"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @myproject_str) nounwind"   --->   Operation 18 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %input_1_0_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 19 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %input_1_1_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %input_1_2_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 21 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %input_1_3_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 22 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %layer2_out_0_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 23 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %layer2_out_1_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 24 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %layer2_out_2_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 25 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %layer2_out_3_V_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"   --->   Operation 26 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "call fastcc void @Block__proc(i16* %const_size_in_1, i16* %const_size_out_1)"   --->   Operation 27 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "ret void" [firmware/myproject.cpp:49]   --->   Operation 28 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -116,8 +128,14 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 1
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ input_1_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ layer2_out_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ input_1_0_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ input_1_1_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ input_1_2_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ input_1_3_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ layer2_out_0_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ layer2_out_1_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ layer2_out_2_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ layer2_out_3_V_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ const_size_in_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ const_size_out_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 ---------------- STG Properties END ------------------
@@ -132,9 +150,21 @@ specbitsmap_ln0           (specbitsmap         ) [ 00000]
 specbitsmap_ln0           (specbitsmap         ) [ 00000]
 specbitsmap_ln0           (specbitsmap         ) [ 00000]
 specbitsmap_ln0           (specbitsmap         ) [ 00000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000]
+specbitsmap_ln0           (specbitsmap         ) [ 00000]
 spectopmodule_ln0         (spectopmodule       ) [ 00000]
-specinterface_ln35        (specinterface       ) [ 00000]
-specinterface_ln35        (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
+specinterface_ln0         (specinterface       ) [ 00000]
 call_ln0                  (call                ) [ 00000]
 ret_ln49                  (ret                 ) [ 00000]
 </LifeTime>
@@ -142,102 +172,102 @@ ret_ln49                  (ret                 ) [ 00000]
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="input_1_V_V">
+<comp id="0" class="1000" name="input_1_0_V_V">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="input_1_V_V"/></StgValue>
+<StgValue><ssdm name="input_1_0_V_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="2" class="1000" name="layer2_out_V_V">
+<comp id="2" class="1000" name="input_1_1_V_V">
 <pin_list>
 <pin id="3" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="layer2_out_V_V"/></StgValue>
+<StgValue><ssdm name="input_1_1_V_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="4" class="1000" name="const_size_in_1">
+<comp id="4" class="1000" name="input_1_2_V_V">
 <pin_list>
 <pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="input_1_2_V_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="input_1_3_V_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="input_1_3_V_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="layer2_out_0_V_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="layer2_out_0_V_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="layer2_out_1_V_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="layer2_out_1_V_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="layer2_out_2_V_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="layer2_out_2_V_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="layer2_out_3_V_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="layer2_out_3_V_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="const_size_in_1">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="const_size_in_1"/></StgValue>
 </bind>
 </comp>
 
-<comp id="6" class="1000" name="const_size_out_1">
+<comp id="18" class="1000" name="const_size_out_1">
 <pin_list>
-<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="const_size_out_1"/></StgValue>
 </bind>
 </comp>
 
-<comp id="8" class="1001" name="const_8">
-<pin_list>
-<pin id="9" dir="1" index="0" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="resize_nearest_v1<ap_fixed<16, 14, 5, 3, 0>, config2>"/></StgValue>
-</bind>
-</comp>
-
-<comp id="10" class="1001" name="const_10">
-<pin_list>
-<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
-</bind>
-</comp>
-
-<comp id="12" class="1001" name="const_12">
-<pin_list>
-<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name=""/></StgValue>
-</bind>
-</comp>
-
-<comp id="14" class="1001" name="const_14">
-<pin_list>
-<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name=""/></StgValue>
-</bind>
-</comp>
-
-<comp id="16" class="1001" name="const_16">
-<pin_list>
-<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="p_str2"/></StgValue>
-</bind>
-</comp>
-
-<comp id="18" class="1001" name="const_18">
-<pin_list>
-<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
-</bind>
-</comp>
-
 <comp id="20" class="1001" name="const_20">
 <pin_list>
-<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+<StgValue><ssdm name="resize_nearest_array<ap_fixed<16, 14, 5, 3, 0>, config2>"/></StgValue>
 </bind>
 </comp>
 
@@ -246,7 +276,7 @@ ret_ln49                  (ret                 ) [ 00000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="myproject_str"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
 </bind>
 </comp>
 
@@ -255,7 +285,7 @@ ret_ln49                  (ret                 ) [ 00000]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -264,7 +294,7 @@ ret_ln49                  (ret                 ) [ 00000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -273,7 +303,7 @@ ret_ln49                  (ret                 ) [ 00000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="p_str2"/></StgValue>
 </bind>
 </comp>
 
@@ -282,25 +312,85 @@ ret_ln49                  (ret                 ) [ 00000]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str1"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
 </bind>
 </comp>
 
 <comp id="32" class="1001" name="const_32">
 <pin_list>
-<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myproject_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Block__proc"/></StgValue>
 </bind>
 </comp>
 
-<comp id="34" class="1004" name="grp_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s_fu_34">
+<comp id="46" class="1004" name="grp_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s_fu_46">
 <pin_list>
-<pin id="35" dir="0" index="0" bw="0" slack="0"/>
-<pin id="36" dir="0" index="1" bw="16" slack="0"/>
-<pin id="37" dir="0" index="2" bw="16" slack="0"/>
-<pin id="38" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="47" dir="0" index="0" bw="0" slack="0"/>
+<pin id="48" dir="0" index="1" bw="16" slack="0"/>
+<pin id="49" dir="0" index="2" bw="16" slack="0"/>
+<pin id="50" dir="0" index="3" bw="16" slack="0"/>
+<pin id="51" dir="0" index="4" bw="16" slack="0"/>
+<pin id="52" dir="0" index="5" bw="16" slack="0"/>
+<pin id="53" dir="0" index="6" bw="16" slack="0"/>
+<pin id="54" dir="0" index="7" bw="16" slack="0"/>
+<pin id="55" dir="0" index="8" bw="16" slack="0"/>
+<pin id="56" dir="1" index="9" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
@@ -308,12 +398,12 @@ ret_ln49                  (ret                 ) [ 00000]
 </bind>
 </comp>
 
-<comp id="42" class="1004" name="call_ln0_Block_proc_fu_42">
+<comp id="66" class="1004" name="call_ln0_Block_proc_fu_66">
 <pin_list>
-<pin id="43" dir="0" index="0" bw="0" slack="0"/>
-<pin id="44" dir="0" index="1" bw="16" slack="0"/>
-<pin id="45" dir="0" index="2" bw="16" slack="0"/>
-<pin id="46" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="67" dir="0" index="0" bw="0" slack="0"/>
+<pin id="68" dir="0" index="1" bw="16" slack="0"/>
+<pin id="69" dir="0" index="2" bw="16" slack="0"/>
+<pin id="70" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
@@ -324,17 +414,29 @@ ret_ln49                  (ret                 ) [ 00000]
 </comp_list>
 
 <net_list>
-<net id="39"><net_src comp="8" pin="0"/><net_sink comp="34" pin=0"/></net>
+<net id="57"><net_src comp="20" pin="0"/><net_sink comp="46" pin=0"/></net>
 
-<net id="40"><net_src comp="0" pin="0"/><net_sink comp="34" pin=1"/></net>
+<net id="58"><net_src comp="0" pin="0"/><net_sink comp="46" pin=1"/></net>
 
-<net id="41"><net_src comp="2" pin="0"/><net_sink comp="34" pin=2"/></net>
+<net id="59"><net_src comp="2" pin="0"/><net_sink comp="46" pin=2"/></net>
 
-<net id="47"><net_src comp="32" pin="0"/><net_sink comp="42" pin=0"/></net>
+<net id="60"><net_src comp="4" pin="0"/><net_sink comp="46" pin=3"/></net>
 
-<net id="48"><net_src comp="4" pin="0"/><net_sink comp="42" pin=1"/></net>
+<net id="61"><net_src comp="6" pin="0"/><net_sink comp="46" pin=4"/></net>
 
-<net id="49"><net_src comp="6" pin="0"/><net_sink comp="42" pin=2"/></net>
+<net id="62"><net_src comp="8" pin="0"/><net_sink comp="46" pin=5"/></net>
+
+<net id="63"><net_src comp="10" pin="0"/><net_sink comp="46" pin=6"/></net>
+
+<net id="64"><net_src comp="12" pin="0"/><net_sink comp="46" pin=7"/></net>
+
+<net id="65"><net_src comp="14" pin="0"/><net_sink comp="46" pin=8"/></net>
+
+<net id="71"><net_src comp="44" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="72"><net_src comp="16" pin="0"/><net_sink comp="66" pin=1"/></net>
+
+<net id="73"><net_src comp="18" pin="0"/><net_sink comp="66" pin=2"/></net>
 
 </net_list>
 
@@ -343,11 +445,17 @@ ret_ln49                  (ret                 ) [ 00000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: layer2_out_V_V | {2 3 }
+	Port: layer2_out_0_V_V | {2 3 }
+	Port: layer2_out_1_V_V | {2 3 }
+	Port: layer2_out_2_V_V | {2 3 }
+	Port: layer2_out_3_V_V | {2 3 }
 	Port: const_size_in_1 | {4 }
 	Port: const_size_out_1 | {4 }
  - Input state : 
-	Port: myproject : input_1_V_V | {2 3 }
+	Port: myproject : input_1_0_V_V | {2 3 }
+	Port: myproject : input_1_1_V_V | {2 3 }
+	Port: myproject : input_1_2_V_V | {2 3 }
+	Port: myproject : input_1_3_V_V | {2 3 }
   - Chain level:
 	State 1
 	State 2
@@ -360,14 +468,14 @@ ret_ln49                  (ret                 ) [ 00000]
 ============================================================
 
 * Functional unit list:
-|----------|------------------------------------------------------------|---------|---------|---------|
-| Operation|                       Functional Unit                      |  Delay  |    FF   |   LUT   |
-|----------|------------------------------------------------------------|---------|---------|---------|
-|   call   | grp_resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s_fu_34 | 1.76513 |   589   |   191   |
-|          |                  call_ln0_Block_proc_fu_42                 |    0    |    0    |    0    |
-|----------|------------------------------------------------------------|---------|---------|---------|
-|   Total  |                                                            | 1.76513 |   589   |   191   |
-|----------|------------------------------------------------------------|---------|---------|---------|
+|----------|---------------------------------------------------------------|---------|---------|---------|
+| Operation|                        Functional Unit                        |  Delay  |    FF   |   LUT   |
+|----------|---------------------------------------------------------------|---------|---------|---------|
+|   call   | grp_resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s_fu_46 |  3.5496 |   589   |   214   |
+|          |                   call_ln0_Block_proc_fu_66                   |    0    |    0    |    0    |
+|----------|---------------------------------------------------------------|---------|---------|---------|
+|   Total  |                                                               |  3.5496 |   589   |   214   |
+|----------|---------------------------------------------------------------|---------|---------|---------|
 
 Memories:
 N/A
@@ -388,10 +496,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    1   |   589  |   191  |
+|  Function |    3   |   589  |   214  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    -   |
 |  Register |    -   |    -   |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    1   |   589  |   191  |
+|   Total   |    3   |   589  |   214  |
 +-----------+--------+--------+--------+

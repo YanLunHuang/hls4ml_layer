@@ -1,1 +1,1 @@
-set ::AESL_AUTOSIM::gTopFileName /home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp
+set ::AESL_AUTOSIM::gTopFileName /home/YL_HUANG/9_23/hls4ml_layer/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp

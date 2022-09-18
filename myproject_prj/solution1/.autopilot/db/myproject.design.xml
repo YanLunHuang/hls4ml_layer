@@ -5,16 +5,16 @@
 <ModuleName>myproject</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_U0</InstName>
-<ModuleName>resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s</ModuleName>
+<InstName>resize_nearest_array_ap_fixed_16_14_5_3_0_config2_U0</InstName>
+<ModuleName>resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>34</ID>
+<ID>46</ID>
 </Instance>
 <Instance>
 <InstName>Block_proc_U0</InstName>
 <ModuleName>Block_proc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>42</ID>
+<ID>66</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -174,7 +174,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>resize_nearest_v1_ap_fixed_16_14_5_3_0_config2_s</Name>
+<Name>resize_nearest_array_ap_fixed_16_14_5_3_0_config2_s</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>5.00</TargetClockPeriod>
@@ -182,29 +182,29 @@
 <EstimatedClockPeriod>0.785</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>12323</Best-caseLatency>
-<Average-caseLatency>12323</Average-caseLatency>
-<Worst-caseLatency>12323</Worst-caseLatency>
-<Best-caseRealTimeLatency>61.615 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>61.615 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>61.615 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>12323</PipelineInitiationInterval>
+<Best-caseLatency>3083</Best-caseLatency>
+<Average-caseLatency>3083</Average-caseLatency>
+<Worst-caseLatency>3083</Worst-caseLatency>
+<Best-caseRealTimeLatency>15.415 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>15.415 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>15.415 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>3083</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <ImageHeight>
 <Name>ImageHeight</Name>
 <TripCount>56</TripCount>
-<Latency>12321</Latency>
-<PipelineII>220</PipelineII>
-<PipelineDepth>222</PipelineDepth>
+<Latency>3081</Latency>
+<PipelineII>55</PipelineII>
+<PipelineDepth>57</PipelineDepth>
 </ImageHeight>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>815</FF>
-<LUT>1658</LUT>
+<FF>650</FF>
+<LUT>707</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 <URAM>0</URAM>
@@ -213,7 +213,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
+<Object>resize_nearest_array&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -224,7 +224,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
+<Object>resize_nearest_array&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -235,7 +235,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
+<Object>resize_nearest_array&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -246,7 +246,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
+<Object>resize_nearest_array&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -257,7 +257,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_continue</name>
-<Object>resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
+<Object>resize_nearest_array&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -268,7 +268,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
+<Object>resize_nearest_array&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -279,7 +279,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>resize_nearest_v1&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
+<Object>resize_nearest_array&lt;ap_fixed&lt;16, 14, 5, 3, 0&gt;, config2&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -289,8 +289,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>image_V_V_TDATA</name>
-<Object>image_V_V</Object>
+<name>image_0_V_V_TDATA</name>
+<Object>image_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -300,8 +300,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>image_V_V_TVALID</name>
-<Object>image_V_V</Object>
+<name>image_0_V_V_TVALID</name>
+<Object>image_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -311,8 +311,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>image_V_V_TREADY</name>
-<Object>image_V_V</Object>
+<name>image_0_V_V_TREADY</name>
+<Object>image_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -322,8 +322,107 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>resized_V_V_TDATA</name>
-<Object>resized_V_V</Object>
+<name>image_1_V_V_TDATA</name>
+<Object>image_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_1_V_V_TVALID</name>
+<Object>image_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_1_V_V_TREADY</name>
+<Object>image_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_2_V_V_TDATA</name>
+<Object>image_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_2_V_V_TVALID</name>
+<Object>image_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_2_V_V_TREADY</name>
+<Object>image_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_3_V_V_TDATA</name>
+<Object>image_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_3_V_V_TVALID</name>
+<Object>image_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>image_3_V_V_TREADY</name>
+<Object>image_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_0_V_V_TDATA</name>
+<Object>resized_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -333,8 +432,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>resized_V_V_TVALID</name>
-<Object>resized_V_V</Object>
+<name>resized_0_V_V_TVALID</name>
+<Object>resized_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -344,8 +443,107 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>resized_V_V_TREADY</name>
-<Object>resized_V_V</Object>
+<name>resized_0_V_V_TREADY</name>
+<Object>resized_0_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_1_V_V_TDATA</name>
+<Object>resized_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_1_V_V_TVALID</name>
+<Object>resized_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_1_V_V_TREADY</name>
+<Object>resized_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_2_V_V_TDATA</name>
+<Object>resized_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_2_V_V_TVALID</name>
+<Object>resized_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_2_V_V_TREADY</name>
+<Object>resized_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_3_V_V_TDATA</name>
+<Object>resized_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_3_V_V_TVALID</name>
+<Object>resized_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>resized_3_V_V_TREADY</name>
+<Object>resized_3_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -365,21 +563,21 @@
 <EstimatedClockPeriod>0.785</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>12323</Best-caseLatency>
-<Average-caseLatency>12323</Average-caseLatency>
-<Worst-caseLatency>12323</Worst-caseLatency>
-<Best-caseRealTimeLatency>61.615 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>61.615 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>61.615 us</Worst-caseRealTimeLatency>
-<DataflowPipelineThroughput>12324</DataflowPipelineThroughput>
-<PipelineInitiationInterval>12324</PipelineInitiationInterval>
+<Best-caseLatency>3083</Best-caseLatency>
+<Average-caseLatency>3083</Average-caseLatency>
+<Worst-caseLatency>3083</Worst-caseLatency>
+<Best-caseRealTimeLatency>15.415 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>15.415 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>15.415 us</Worst-caseRealTimeLatency>
+<DataflowPipelineThroughput>3084</DataflowPipelineThroughput>
+<PipelineInitiationInterval>3084</PipelineInitiationInterval>
 <PipelineType>dataflow</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>823</FF>
-<LUT>1737</LUT>
+<FF>658</FF>
+<LUT>786</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 <URAM>0</URAM>
@@ -387,8 +585,8 @@
 </AreaEstimates>
 <InterfaceSummary>
 <RtlPorts>
-<name>input_1_V_V_TDATA</name>
-<Object>input_1_V_V</Object>
+<name>input_1_0_V_V_TDATA</name>
+<Object>input_1_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -399,8 +597,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>input_1_V_V_TVALID</name>
-<Object>input_1_V_V</Object>
+<name>input_1_0_V_V_TVALID</name>
+<Object>input_1_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -411,8 +609,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>input_1_V_V_TREADY</name>
-<Object>input_1_V_V</Object>
+<name>input_1_0_V_V_TREADY</name>
+<Object>input_1_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -423,8 +621,116 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>layer2_out_V_V_TDATA</name>
-<Object>layer2_out_V_V</Object>
+<name>input_1_1_V_V_TDATA</name>
+<Object>input_1_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_1_V_V_TVALID</name>
+<Object>input_1_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_1_V_V_TREADY</name>
+<Object>input_1_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_2_V_V_TDATA</name>
+<Object>input_1_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_2_V_V_TVALID</name>
+<Object>input_1_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_2_V_V_TREADY</name>
+<Object>input_1_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_3_V_V_TDATA</name>
+<Object>input_1_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_3_V_V_TVALID</name>
+<Object>input_1_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>input_1_3_V_V_TREADY</name>
+<Object>input_1_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_0_V_V_TDATA</name>
+<Object>layer2_out_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -435,8 +741,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>layer2_out_V_V_TVALID</name>
-<Object>layer2_out_V_V</Object>
+<name>layer2_out_0_V_V_TVALID</name>
+<Object>layer2_out_0_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -447,8 +753,116 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>layer2_out_V_V_TREADY</name>
-<Object>layer2_out_V_V</Object>
+<name>layer2_out_0_V_V_TREADY</name>
+<Object>layer2_out_0_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_1_V_V_TDATA</name>
+<Object>layer2_out_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_1_V_V_TVALID</name>
+<Object>layer2_out_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_1_V_V_TREADY</name>
+<Object>layer2_out_1_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_2_V_V_TDATA</name>
+<Object>layer2_out_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_2_V_V_TVALID</name>
+<Object>layer2_out_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_2_V_V_TREADY</name>
+<Object>layer2_out_2_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_3_V_V_TDATA</name>
+<Object>layer2_out_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_3_V_V_TVALID</name>
+<Object>layer2_out_3_V_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>layer2_out_3_V_V_TREADY</name>
+<Object>layer2_out_3_V_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>

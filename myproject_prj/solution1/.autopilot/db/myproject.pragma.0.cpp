@@ -30465,8 +30465,8 @@ typedef ap_fixed<16,14> layer2_t;
 
 
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> input_1[4],
+    hls::stream<layer2_t> layer2_out[4],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 );
@@ -57889,14 +57889,16 @@ void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {
 }
 
 template<class src_T, class dst_T, size_t OFFSET, size_t SIZE>
-void copy_data_me(std::vector<src_T> src, hls::stream<dst_T> &dst) {
+void copy_data_me(std::vector<src_T> src, hls::stream<dst_T> dst[4]) {_ssdm_SpecArrayDimSize(dst, 4);
     typename std::vector<src_T>::const_iterator in_begin = src.cbegin() + OFFSET;
     typename std::vector<src_T>::const_iterator in_end = in_begin + SIZE;
 
     dst_T dst_pack;
+ int j=0;
     for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {
         dst_pack = dst_T(*i);
-        dst.write(dst_pack);
+        dst[j++].write(dst_pack);
+  if(j==4)j=0;
     }
 }
 
@@ -57926,11 +57928,14 @@ void print_result(res_T result[SIZE], std::ostream &out, bool keep = false) {
 
 
 template<class res_T, size_t SIZE>
-void print_result_me(hls::stream<res_T> &result, std::ostream &out, bool keep = false) {
+void print_result_me(hls::stream<res_T> result[4], std::ostream &out, bool keep = false) {_ssdm_SpecArrayDimSize(result, 4);
+ int j=0;
     for(int i = 0; i < SIZE; i++) {
-        res_T res_pack = result.read();
+        res_T res_pack = result[j].read();
         out << res_pack << " ";
-        if (keep) result.write(res_pack);
+        if (keep) result[j].write(res_pack);
+  if(j==3)j=0;
+  else j++;
     }
  out << std::endl;
 }
@@ -62508,6 +62513,44 @@ void resize_nearest_v2(
 
 
 
+template<class data_T, typename CONFIG_T>
+void resize_nearest_array(
+    hls::stream<data_T> image[CONFIG_T::n_chan],
+    hls::stream<data_T> resized[CONFIG_T::n_chan]
+) {
+ ((CONFIG_T::new_height % CONFIG_T::height == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_height % CONFIG_T::height == 0", "firmware/nnet_utils/nnet_image_stream.h", 215, __PRETTY_FUNCTION__));
+ ((CONFIG_T::new_width % CONFIG_T::width == 0) ? static_cast<void> (0) : __assert_fail ("CONFIG_T::new_width % CONFIG_T::width == 0", "firmware/nnet_utils/nnet_image_stream.h", 216, __PRETTY_FUNCTION__));
+ constexpr unsigned ratio_height = CONFIG_T::new_height / CONFIG_T::height;
+ constexpr unsigned ratio_width = CONFIG_T::new_width / CONFIG_T::width;
+ constexpr unsigned ii = ratio_height * ratio_width;
+
+ data_T data_in_row[CONFIG_T::width][CONFIG_T::n_chan];
+
+ ImageHeight: for (unsigned h = 0; h < CONFIG_T::height; h++) {
+#pragma HLS PIPELINE II=CONFIG_T::new_width
+ ImageWidth: for (unsigned i = 0; i < CONFIG_T::width; i++) {
+   ReadData: for(unsigned j = 0; j < CONFIG_T::n_chan ; j++){
+
+#pragma HLS loop_flatten
+ data_in_row[i][j] = image[j].read();
+   }
+  }
+
+  ResizeHeight: for (unsigned i = 0; i <ratio_height; i++) {
+   ImageWidth2: for (unsigned l = 0; l < CONFIG_T::width; l++) {
+    ResizeWidth: for (unsigned j = 0; j < ratio_width; j++) {
+     ResizeChan: for (unsigned k = 0; k < CONFIG_T::n_chan; k++) {
+#pragma HLS loop_flatten
+ data_T out_data = data_in_row[l][k];
+      resized[k].write(out_data);
+     }
+    }
+   }
+  }
+ }
+}
+
+
 }
 # 21 "firmware/parameters.h" 2
 # 1 "firmware/nnet_utils/nnet_padding.h" 1
@@ -64602,11 +64645,11 @@ struct config2 : nnet::resize_config {
 
 
 void myproject(
-    hls::stream<input_t> &input_1,
-    hls::stream<layer2_t> &layer2_out,
+    hls::stream<input_t> input_1[4],
+    hls::stream<layer2_t> layer2_out[4],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
-) {
+) {_ssdm_SpecArrayDimSize(input_1, 4);_ssdm_SpecArrayDimSize(layer2_out, 4);
 
 
 #pragma HLS INTERFACE axis port=&input_1,&layer2_out
@@ -64621,6 +64664,6 @@ void myproject(
 
 
 #pragma HLS DATAFLOW
- nnet::resize_nearest_v1<input_t, config2>(input_1, layer2_out);
+ nnet::resize_nearest_array<input_t, config2>(input_1, layer2_out);
 
 }

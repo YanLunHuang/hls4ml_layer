@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="myproject" xd:componentRef="myproject" xd:initiationInterval="12324" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="myproject" xd:componentRef="myproject" xd:initiationInterval="3084" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
-  <xd:arg xd:name="input_1" xd:originalName="input_1" xd:direction="in" xd:interfaceRef="input_1_V_V" xd:busTypeRef="axis" xd:dataWidth="16"/>
-  <xd:arg xd:name="layer2_out" xd:originalName="layer2_out" xd:direction="out" xd:interfaceRef="layer2_out_V_V" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="input_1[0]" xd:originalName="input_10" xd:direction="in" xd:interfaceRef="input_1_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
+  <xd:arg xd:name="input_1[1]" xd:originalName="input_11" xd:direction="in" xd:interfaceRef="input_1_1_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
+  <xd:arg xd:name="input_1[2]" xd:originalName="input_12" xd:direction="in" xd:interfaceRef="input_1_2_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
+  <xd:arg xd:name="input_1[3]" xd:originalName="input_13" xd:direction="in" xd:interfaceRef="input_1_3_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
+  <xd:arg xd:name="layer2_out[0]" xd:originalName="layer2_out0" xd:direction="out" xd:interfaceRef="layer2_out_0_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
+  <xd:arg xd:name="layer2_out[1]" xd:originalName="layer2_out1" xd:direction="out" xd:interfaceRef="layer2_out_1_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
+  <xd:arg xd:name="layer2_out[2]" xd:originalName="layer2_out2" xd:direction="out" xd:interfaceRef="layer2_out_2_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
+  <xd:arg xd:name="layer2_out[3]" xd:originalName="layer2_out3" xd:direction="out" xd:interfaceRef="layer2_out_3_V_V" xd:busTypeRef="axis" xd:arraySize="1" xd:dataWidth="16"/>
   <xd:arg xd:name="const_size_in_1" xd:originalName="const_size_in_1" xd:direction="out" xd:interfaceRef="const_size_in_1" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="0"/>
   <xd:arg xd:name="const_size_out_1" xd:originalName="const_size_out_1" xd:direction="out" xd:interfaceRef="const_size_out_1" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="0"/>
-  <xd:latencyEstimates xd:best-case="12323" xd:worst-case="12323" xd:average-case="12323"/>
-  <xd:resourceEstimates xd:LUT="1737" xd:FF="823" xd:BRAM="0" xd:DSP="0"/>
+  <xd:latencyEstimates xd:best-case="3083" xd:worst-case="3083" xd:average-case="3083"/>
+  <xd:resourceEstimates xd:LUT="786" xd:FF="658" xd:BRAM="0" xd:DSP="0"/>
 </xd:acceleratorMap>

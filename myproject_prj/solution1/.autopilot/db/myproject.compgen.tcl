@@ -12,17 +12,17 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 6 \
-    name input_1_V_V \
+    id 12 \
+    name input_1_0_V_V \
     reset_level 0 \
     sync_rst true \
     corename {} \
     metadata {  } \
     op interface \
-    ports { input_1_V_V_TDATA { I 16 vector } input_1_V_V_TVALID { I 1 bit } input_1_V_V_TREADY { O 1 bit } } \
+    ports { input_1_0_V_V_TDATA { I 16 vector } input_1_0_V_V_TVALID { I 1 bit } input_1_0_V_V_TREADY { O 1 bit } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_1_V_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_1_0_V_V'"
 }
 }
 
@@ -31,17 +31,131 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 7 \
-    name layer2_out_V_V \
+    id 13 \
+    name input_1_1_V_V \
     reset_level 0 \
     sync_rst true \
     corename {} \
     metadata {  } \
     op interface \
-    ports { layer2_out_V_V_TDATA { O 16 vector } layer2_out_V_V_TVALID { O 1 bit } layer2_out_V_V_TREADY { I 1 bit } } \
+    ports { input_1_1_V_V_TDATA { I 16 vector } input_1_1_V_V_TVALID { I 1 bit } input_1_1_V_V_TREADY { O 1 bit } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'layer2_out_V_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_1_1_V_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 14 \
+    name input_1_2_V_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {} \
+    metadata {  } \
+    op interface \
+    ports { input_1_2_V_V_TDATA { I 16 vector } input_1_2_V_V_TVALID { I 1 bit } input_1_2_V_V_TREADY { O 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_1_2_V_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 15 \
+    name input_1_3_V_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {} \
+    metadata {  } \
+    op interface \
+    ports { input_1_3_V_V_TDATA { I 16 vector } input_1_3_V_V_TVALID { I 1 bit } input_1_3_V_V_TREADY { O 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_1_3_V_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 16 \
+    name layer2_out_0_V_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {} \
+    metadata {  } \
+    op interface \
+    ports { layer2_out_0_V_V_TDATA { O 16 vector } layer2_out_0_V_V_TVALID { O 1 bit } layer2_out_0_V_V_TREADY { I 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'layer2_out_0_V_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 17 \
+    name layer2_out_1_V_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {} \
+    metadata {  } \
+    op interface \
+    ports { layer2_out_1_V_V_TDATA { O 16 vector } layer2_out_1_V_V_TVALID { O 1 bit } layer2_out_1_V_V_TREADY { I 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'layer2_out_1_V_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 18 \
+    name layer2_out_2_V_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {} \
+    metadata {  } \
+    op interface \
+    ports { layer2_out_2_V_V_TDATA { O 16 vector } layer2_out_2_V_V_TVALID { O 1 bit } layer2_out_2_V_V_TREADY { I 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'layer2_out_2_V_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 19 \
+    name layer2_out_3_V_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {} \
+    metadata {  } \
+    op interface \
+    ports { layer2_out_3_V_V_TDATA { O 16 vector } layer2_out_3_V_V_TVALID { O 1 bit } layer2_out_3_V_V_TREADY { I 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'layer2_out_3_V_V'"
 }
 }
 
@@ -49,7 +163,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 8 \
+    id 20 \
     name const_size_in_1 \
     type other \
     dir O \
@@ -64,7 +178,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 21 \
     name const_size_out_1 \
     type other \
     dir O \
@@ -141,7 +255,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 10
+set ID 22
 set RegSliceName regslice_core
 set RegSliceInstName regslice_core_U
 set CoreName ap_simcore_regslice_core

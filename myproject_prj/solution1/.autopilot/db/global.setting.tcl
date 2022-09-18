@@ -42,7 +42,7 @@ set SCTraceOption all
 set TargetInfo xczu9eg:-ffvb1156:-2-e
 set SourceFiles {sc {} c ../../firmware/myproject.cpp}
 set SourceFlags {sc {} c {{ -std=c++0x} {}}}
-set DirectiveFile /home/YL_HUANG/9_2/upsampling/myproject_prj/solution1/solution1.directive
+set DirectiveFile /home/YL_HUANG/9_23/hls4ml_layer/myproject_prj/solution1/solution1.directive
 set TBFiles {verilog {../../tb_data ../../firmware/weights ../../myproject_test.cpp} bc {../../tb_data ../../firmware/weights ../../myproject_test.cpp} sc {../../tb_data ../../firmware/weights ../../myproject_test.cpp} vhdl {../../tb_data ../../firmware/weights ../../myproject_test.cpp} c {} cas {../../tb_data ../../firmware/weights ../../myproject_test.cpp}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

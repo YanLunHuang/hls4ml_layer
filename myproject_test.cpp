@@ -76,9 +76,9 @@ int main(int argc, char **argv)
       }
 
       //hls-fpga-machine-learning insert data
-      hls::stream<input_t> input_1("input_1");
+      hls::stream<input_t> input_1[4];
       nnet::copy_data_me<float, input_t, 0, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(in, input_1);
-      hls::stream<layer2_t> layer2_out("layer2_out");
+      hls::stream<layer2_t> layer2_out[4];
 
       //hls-fpga-machine-learning insert top-level-function
       unsigned short size_in1,size_out1;
