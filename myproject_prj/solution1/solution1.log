@@ -1,0 +1,150 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:5
+WARNING: [HLS 200-471] Dataflow form checks found 5 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79808 ; free virtual = 119727
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79808 ; free virtual = 119727
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:131).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:125).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:119).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:113).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:122).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79803 ; free virtual = 119723
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79799 ; free virtual = 119720
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:47) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:23) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 256.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 1059.078 ; gain = 539.039 ; free physical = 79723 ; free virtual = 119644
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' to 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' (firmware/nnet_utils/nnet_padding_stream.h:26:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:13 ; elapsed = 00:02:15 . Memory (MB): peak = 1491.074 ; gain = 971.035 ; free physical = 79313 ; free virtual = 119240
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' to 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 138.7 seconds; current allocated memory: 605.267 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 605.314 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 80.57 seconds; current allocated memory: 618.622 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:39:5
+WARNING: [HLS 200-471] Dataflow form checks found 5 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79608 ; free virtual = 119721
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79608 ; free virtual = 119721
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:131).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:125).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:119).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:113).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' into 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' (firmware/nnet_utils/nnet_padding_stream.h:122).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79605 ; free virtual = 119718
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79602 ; free virtual = 119715
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Block__proc'
+	 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79579 ; free virtual = 119692
+INFO: [XFORM 203-541] Flattening a loop nest 'PadTopWidth' (firmware/nnet_utils/nnet_padding_stream.h:112:69) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CopyMain' (firmware/nnet_utils/nnet_padding_stream.h:121:65) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'PadRight' (firmware/nnet_utils/nnet_padding_stream.h:124:66) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'PadBottomWidth' (firmware/nnet_utils/nnet_padding_stream.h:130:72) in function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>'.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl_me<ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 14, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' to 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' (firmware/nnet_utils/nnet_padding_stream.h:23:43)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 79573 ; free virtual = 119681
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl_me<ap_fixed,ap_fixed,config4>' to 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.51 seconds; current allocated memory: 148.612 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 148.659 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PadTopWidth_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'PadMain.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'CopyMain_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'PadMain.3'.

@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/YL_HUANG/9_23/zeropad/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,232 @@
+
+
+================================================================
+== Vivado HLS Report for 'zeropad2d_cl_me_ap_fixed_ap_fixed_config4_s'
+================================================================
+* Date:           Sun Sep 18 18:54:06 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 1.199 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6437|     6437| 32.185 us | 32.185 us |  6437|  6437|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- PadTopWidth_L     |     1281|     1281|         3|          1|          1|  1280|    yes   |
+        |- PadMain           |     3870|     3870|      1290|          -|          -|     3|    no    |
+        | + PadMain.1        |      257|      257|         3|          1|          1|   256|    yes   |
+        | + CopyMain_L       |      769|      769|         3|          1|          1|   768|    yes   |
+        | + PadMain.3        |      257|      257|         3|          1|          1|   256|    yes   |
+        |- PadBottomWidth_L  |     1281|     1281|         3|          1|          1|  1280|    yes   |
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|     223|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     242|    -|
+|Register         |        -|      -|     108|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|     108|     465|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln112_fu_172_p2                |     +    |      0|  0|  18|          11|           1|
+    |add_ln121_fu_208_p2                |     +    |      0|  0|  17|          10|           1|
+    |add_ln130_fu_232_p2                |     +    |      0|  0|  18|          11|           1|
+    |c_1_fu_220_p2                      |     +    |      0|  0|  16|           9|           1|
+    |c_fu_196_p2                        |     +    |      0|  0|  16|           9|           1|
+    |i_fu_184_p2                        |     +    |      0|  0|   9|           2|           1|
+    |ap_block_pp2_stage0_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state11_pp2_stage0_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state12_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state13_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state16_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state17_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state20_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state21_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3_io                 |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_io                 |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state8_io                 |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state9_io                 |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln112_fu_166_p2               |   icmp   |      0|  0|  13|          11|          11|
+    |icmp_ln117_fu_178_p2               |   icmp   |      0|  0|   8|           2|           2|
+    |icmp_ln121_fu_202_p2               |   icmp   |      0|  0|  13|          10|          10|
+    |icmp_ln130_fu_226_p2               |   icmp   |      0|  0|  13|          11|          11|
+    |icmp_ln23_1_fu_214_p2              |   icmp   |      0|  0|  13|           9|          10|
+    |icmp_ln23_fu_190_p2                |   icmp   |      0|  0|  13|           9|          10|
+    |ap_block_pp0_stage0_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp1_stage0_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp2_stage0_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp3_stage0_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp4_stage0_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                    |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp1                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp2                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp3                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp4                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1            |    xor   |      0|  0|   2|           2|           1|
+    |ap_enable_reg_pp1_iter1            |    xor   |      0|  0|   2|           2|           1|
+    |ap_enable_reg_pp2_iter1            |    xor   |      0|  0|   2|           2|           1|
+    |ap_enable_reg_pp3_iter1            |    xor   |      0|  0|   2|           2|           1|
+    |ap_enable_reg_pp4_iter1            |    xor   |      0|  0|   2|           2|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0| 223|         137|          93|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  56|         13|    1|         13|
+    |ap_done                   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2   |   9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter2   |   9|          2|    1|          2|
+    |ap_enable_reg_pp2_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp2_iter2   |   9|          2|    1|          2|
+    |ap_enable_reg_pp3_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp3_iter2   |   9|          2|    1|          2|
+    |ap_enable_reg_pp4_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp4_iter2   |   9|          2|    1|          2|
+    |c_0_i22_reg_144           |   9|          2|    9|         18|
+    |c_0_i28_reg_122           |   9|          2|    9|         18|
+    |data_V_V_TDATA_blk_n      |   9|          2|    1|          2|
+    |i1_0_reg_111              |   9|          2|    2|          4|
+    |indvar_flatten11_reg_133  |   9|          2|   10|         20|
+    |indvar_flatten23_reg_155  |   9|          2|   11|         22|
+    |indvar_flatten_reg_100    |   9|          2|   11|         22|
+    |res_V_V_TDATA_blk_n       |   9|          2|    1|          2|
+    |res_V_V_TDATA_int         |  15|          3|   16|         48|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 242|         54|   82|        191|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |  12|   0|   12|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter0            |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp2_iter0            |   1|   0|    1|          0|
+    |ap_enable_reg_pp2_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp2_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp3_iter0            |   1|   0|    1|          0|
+    |ap_enable_reg_pp3_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp3_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp4_iter0            |   1|   0|    1|          0|
+    |ap_enable_reg_pp4_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp4_iter2            |   1|   0|    1|          0|
+    |c_0_i22_reg_144                    |   9|   0|    9|          0|
+    |c_0_i28_reg_122                    |   9|   0|    9|          0|
+    |i1_0_reg_111                       |   2|   0|    2|          0|
+    |i_reg_251                          |   2|   0|    2|          0|
+    |icmp_ln112_reg_238                 |   1|   0|    1|          0|
+    |icmp_ln112_reg_238_pp0_iter1_reg   |   1|   0|    1|          0|
+    |icmp_ln121_reg_265                 |   1|   0|    1|          0|
+    |icmp_ln121_reg_265_pp2_iter1_reg   |   1|   0|    1|          0|
+    |icmp_ln130_reg_288                 |   1|   0|    1|          0|
+    |icmp_ln130_reg_288_pp4_iter1_reg   |   1|   0|    1|          0|
+    |icmp_ln23_1_reg_279                |   1|   0|    1|          0|
+    |icmp_ln23_1_reg_279_pp3_iter1_reg  |   1|   0|    1|          0|
+    |icmp_ln23_reg_256                  |   1|   0|    1|          0|
+    |icmp_ln23_reg_256_pp1_iter1_reg    |   1|   0|    1|          0|
+    |indvar_flatten11_reg_133           |  10|   0|   10|          0|
+    |indvar_flatten23_reg_155           |  11|   0|   11|          0|
+    |indvar_flatten_reg_100             |  11|   0|   11|          0|
+    |tmp_V_reg_274                      |  16|   0|   16|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 108|   0|  108|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+--------------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++-----------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config4> | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config4> | return value |
+|ap_start         |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config4> | return value |
+|ap_done          | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config4> | return value |
+|ap_continue      |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config4> | return value |
+|ap_idle          | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config4> | return value |
+|ap_ready         | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config4> | return value |
+|data_V_V_TDATA   |  in |   16|    axis    |                  data_V_V                  |    pointer   |
+|data_V_V_TVALID  |  in |    1|    axis    |                  data_V_V                  |    pointer   |
+|data_V_V_TREADY  | out |    1|    axis    |                  data_V_V                  |    pointer   |
+|res_V_V_TDATA    | out |   16|    axis    |                   res_V_V                  |    pointer   |
+|res_V_V_TVALID   | out |    1|    axis    |                   res_V_V                  |    pointer   |
+|res_V_V_TREADY   |  in |    1|    axis    |                   res_V_V                  |    pointer   |
++-----------------+-----+-----+------------+--------------------------------------------+--------------+
+
